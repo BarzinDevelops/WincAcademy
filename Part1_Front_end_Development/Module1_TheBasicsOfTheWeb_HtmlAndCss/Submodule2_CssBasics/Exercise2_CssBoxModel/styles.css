@@ -9,15 +9,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 /* ------------------------------------------------------------------------------ */
+/* global settings */
 
+
+/* ------------------------------------------------------------------------------ */
 .nav_header{
     background-color: gray;
     margin: 5%;
     padding: 20px;
+    text-align: center;
 }
-nav ul{
-    display: flex;
-    justify-content: space-around;
+.nav_header nav ul li{
+    font-size: 1.1em;
+    font-weight: bold;
+    display: inline;
+    margin-left: 20px;
 }
 nav a {
     color: black;
@@ -71,8 +77,31 @@ article header, section{
     margin: 20px;
     padding: 10px;
 }
+/* about.html specific styles: */
+.aboutme_header{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.aboutme_main{
+    border: 5px solid green;
+    padding: 0;
+}
 
+.aboutme_article1 {
+    /* border: 5px solid blueviolet; */
+    margin: 0;
+    padding: 10px;
+
+}
 .photo{
-    margin: 20px;
-    box-shadow: 2px 1px 9px 5px rgba(59, 57, 57, 0.575);
+    width: 250px;
+    margin: 5px;
+    box-shadow: 1px 5px 15px 4px rgba(14, 10, 10, 0.39);
+}
+
+.my_photo{
+    width: 260px;
+    margin: 20px auto;
+    
 }

@@ -1,0 +1,35 @@
+Exercise - CSS Box Model
+Introduction
+You will use the Box Model properties on the elements of your website. Maybe you've even already done so before when you gave your borders a color.
+
+Part 1:
+Grab a pen and paper and draw the box-model.
+No, seriously, draw it. It will help you understand.
+
+Part 2:
+- Give all semantic elements (<main>, <header>) a nice colored border.
+    use margin to make all the elements on the page have a nice-looking distance from each other. Not too close, but not too far away either.
+- Make sure the padding on text elements is good.
+    Use different padding for top & bottom, and for left & right. First, use the extensive CSS notation, then the "shorthand" notation. i.e.: padding: top, right, bottom, left.
+    
+- Center an element using margin: 0 auto. Use your references and Google
+    The centered element needs margin and another property to be able to center itself. Do you know what property? *See answer below.
+
+Part 3: inline vs block-level elements
+Some HTML elements have default values for box-model properties. For example, an <h1> element has default margins. As such, any HTML element is always by default either a block-level element or an inline element.
+
+block-level element: An element that behaves as a page-wide block.
+
+inline element: An element that behaves as a part of a paragraph, only taking up the width it requires.
+
+View this image for clarification:
+
+Block vs inline
+
+To do:
+
+-  Add a list to your <nav>, through a <ul>
+    Make each <li> have a link to a different page
+    Use the CSS display property to make the list horizontal instead of vertical. You can read more about the display property and how to use it here.
+When using the element selector, you will see that all the lists on your page are not horizontal. Use a class selector to only affect the ul in the navigation.
+* Answer: width-property
