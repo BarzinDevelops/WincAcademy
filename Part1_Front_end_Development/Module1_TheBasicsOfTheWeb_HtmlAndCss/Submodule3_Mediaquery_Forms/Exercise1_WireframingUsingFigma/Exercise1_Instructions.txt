@@ -1,0 +1,25 @@
+Exercise: Wireframing using Figma
+Introduction
+You're going to design a website using Figma. Figma is a very accessible wireframing tool that allows you to quickly create wireframes for your website. Think of it as Paint, but with a whole lot of extra features.
+
+The goal of this exercise is to practice thinking conceptually about websites and their functionalities. Before you begin actually developing a website, it is always a good idea to ask yourself: what is my target audience? What should the result look like? You will notice that you'll end up asking these kinds of questions automatically when you start making wireframes.
+
+Don't be put off by Figma's interface; it may seem intimidating, but wireframing tools such as Figma offer a lot of features. We will only be using the basic features.
+
+Exercise
+1. Open http://figma.com/ and log in or create an account.
+2. Get familiar! Click around, try to figure out how Figma works. (For example, try to create some squares with text in them).
+3. Think of a subject for your website
+    - use a subject that you find interesting, fun, or important.
+    - Think of what pages your website needs to have (keep it simple!)
+    - Make sure your website includes form elements (like a search bar, contact form, or questionnaire).
+4. Create a wireframe for the mobile version of your website
+    - You may start by sketching it out using pen and paper!
+        # Afterwards, go and design it in Figma.
+    - Your designs don't have to be perfect. Keep them rough.
+    - You're not going to be writing any HTML or CSS (yet).
+5. Create wireframes for the desktop version of your website as well.
+6. In a future exercise, you will convert your designs to an actual website using HTML and CSS.
+7. Make your wireframes "public" in Figma using the "Share" button in the top-right.
+    - Use the link currently in your browser's search bar.
+    - Make sure to select "Anyone with the link" in Figma!
