@@ -1,0 +1,70 @@
+Exercise - CSS media queries
+Introduction
+You're going to use media queries in the project you have so far.
+
+part 1 - Researching how media queries work
+Visit a site you frequently use (such as google.com or twitter.com)
+Shrink the browser window, then increase its size again.
+What do you notice? How does the website change?
+part 2 - Exercise
+Let's add media queries to your website to make it look good when used on a large screen, such as on a desktop pc.
+
+Remember: CSS works from top to bottom. For a reminder on this, view the code snippet at the bottom of this page.
+
+Make a copy of a previous exercise.
+Add the following meta-tag to your <head> element in index.html:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+This will make sure your website is viewed with the proper scale on mobile. Without this tag, some mobile devices will use a different resolution. When this happens, the mobile screen may end up showing CSS that was intended for desktop views.
+
+Make the necessary adjustments to make the website look good on mobile.
+Now make it look good on desktop:
+(Keep in mind that media queries should be beneath your other CSS):
+
+@media (min-width: 1024px) {}
+Change the background color on desktop (background-color)
+
+Start by using an easily noticeable color and rapidly change the window's size. That allows you to easily see whether your media query is working. If it works, change the color to a better-looking one.
+Change the color of text on desktop (color).
+
+Change the size of text on desktop (Make the text smaller on a larger screen).
+
+Change the line-height on desktop
+
+Test your CSS + media queries knowledge through this code snippet
+By looking at this code, try to answer the question What size will h1 elements be on my page?:
+
+/* This gray block is a piece of code you can copy and paste into a CSS file
+ * and use in your HTML to see what it would look like.
+ * If you understand the code, you may also simply read through it.
+ * /
+
+/* This sets the size of all h1 elements for the first time. */                      
+h1 {                                                                                 
+    font-size: 50px;                                                                 
+}                                                                                    
+/* The first media query. If the window has a minimum width of 768 pixels,
+ * this style will be used. If **not**, then this style will **not** be used. */
+@media (min-width: 768px) {                                                          
+    h1 {                                                                             
+        font-size: 60px;                                                             
+    }                                                                                
+}                                                                                    
+/* The second media query. Same goes here, except this time the window has
+ * to be at least 320 pixels for this style to be used.
+ * Notice that a window with a width of 800 pixels will satisfy the previous media query,
+ * but also satisfy this media query. This means that the size of h1 would be changed
+ * yet again. */
+@media (min-width: 320px) {                                                          
+    h1 {                                                                             
+        font-size: 10px;                                                             
+    }                                                                                
+}                                                                                    
+/* Here we change the size again, unconditionally. This means that all the code above
+ * is irrelevant, since this is the last change to font-size, and therefore this is the
+ * font-size that will be used, regardless of window size. */                   
+h1 {                                                                                 
+    font-size: 100px;                                                                
+}                                                                                    
+/* Conclusion: Order matters in CSS. Think carefully about your media queries
+ * and about what you expect to see, based on how your
+ * browser reads the code -- From top to bottom! */
