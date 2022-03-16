@@ -120,9 +120,8 @@ article header, section{
 
 /* Media Queries */
 
-@media screen and (max-width: 600px){   
+@media screen and (max-width: 600px) and (min-width: 400px){   
     .nav_header nav ul li {
-        /* background-color: red; */
         font-size: 1.2em;
         font-weight: bold;
         display: block;
@@ -135,8 +134,61 @@ article header, section{
     body{
         padding-top: 150px;
     }
-    /* .nav_header, main, footer{
-        padding: 10px;
-    } */
 }
 
+@media screen and (max-width: 400px){   
+    .nav_header nav ul li {
+        font-size: 1em;
+        font-weight: bold;
+        display: block;
+        margin-left: 10px;
+        line-height: 1.3em;
+    }
+    .nav_header{
+        padding: 20px;
+    }
+    body{
+        padding-top: 150px;
+    }
+    main {
+        font-size: 1.0em;
+        margin: 5px;
+        padding: 5px;
+    }
+    .article_section, .article_header{
+        margin: 5px;
+        padding: 5px;
+    }
+    .photo{
+        width: 220px;
+        margin: 10px 0px;
+        box-shadow: 1px 5px 15px 4px rgba(14, 10, 10, 0.39);
+    }
+    .my_photo{
+        width: 200px;
+        margin: 0 auto ;
+        
+    }
+
+    h1{
+        font-size: 1.2em;
+    }
+    h3{
+        font-size: 1.0em;
+        margin-top: 10px;
+    }
+}
+
+@media all and (orientation: landscape){
+
+    main{
+        padding: 10px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: medium;
+    }
+    .nav_header, footer{
+        padding: 20px;
+    }
+
+}
