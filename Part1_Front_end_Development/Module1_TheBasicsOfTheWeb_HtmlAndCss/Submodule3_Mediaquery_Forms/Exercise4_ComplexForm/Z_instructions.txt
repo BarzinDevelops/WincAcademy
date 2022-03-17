@@ -1,0 +1,41 @@
+Exercise - Basic HTML form
+Introduction
+Usually, you would need a complicated back-end for saving user input. For example: when you purchase a book, the book needs to be retrieved from a warehouse and be sent to the address you wrote in the form. In other words: you would need to use more than just HTML/CSS.
+
+Today, you will start practicing with HTML forms. You will make the form work properly by using a simple "back-end": Netlify! This way, you do not (yet) need anything other than HTML/CSS.
+
+Because you'll be using Netlify, your form will need some specific properties. You'll see these in the exercise. Good luck!
+
+You're going to build a form in HTML. You'll also store the data given to the form in Netlify. Before you get started, have a look at Netlify's documentation: https://docs.netlify.com/forms/setup/#html-forms
+
+Part 1: Adding a contact form
+In this exercise, you will build a simple contact form to help you understand how HTML forms work.
+
+Make another copy of the latest version of your website.
+Add a new page where you will add the contact form.
+(Consider calling it "contact.html")
+Link from your index.html to this new page, and vice versa.
+Add a form to the new page. Use:
+A name field;
+An email field;
+A text field;
+A submit button.
+Part 2: Save the form data using Netlify
+By deploying your website on Netlify, you can make the form fully functional. You will be able to retrieve the data users enter in the form on your deployed website in your Netlify account.
+
+In this exercise, you use Netlify to store your user's input. In a real-world scenario, you would use a proper "back-end" to do this. We're not going to worry about this yet. We will use Netlify instead because it is a lot simpler.
+
+Create a Netlify account.
+Point your contact form to Netlify (as shown in Netlify's documentation: https://www.netlify.com/docs/form-handling/)
+Save your files & deploy!
+Fill in the form on the deployed version of your website (it will not work on a local version)
+Check whether you can retrieve your input in Netlify.
+Extra information:
+
+When you've deployed a website on Netlify, you will see a screen with "Recent Form Submissions" in the bottom-left. After filling in the form, you can refresh this page and click this button to see your input (if all went well).
+
+Note:
+
+You need a Netlify account.
+Netlify is very picky about adding the right name to your form. Read Netlify's documentation carefully.
+Check the FAQ if you can't figure it out.
