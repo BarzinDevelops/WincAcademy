@@ -103,8 +103,8 @@ nav li{
 
 article header, section{
     margin: 20px;
-    /* padding: 10px; */
 }
+
 /* about.html specific styles: */
 .aboutme_header{
     margin: 0;
@@ -166,7 +166,6 @@ article header, section{
     }
     .nav_header{
         padding: 10px;
-        background-color: red;
         position: fixed;
         top: 0;
     }
@@ -178,7 +177,6 @@ article header, section{
     main {
         font-size: 1.0em;
         padding: 1px;
-        /* border: 2px solid purple; */
         margin: 0px;
     }
     .article_section, .article_header{

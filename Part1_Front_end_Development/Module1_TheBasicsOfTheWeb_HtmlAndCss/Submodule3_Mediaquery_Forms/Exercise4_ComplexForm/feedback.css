@@ -29,7 +29,49 @@ h1,h2, h3, h4 {
 .menu_items, footer{
     color: whitesmoke;
 }
+
+
+#birthday{
+    background-color: white;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    min-width: 0px;
+    margin-left: 10px;
+
+}
+
+
+.labelwrapper{
+    margin: 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+}
+.labelwrapper  label{
+    margin-left: 10px;
+}
+.form_buttons{
+    display: flex;
+    gap: 30px;
+}
+.apron{
+    display: flex;
+}
+input[type="color"]{
+    min-width: 0px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+form{
+    padding-bottom: 20px;
+}
+
+
+
 /* ------------------------------------------------------------------------------ */
+
 
 form p{
     display: flex;
@@ -37,6 +79,7 @@ form p{
     align-items: flex-start;
 }
 input, textarea{
+    min-width: 250px;
     padding: 10px;
     border: 0;
     outline: none;
@@ -55,9 +98,6 @@ button{
     background-color: rgba(44, 42, 42, 0.9);
     color: whitesmoke;
 }
-button:hover, button:focus{
-
-}
 
 .nav_header{
     display: flex;
@@ -66,10 +106,9 @@ button:hover, button:focus{
     background-color: rgba(44, 42, 42, 0.9);
     text-align: center;  
     width: 100%;
-    padding:  10px;
+    padding:  10px 0;
 }
 .success{
-    height: 70vh;
     background-color: rgb(40, 184, 141);
     display: flex;
     flex-direction: column;
@@ -84,7 +123,7 @@ footer{
     align-items: center;
     background-color: rgba(44, 42, 42, 0.9);
     width: 100%;
-    height: 15vh;
+    padding:  10px;
 }
 
 h1, p{
@@ -95,9 +134,9 @@ h1, p{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    /* gap: 15px; */
     flex-wrap: wrap;
-    /* padding: 25px; */
+    width: 100%;
 }
 
 .nav_header nav ul li{
@@ -105,6 +144,12 @@ h1, p{
     width: 100%;
     font-weight: bold;
     padding: 0px;
+}
+nav a:hover {
+    color: rgb(29, 116, 101);
+    font-weight: bolder;
+    text-decoration: none;
+    list-style: none;
 }
 
 nav a {
@@ -135,3 +180,16 @@ nav li{
     font-family: 'Permanent Marker', cursive;
 }
 
+
+
+
+/* style for favorite_recipes form page */
+.wrapper{
+    background-color: rgb(40, 184, 141);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* ------------------------------------------------------------------------------ */
