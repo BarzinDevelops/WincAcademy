@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+/*---------------------------------IMPORTS----------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* ------------------------------------------------------------------------------ */
+/* global settings */
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    font-size: 1.2em;
+}
+
+.titles,.menu_items, footer,
+h1,h2, h3, h4 {
+    font-family: 'Permanent Marker', cursive;
+ 
+}
+
+.menu_items, footer{
+    color: whitesmoke;
+}
+
+
+#birthday{
+    background-color: white;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    min-width: 0px;
+    margin-left: 10px;
+
+}
+
+
+.labelwrapper{
+    margin: 20px;
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+}
+.labelwrapper  label{
+    margin-left: 10px;
+}
+.form_buttons{
+    display: flex;
+    gap: 30px;
+}
+.apron{
+    display: flex;
+}
+input[type="color"]{
+    min-width: 0px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+form{
+    padding-bottom: 20px;
+}
+
+
+
+/* ------------------------------------------------------------------------------ */
+
+
+form p{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+input, textarea{
+    min-width: 250px;
+    padding: 10px;
+    border: 0;
+    outline: none;
+
+}
+input:focus, 
+textarea:focus, 
+button:hover, button:focus{
+    background-color: rgb(74, 199, 193);
+}
+button{
+    padding: 15px 30px;
+    border: 0;
+    border-radius: 5px;
+    justify-self: flex-start;
+    background-color: rgba(44, 42, 42, 0.9);
+    color: whitesmoke;
+}
+
+.nav_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(44, 42, 42, 0.9);
+    text-align: center;  
+    width: 100%;
+    padding:  10px 0;
+}
+.success{
+    background-color: rgb(40, 184, 141);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(44, 42, 42, 0.9);
+    width: 100%;
+    padding:  10px;
+}
+
+h1, p{
+    margin: 20px;
+}
+
+.nav_header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 15px; */
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.nav_header nav ul li{
+    font-size: 1em;
+    width: 100%;
+    font-weight: bold;
+    padding: 0px;
+}
+nav a:hover {
+    color: rgb(29, 116, 101);
+    font-weight: bolder;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+nav a:hover {
+    color: rgb(29, 116, 101);
+    font-weight: bolder;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+nav li{
+    list-style: none;
+}
+
+
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.titles{
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+
+
+/* style for favorite_recipes form page */
+.wrapper{
+    background-color: rgb(40, 184, 141);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* ------------------------------------------------------------------------------ */
