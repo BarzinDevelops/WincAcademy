@@ -130,8 +130,10 @@ article header, section{
     
 }
 
+/* --------------------------------------------------My Blog style-------------------------------------------*/
 
-/* Media Queries */
+
+/* ------------------------------Media Queries --------------------------------------------------------------*/
 
 @media screen and (max-width: 600px) and (min-width: 400px){   
     .nav_header nav ul li {
@@ -203,16 +205,4 @@ article header, section{
     }
 }
 
-/* @media all and (orientation: landscape){
 
-    main{
-        padding: 10px;
-        margin-top: 0px;
-        margin-bottom: 10px;
-        font-size: medium;
-    }
-    .nav_header, footer{
-        padding: 10px;
-    }
-
-} */
