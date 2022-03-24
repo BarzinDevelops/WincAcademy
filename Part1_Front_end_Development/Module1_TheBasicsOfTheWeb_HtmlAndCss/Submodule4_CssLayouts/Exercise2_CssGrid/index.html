@@ -7,14 +7,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise2 - CSS Grid</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/b64c7abd2f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="grid-container">
-        <header class="site-header"></header>
-        <main class="site-main"></main>
-        <section class="widget-area"></section>
-        <footer class="site-footer"></footer>
+        <header class="site-header">
+            <a class="logo" href="#">
+                <i class="fa-solid fa-house fa-xl"></i>
+            </a>
+            <ul class="menu_container">
+                <li class="menu_items home">Home</li>
+
+                <li class="menu_items about">
+                    <a href="#">Resume</a>
+                </li>
+
+                <li class="menu_items contact">Contact</li>
+            </ul>
+
+        </header>
+
+        <main class="site-main">
+            <article class="articles article1">
+                <h1 class="art_titles art1_title">Current Projects</h1>
+                <section class="art_sections art1_section1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ab. Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Error optio nemo sunt fugiat vitae perspiciatis sed pariatur corporis
+                    iure, quisquam esse dolor, officiis asperiores! Enim est doloremque quos quia! Eaque?
+                    Nobis, soluta.</section>
+            </article>
+        </main>
+
+        <section class="widget-area">
+            <h1 class="widgets_title">Available Widgets</h1>
+            <div class="widgets">
+                <div class="widget spotify_widget">
+                    <img class="widget_images spotify_image" src="images/spotify.png" alt="spotify icon">
+                    <figcaption>Spotify Widget</figcaption>
+                </div>
+                <div class="widget gmail_widget">
+                    <img class="widget_images spotify_image" src="images/gmail.jpg" alt="spotify icon">
+                    <figcaption>Gmail Widget</figcaption>
+                </div>
+                <div class="widget linkedin_widget">
+                    <img class="widget_images linkedin_image" src="images/linkedin.png" alt="linkedin icon">
+                    <figcaption>linkedin Widget</figcaption>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">©️ Barry Developments 2022</footer>
     </div>
 </body>
 
