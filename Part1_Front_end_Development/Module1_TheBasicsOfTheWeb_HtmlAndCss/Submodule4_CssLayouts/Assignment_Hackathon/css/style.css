@@ -76,7 +76,7 @@ hr{
     width: 1rem;
 }
 .open_menu_btn{ 
-    color: whitesmoke; 
+    color: yellow; 
     font-size: 2.5rem;
     width: 1rem;
 }
@@ -139,15 +139,58 @@ hr{
     padding-bottom: 5px;
     font-size: 1.3rem;
 }
+/* Main Content -> Form styling */
+form{
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+label{
+    align-self: start;
+    font-weight: bolder;
+}
+input, textarea{
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+}
+.submit_btn{
+    background-color: black;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 1rem;
+    border: none;
+    width: 100px;
+    padding: 10px 5px;
+}
+.submit_btn:hover{
+    padding: 7px 2px;
+    color: yellow;
+    border: 3px double yellow;
+}
+
+.gender{
+    display: flex;
+    gap: 20px;
+}
+
+
 /* -------------------------------------------- */
 /* Footer styling */
 .site_footer{
     grid-area: f;
     color: white;
     background-color: rgb(15, 8, 8);
-    display: grid;
+    display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
     padding: 10px 0px;
+    gap: 5px;
+}
+.footer_copyright{
+    color: yellow;
 }
 /* ---------------------------------------------- */
