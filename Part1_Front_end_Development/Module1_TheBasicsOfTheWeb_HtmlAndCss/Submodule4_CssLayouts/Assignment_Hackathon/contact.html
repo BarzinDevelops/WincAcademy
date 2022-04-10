@@ -5,67 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>My Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Index html page</title>
 </head>
 
 <body>
-    <div class="container">
-        <header class="site_header">
-            <div class="profile_photo"></div>
-            <h1 class="header_title">Barzin Frozandehfar</h1>
-            <h4 class="current_page">Contact</h4>
-            <button id="open_menu_btn" class="open_menu_btn">&equiv;</button>
-            <nav id="site_nav" class="site_nav">
-                <button id="close_menu_btn" class="close_menu_btn">&times;</button>
-                <li class="nav_items item1">
-                    <a class="nav_links" href="index.html">Main Page</a>
-                </li>
-                <li class="nav_items item2">
-                    <a class="nav_links" href="aboutme.html">About Me</a>
-                </li>
-                <li class="nav_items item3">
-                    <a class="nav_links" href="my_projects.html">My Projects</a>
-                </li>
-                <li class="nav_items item4">
-                    <a class="nav_links current_page" href="contact.html">Contact</a>
-                </li>
+    <div class="main_container">
+        <header class="nav_header">
+            <nav>
+                <ul class="nav_header_ul">
+                    <li><a class="menu_items" href="index.html" tabindex="5">Home Page</a></li>
+                    <li><a class="menu_items" href="about.html" tabindex="6">About me page</a></li>
+                    <li><a class="menu_items" href="my_projects.html" tabindex="7">My Projects Page</a></li>
+                    <li><a class="menu_items current_page" href="contact.html" tabindex="8">My Contact Page</a></li>
+                    <li><a class="menu_items" href="favorite_recipes.html" tabindex="8">Favorite
+                            Recipes</a></li>
+                </ul>
             </nav>
         </header>
 
-
-        <main class="main_content">
-            <form name="contact" method="#" data-netlify="true">
-                <label for="fname">First Name</label>
-                <input type="text" name="fname" id="fname" required>
-
-                <label for="lname">Last Name</label>
-                <input type="text" name="lname" id="lname" required>
-
-                <div class="gender">
-                    <div class="male_div">
-                        <input type="radio" name="gender_radio_btn" id="male">
-                        <label for="male">Male</label>
+        <div class="wrapper">
+            <div class="success">
+                <form class="my_form" name="favorite_recipes" method="POST" action="success.html" data-netlify="true">
+                    <p>
+                        <label class="all_form_labels">Name:</label>
+                        <input class="all_form_inputs" name="name" type="text" placeholder="Enter your Name here.."
+                            autofocus>
+                    </p>
+                    <p>
+                        <label class="all_form_labels">Email:</label>
+                        <input class="all_form_inputs" name="email" type="email"
+                            placeholder="Enter your Mail-address here...">
+                    </p>
+                    <p>
+                        <label class="all_form_labels">Comments:</label>
+                        <textarea class="all_form_inputs" name="biography" rows="10" cols="30"
+                            placeholder="Enter your Biography...">
+                    </textarea>
+                    </p>
+                    <div class="form_buttons">
+                        <button class="form_btn" type="submit" tabindex="4">Send</button>
+                        <button class="form_btn" type="reset" tabindex="4">Reset Form</button>
                     </div>
-                    <div class="female_div">
-                        <input type="radio" name="gender_radio_btn" id="female">
-                        <label for="female">Female</label>
-                    </div>
-                </div>
+                </form>
+            </div>
+        </div>
 
-                <label for="email">Email address</label>
-                <input type="email" name="email" id="email" placeholder="youremail@domain.com" required>
-                <label for="message">Message / Comment:</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                <button class="submit_btn" type="submit" id="submit_btn">Send</button>
-            </form>
-
-        </main>
-
-
-        <footer class="site_footer"><span class="footer_copyright">©️ 2022</span>Barzin Developments</footer>
+        <footer>
+            <span>©️ 2022 Barzin Developments </span>
+        </footer>
     </div>
-    <script src="index.js"></script>
 </body>
 
 </html>

@@ -5,46 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>My Projects</title>
 </head>
 
 <body>
-    <div class="container">
-        <header class="site_header">
-            <div class="profile_photo"></div>
-            <h1 class="header_title">Barzin Frozandehfar</h1>
-            <h4 class="current_page">My Projects</h4>
-            <button id="open_menu_btn" class="open_menu_btn">&equiv;</button>
-            <nav id="site_nav" class="site_nav">
-                <button id="close_menu_btn" class="close_menu_btn">&times;</button>
-                <li class="nav_items item1">
-                    <a class="nav_links" href="index.html">Main Page</a>
-                </li>
-                <li class="nav_items item2">
-                    <a class="nav_links" href="aboutme.html">About Me</a>
-                </li>
-                <li class="nav_items item3">
-                    <a class="nav_links current_page" href="my_projects.html">My Projects</a>
-                </li>
-                <li class="nav_items item4">
-                    <a class="nav_links" href="contact.html">Contact</a>
-                </li>
+    <div class="main_container">
+        <header class="nav_header">
+            <nav>
+                <ul class="nav_header_ul">
+                    <li><a class="menu_items" href="index.html" tabindex="5">Home Page</a></li>
+                    <li><a class="menu_items" href="about.html" tabindex="6">About me page</a></li>
+                    <li><a class="menu_items current_page" href="my_projects.html" tabindex="7">My Projects Page</a>
+                    </li>
+                    <li><a class="menu_items" href="contact.html" tabindex="8">My Contact Page</a></li>
+                    <li><a class="menu_items" href="favorite_recipes.html" tabindex="8">Favorite Recipes</a></li>
+                </ul>
             </nav>
         </header>
+        <main class="wrapper">
+            <article>
+                <header class="article_header">
+                    <h3>All my projects so far:</h3>
+                </header>
+                <section class="project_cards">
+                    <div class="project_card">
+                        <div class="card_title">
+                            <a href="Site2/index.html" target="blank">
+                                # My GRID Practice Page
+                            </a>
+                        </div>
+                        <div class="card_img">Here comes an project image</div>
+                        <div class="card_description">Short description of project</div>
+                    </div>
+                    <div class="project_card">
+                        <div class="card_title">
+                            <a href="Site2/index.html" target="blank">
+                                # My GRID Practice Page
+                            </a>
+                        </div>
+                        <div class="card_img">Here comes an project image</div>
+                        <div class="card_description">Short description of project</div>
+                    </div>
+                    <div class="project_card">
+                        <div class="card_title">
+                            <a href="Site2/index.html" target="blank">
+                                # My GRID Practice Page
+                            </a>
+                        </div>
+                        <div class="card_img">Here comes an project image</div>
+                        <div class="card_description">Short description of project</div>
+                    </div>
+                    <div class="project_card">
+                        <div class="card_title">
+                            <a href="Site2/index.html" target="blank">
+                                # My GRID Practice Page
+                            </a>
+                        </div>
+                        <div class="card_img">Here comes an project image</div>
+                        <div class="card_description">Short description of project</div>
+                    </div>
 
-
-
-
-
-
-
-        <main class="main_content">
-
+                </section>
+            </article>
         </main>
-        <footer class="site_footer">©️ 2022 Barzin Developments</footer>
+        <footer>
+            <span>©️ 2022 Barzin Developments </span>
+        </footer>
     </div>
-    <script src="index.js"></script>
 </body>
+
 
 </html>

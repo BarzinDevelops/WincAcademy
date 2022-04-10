@@ -5,78 +5,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Index html page</title>
 </head>
 
 <body>
-    <div class="container">
-        <header class="site_header">
-            <div class="profile_photo"></div>
-            <h1 class="header_title">Barzin Frozandehfar</h1>
-            <h4 class="current_page">Main Page</h4>
-            <button id="open_menu_btn" class="open_menu_btn">&equiv;</button>
-            <nav id="site_nav" class="site_nav">
-                <button id="close_menu_btn" class="close_menu_btn">&times;</button>
-                <li class="nav_items item1">
-                    <a class="nav_links current_page" href="index.html">Main Page</a>
-                </li>
-                <li class="nav_items item2">
-                    <a class="nav_links" href="aboutme.html">About Me</a>
-                </li>
-                <li class="nav_items item3">
-                    <a class="nav_links" href="my_projects.html">My Projects</a>
-                </li>
-                <li class="nav_items item4">
-                    <a class="nav_links" href="contact.html">Contact</a>
-                </li>
+    <div class="main_container">
+        <header class="nav_header">
+            <nav>
+                <ul class="nav_header_ul">
+                    <li><a class="menu_items current_page
+                        " href="index.html" tabindex="5">Home Page</a></li>
+                    <li><a class="menu_items" href="about.html" tabindex="6">About me page</a></li>
+                    <li><a class="menu_items" href="my_projects.html" tabindex="7">My Projects Page</a></li>
+                    <li><a class="menu_items" href="contact.html" tabindex="8">My Contact Page</a></li>
+                    <li><a class="menu_items" href="favorite_recipes.html" tabindex="8">Favorite Recipes</a></li>
+                </ul>
             </nav>
         </header>
+        <main class="wrapper">
+            <article>
+                <header class="article_header">
+                    <h2>Coffees i like:</h2>
+                </header>
+                <section class="article_section lat">
+                    <h4>Latte Machiato</h4>
+                    <div class="art_sect_cont latte_content">
+                        <p> Wat is een latte macchiato?
+                            Een latte macchiato is een koffiesoort die voor het grootste deel bestaat uit warme melk en
+                            melkschuim, waar een espresso aan wordt toegevoegd. De letterlijke vertaling van Latte
+                            Macchiato
+                            is “gevlekte melk”. Wist je dat deze naam doelt op het <em>vlekje</em> espresso in de melk?
+                            <br>
+                            Een latte macchiato is een zeer herkenbare drank, omdat het uit drie afzonderlijke delen
+                            lijkt
+                            te bestaan. Door de espresso als laatste toe te voegen aan het melkschuim en de warme melk,
+                            ontstaan er drie lagen in het glas.
+                        </p><br>
+                        <div class="img_div">
+                            <img class="latte_img images" src="images/latte.png" alt="">
+                        </div>
+
+                        <p>
+                            <h4> Wat is het verschil tussen een latte en een latte macchiato?</h4>
+                            Ook deze koffiesoorten worden wel eens door elkaar gehaald. De namen lijken veel op elkaar,
+                            maar
+                            in de werkelijkheid zit er toch verschil tussen deze koffiesoorten. Dit verschil zit hierbij
+                            in de manier van bereiden. Bij een Caffé latte wordt de melk toegevoegd aan de
+                            espresso
+                            (zoals bij een cappuccino) en bij een latte macchiato wordt de espresso pas als laatste
+                            toegevoegd. Daarnaast komt er bij Caffé latte bijna geen schuim kijken, waar de latte
+                            macchiato
+                            een duidelijke schuimlaag heeft.
+                        </p><br>
+                        <h4>Hoe veel calorieën bevat een latte macchiato?</h4>
+                        <p> glas latte macchiato van 250 ml bevat - volgens het Voedingscentrum - 128 calorieën. Deze
+                            calorieën zitten ‘m in de melk. Een espresso bevat namelijk maar 2 calorieën. Het
+                            caloriegehalte
+                            in een cappuccino is bijvoorbeeld lager, omdat er minder melk in zit.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="article_section cap">
+                    <h3>Cappuccino</h3>
+                    <div class="art_sect_cont cap_content">
+                        <p> Wat is een cappuccino?
+                            Cappuccino is een Italiaanse koffiesoort, maar wordt zeker niet alleen meer in Italië
+                            gedronken. Over de hele wereld is de cappuccino een populaire drank. Een cappuccino bestaat
+                            uit één deel espresso, één deel gestoomde melk en één deel melkschuim. Deze mengen met
+                            elkaar, waardoor de witte kleur van de melk mooi combineert met de kleur van de koffie.
+
+                            Tien jaar geleden werd een cappuccino vaak nog met cacao geserveerd. Tegenwoordig heeft deze
+                            plaatsgemaakt voor een stevige en glanzende laag melkschuim met de mooiste figuurtjes in het
+                            schuim (ook wel latte art genoemd).
+                        </p><br>
+                        <div class="img_div">
+                            <img class="cappu_img images" src="images/cappuccino.png" alt="">
+                        </div>
+
+                        <p>
+                            <h4>Waar komt cappuccino vandaan?</h4>
+                            De oorsprong van de cappuccino wordt geclaimd door Wenen. De naam cappuccino is namelijk
+                            afgeleid van “Kapuziner Kaffee". Toch staat cappuccino tegenwoordig bekend als een
+                            Italiaanse koffie.
+
+                            Wij in Nederland zijn gewend om de hele dag door cappuccino’s te drinken. In Italië gaan ze
+                            daar anders mee om. Zij drinken de cappuccino alleen in de ochtend.
+                        </p>
+
+                        <p>
+                            <h4>Het belang van de juiste espresso en melk</h4>
+                            De perfecte cappuccino valt en staat met de juiste ingrediënten. Dit houdt in dat de basis
+                            bestaat uit een sterke espresso en goede melk voor stevige melkschuim (ook wel microfoam
+                            genoemd).
+
+                            Met name de kwaliteit van de melk is belangrijk. Melk bevat eiwitten, vetten en suikers. Het
+                            eiwit zorgt voor het mooie, dikke en smeuïge effect bij gestoomde melk. Voor het perfecte
+                            melkschuim werkt verse volle melk het beste.
+
+                            Tip: zorg ervoor dat jouw melk altijd koud is wanneer je deze gaat opstomen voor de
+                            cappuccino.
+                        </p>
+                        <h4>Hoe veel calorieën bevat een latte cappuccino?</h4>
+                        Hoe veel calorieën in een cappuccino zitten, hangt af van de melk die je gebruikt voor het
+                        melkschuim. Voor de beste cappuccino gebruik je volgens de echte barista’s volle melk. Volgens
+                        het Voedingscentrum bevat een cappuccino met volle melk 39 calorieën.
+                    </div>
+                </section>
 
 
 
-
-
-
-
-        <main class="main_content">
-            <article class="article1">
-                <h1 class="content_titles">Introduction</h1>
-                <p><strong>Hi and welcome</strong> to my personal profile page.
-                    I like to give you a short introduction
-                    of what you can expect to find on my site, and where you can find each category.
-                </p>
-                <hr>
-                <h4 class="content_subtitles">About Me Page</h4>
-                <p>
-                    The <strong>About Me </strong>page gives a more detail history of different subjects that is related
-                    to me as a person and what i like, or have done (career/study) in the past, what i'm doing in the
-                    current time and what plans i have for the future.
-                    I also get into the study <em>Fullstack Developer Path </em>which i'm doing since 1 march 2022.
-                </p>
-                <hr>
-                <h4 class="content_subtitles">My Project</h4>
-                <p>
-                    The <strong>About Me </strong>page gives a more detail history of different subjects that is related
-                    to me as a person and what i like, or have done (career/study) in the past, what i'm doing in the
-                    current time and what plans i have for the future.
-                    I also get into the study <em>Fullstack Developer Path </em>which i'm doing since 1 march 2022.
-                </p>
-                <hr>
-                <h4 class="content_subtitles">Contact</h4>
-                <p>
-                    The <strong>About Me </strong>page gives a more detail history of different subjects that is related
-                    to me as a person and what i like, or have done (career/study) in the past, what i'm doing in the
-                    current time and what plans i have for the future.
-                    I also get into the study <em>Fullstack Developer Path </em>which i'm doing since 1 march 2022.
-                </p>
-                <hr>
 
             </article>
         </main>
-        <footer class="site_footer">©️ 2022 Barzin Developments</footer>
+
+        <footer>
+            <span>©️ 2022 Barzin Developments </span>
+        </footer>
     </div>
-    <script src="index.js"></script>
 </body>
 
 </html>

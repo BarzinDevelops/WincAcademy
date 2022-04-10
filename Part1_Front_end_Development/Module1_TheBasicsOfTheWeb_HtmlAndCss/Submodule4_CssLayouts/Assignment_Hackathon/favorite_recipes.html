@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Index html page</title>
+</head>
+
+<body>
+    <div class="main_container">
+        <header class="nav_header">
+            <nav>
+                <ul class="nav_header_ul">
+                    <li><a class="menu_items" href="index.html" tabindex="5">Home Page</a></li>
+                    <li><a class="menu_items" href="about.html" tabindex="6">About me page</a></li>
+                    <li><a class="menu_items" href="my_projects.html" tabindex="7">My Projects Page</a></li>
+                    <li><a class="menu_items" href="contact.html" tabindex="8">My Contact Page</a></li>
+                    <li><a class="menu_items current_page" href="favorite_recipes.html" tabindex="8">Favorite
+                            Recipes</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="wrapper">
+            <div class="success">
+                <form class="my_form" name="favorite_recipes" method="POST" action="success.html" data-netlify="true">
+                    <p>
+                        <label class="all_form_labels">Name:</label>
+                        <input class="all_form_inputs" name="name" type="text" placeholder="Enter your Name here.."
+                            autofocus>
+                    </p>
+                    <p>
+                        <label class="all_form_labels">Email:</label>
+                        <input class="all_form_inputs" name="email" type="email"
+                            placeholder="Enter your Mail-address here...">
+                    </p>
+                    <p>
+                        <label class="all_form_labels">Telephone number:</label>
+                        <input class="all_form_inputs" name="tel_num" type="tel"
+                            placeholder="Enter your telephone number...">
+                    </p>
+
+                    <p>
+                        <label class="all_form_labels">Age:</label>
+                        <input class="all_form_inputs" name="age" type="number" placeholder="Enter your age ...">
+                    </p>
+                    <p>
+                        <label class="all_form_labels">Date of Birth:</label>
+                        <input class="all_form_inputs" id="birthday" name="birthday" type="date">
+                    </p>
+
+                    <div class="labelwrapper">
+                        <span>Gender:</span>
+                        <div class="individual_label_container">
+                            <input class="all_form_inputs labelwrapper_inputs" id="male" name="gender" type="radio">
+                            <label class="labelwrapper_labels" for="male">Male</label>
+
+
+                        </div>
+                        <div class="individual_label_container">
+                            <input class="all_form_inputs labelwrapper_inputs" id="female" name="gender" type="radio">
+                            <label class="labelwrapper_labels" for="female">Female</label>
+                        </div>
+                    </div>
+
+                    <div class="labelwrapper">
+                        <p>Favorite cuisine:</p>
+                        <div class="individual_label_container">
+                            <input class="all_form_inputs labelwrapper_inputs" name="cuisine1" type="checkbox"
+                                value="Spanish">
+                            <label class="labelwrapper_labels">Spanish</label>
+                        </div>
+
+                        <div class="individual_label_container">
+                            <input class="all_form_inputs labelwrapper_inputs" name="cuisine2" type="checkbox"
+                                value="french">
+                            <label class="labelwrapper_labels">French</label>
+                        </div>
+
+                        <div class="individual_label_container">
+                            <input class="all_form_inputs labelwrapper_inputs" name="cuisine3" type="checkbox"
+                                value="persian">
+                            <label class="labelwrapper_labels">Persian</label>
+
+                        </div>
+                    </div>
+                    <div class="apron">
+                        <label class="apron_labels">Favorite apron color:</label>
+                        <input class="all_form_inputs apron_labels" id="apron_color" name="apron_color" type="color"
+                            tabindex="2">
+                    </div>
+                    <p>
+                        <label class="all_form_labels">Comments:</label>
+                        <textarea class="all_form_inputs" name="biography" rows="10" cols="30"
+                            placeholder="Enter your Biography...">
+                    </textarea>
+                    </p>
+                    <p>
+                        <label class="all_form_labels upload_label" for="recipe_file">Upload your recipe</label>
+                        <input class="upload_btn all_form_inputs" type="file" id="recipe_file" name="recipe_file">
+                    </p>
+                    <p>
+                        <label class="all_form_labels" for="recipe_website_url">URL to recipe
+                            website:</label>
+                        <input class="all_form_inputs" type="url" id="recipe_website_url all_form_inputs" name="url"
+                            placeholder="https://www.google.com ...">
+                    </p>
+
+                    <div class="form_buttons">
+                        <button class="form_btn" type="submit" tabindex="4">Send</button>
+                        <button class="form_btn" type="reset" tabindex="4">Reset Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <span>©️ 2022 Barzin Developments </span>
+        </footer>
+    </div>
+</body>
+
+</html>
