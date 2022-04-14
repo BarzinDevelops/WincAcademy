@@ -446,6 +446,9 @@ button:focus {
         margin: 10px;
         box-shadow: 1px 5px 15px 4px rgba(14, 10, 10, 0.39);
     }
+    iframe{
+        height: 230px;
+    }
 
     /* Project Card styles */
     .project_cards {
