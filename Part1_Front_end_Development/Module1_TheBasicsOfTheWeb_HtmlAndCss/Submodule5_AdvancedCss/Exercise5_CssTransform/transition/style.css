@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="text"] {
+  outline: none;
+  border: 3px solid red;
+  margin: 20px;
+  width: 100px;
+  transition: width 0.35s ease-in-out;
+}
+
+input[type="text"]:focus {
+  width: 250px;
+}
+
+.bal-container {
+  max-width: 100%;
+  height: 100vh;
+  border: 3px solid black;
+  padding: 20px 0;
+  position: relative;
+}
+
+.bal1,
+.bal2 {
+  position: absolute;
+  border-radius: 50%;
+}
+.bal1 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  top: 200px;
+  right: 86.2%;
+  transition: right 1.68s ease-out;
+  transition-property: width, height;
+  transition: 1.35s ease-in;
+}
+div:active .bal1 {
+  right: 0px;
+  width: 200px;
+  height: 200px;
+}
+
+.bal2 {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  right: 0px;
+  top: 100px;
+  transition-property: top, right;
+  transition: 0.5s ease-in 1s;
+}
+div:active .bal2 {
+  top: 0;
+  right: 100px;
+}
