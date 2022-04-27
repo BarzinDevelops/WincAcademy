@@ -1,0 +1,31 @@
+
+
+.featured {
+    padding: $stdPadding;
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        .image img{
+             width: 300px;
+        }
+        .text-featured {
+            @include textStyle;
+        }
+
+/*         .text-featured {
+            max-width: 700px;
+            text-align: center;
+            padding: $stdPadding;
+            p {
+                text-align: justify;
+                padding: $stdPadding;
+                line-height: 1.4em;
+              }
+          } */
+
+
+      }
+
+
+      .tester{ background-color: $testerBg; } 
+  }

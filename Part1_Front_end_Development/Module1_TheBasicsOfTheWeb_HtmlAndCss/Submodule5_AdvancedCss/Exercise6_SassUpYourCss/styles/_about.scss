@@ -1,0 +1,47 @@
+
+
+  .about {
+    background-color: $lightgreenBgColor;
+    padding: $stdPadding;
+    .wrapper {
+        display: flex;
+
+        .text-about {
+            @include textStyle;
+                      }
+
+
+/*         .text-about {
+            max-width: 700px;
+            text-align: center;
+            padding: $stdPadding;
+            p {
+                text-align: justify;
+                padding-bottom: 1em;
+                line-height: 1.4em;
+              }
+          }
+ */
+
+          .video-wrapper {
+            position: relative;
+            padding-bottom: 33.25%;
+            overflow: hidden;
+            align-self: center;
+            flex: 2 0 55%;
+            margin: 1.4em 0;
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              }
+          }
+          
+      }
+    
+      .tester{ background-color: $testerBg; } 
+  }
+  
+
