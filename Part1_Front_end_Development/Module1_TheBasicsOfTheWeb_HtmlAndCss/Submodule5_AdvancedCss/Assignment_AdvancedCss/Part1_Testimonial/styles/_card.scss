@@ -1,5 +1,7 @@
 @import 'mixins';
 .card {
+    margin-bottom: 40px;
+    border: solid;
     min-height: $cardMinHeight;
     max-width: 480px;
     border-radius: 20px;
@@ -12,26 +14,24 @@
         background-color: $cardBgColor;
     } 
     &__footer{
-        @include centerFlex(column,center,center);   
-        padding: $footerPadding;
+        height: 150px;
         background-color: $footerBgColor;
         border-radius: $footerBorderRadius;
-        position: relative;
-
-        &__img-container{
-            top: -6em;
-            position: absolute;
-            @include centerFlex();
-            margin: 5px;
+        padding: 0;
+        &__footer-container{
+            text-align: center;
+            position: relative;
+            top: -3rem;
+        }
+        &__footer-img-container{
+            margin-bottom: 10px;
             &__profile-img{
                 width: $profileImageSize;
                 border-radius: 50%;
                 border: 5px solid white;
             }
         }
-        &__foot-content{
-            // min-width: 100%;
-            // padding: 5px;
+        &__footer-content{
             @include centerFlex(column);
             &__title{
                 color: #fff;
