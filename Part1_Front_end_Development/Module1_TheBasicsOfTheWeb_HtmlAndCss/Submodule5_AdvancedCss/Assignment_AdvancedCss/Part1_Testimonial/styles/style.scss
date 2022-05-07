@@ -3,23 +3,25 @@
 @import "variables";
 @import "mixins";
 @import "card";
-@import "img_grid";
+@import "grid";
 
 
 
 *, *::after, *::before{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
 }
 body{
     width: 100%;
-    min-width: 320px;
     height: 100vh;
+    // min-width: 320px;
     line-height: 1.4;
     font-family: $mainFontFamily;
+    margin: 0;
+    padding: 0;
 }
 .main-container{
+    // width: 100%;
     margin: 0 auto;
     @include centerFlex(column);
     gap: 50px;

@@ -1,0 +1,17 @@
+
+
+.grid-container{
+    display: grid;
+    row-gap: 0.4em ;
+    column-gap: 0.4em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: repeat(100px);
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
