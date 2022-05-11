@@ -1,0 +1,62 @@
+
+.social-wrapper{
+    position: fixed;
+    top: 30%;
+    right: 0;
+    padding: 0;
+    width: 50px;
+    &__items{
+        position: relative;
+        list-style: none;
+        width: 180px;
+        &__link{     
+            right: 0;
+            width: 100%;
+            text-align: left;
+            color: white;
+            text-decoration: none;
+            @include centerFlex();
+            gap: 20px;
+            padding: 10px 0px 10px 10px;
+            transition: all 0.7s linear;
+                &__text{ 
+                    text-decoration: underline;
+                    margin-right:  auto;
+                    font-size: 0.7em;
+                }
+                &__icon{
+                    text-align: center;
+                    width: 20px;
+                    font-size: 1.5rem;
+                    transition: transform 0.9s ease-in-out;
+                } 
+            &:hover, &:focus{
+                z-index: 4;
+                box-shadow: $menu-icons-box-shadow;
+                border-radius: 10px 0 0 10px;
+                position: relative;
+                right: 130px;
+                .fa-brands{
+                    transform: rotate(360deg);
+                }
+            }
+        } 
+    }
+}
+
+.blog{
+    background-color: $blog-icon-bg-color;
+}
+.twitter {
+    background-color: $twitter-icon-bg-color;
+}
+.linkedin {
+    background-color: $linkedin-icon-bg-color;
+}
+.facebook {
+    background-color: $facebook-icon-bg-color;
+}
+.github {
+    background-color: $github-icon-bg-color;
+}
+
