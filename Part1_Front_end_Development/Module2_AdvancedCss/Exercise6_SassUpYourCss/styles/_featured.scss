@@ -1,0 +1,14 @@
+
+.featured {
+    padding: $stdPadding;
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        .image img{
+             width: 300px;
+        }
+        .text-featured {
+            @include textStyle;
+        }
+      }
+  }

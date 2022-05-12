@@ -1,0 +1,19 @@
+
+.hero {
+    padding: $stdPadding;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    background: $lightgreenBgColor;
+    .hero-img {
+        img {
+            display: block;
+            height: auto;
+            width: 15.5em;
+        }
+    }
+    .hero-text {
+        @include textStyle;
+      }
+  }
+

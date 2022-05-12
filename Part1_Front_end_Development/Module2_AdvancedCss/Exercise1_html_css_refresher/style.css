@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@300;400;500;600;700&family=Permanent+Marker&family=Roboto+Slab:wght@300&display=swap');
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+strong{
+    color: black;
+    font-weight: 1000;
+}
+
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Karma', serif;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Roboto Slab', serif;
+}
+.main_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.cards_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 10%;
+}
+
+.cards_main{
+    width: 50%;
+    max-width: 370px;
+    border: 2px solid rgba(196, 191, 191, 0.51);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.cards_part1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+.cards_row1{
+    display: flex;   
+}
+.card_photo{
+    width: 15%;
+    display: flex;
+}
+img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.cards_title_container{
+    width: 85%;
+    line-height: 1.3;
+}
+.cards_subtitle{
+    color: rgba(128, 128, 128, 0.601);
+}
+.cards_row2{
+    line-height: 1.3;
+    color: rgba(70, 66, 66, 0.808);
+    font-weight: bold;
+}
+.separator{
+    height: 2px;
+    width: 100%;
+    border-bottom: 2px solid rgba(196, 191, 191, 0.51);
+    margin: 0;
+    padding: 0;
+}
+.cards_part2{
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+}
+button{
+    background-color: white;
+    width: 90%;
+    padding: 10px 0px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.approve_btn{
+    border-radius:  8px 0 0 8px  ;
+    border-right: none;
+    border: 2px solid limegreen;
+    border-right: none;
+    color: limegreen;
+}
+.decline_btn{
+    border-radius: 0 8px 8px 0 ;
+    border: 2px solid red;
+    color: red;
+}
