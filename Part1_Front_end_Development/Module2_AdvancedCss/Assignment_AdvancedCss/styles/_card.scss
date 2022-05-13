@@ -17,17 +17,23 @@
         background-color: $footerBgColor;
         border-radius: $footerBorderRadius;
         padding: 0;
+        @include centerFlex($align: flex-start);
         &__footer-container{
             text-align: center;
             position: relative;
+            width: 100px;
+            height: 100px;
+            padding: 3px;
             top: -3rem;
         }
         &__footer-img-container{
-            margin-bottom: 10px;
             &__profile-img{
-                width: $profileImageSize;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
                 border-radius: 50%;
-                border: 5px solid white;
+                border: 4px solid white;
             }
         }
         &__footer-content{
@@ -44,13 +50,4 @@
 
     }
     
-}
-
-@media (max-width: 360px){
-    .card__footer__img-container{
-        top: -5em;
-    }
-    .card__footer__img-container__profile-img{
-        width: 80px;
-    }
 }

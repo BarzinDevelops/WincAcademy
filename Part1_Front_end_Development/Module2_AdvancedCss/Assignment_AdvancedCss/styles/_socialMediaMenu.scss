@@ -10,7 +10,6 @@
         list-style: none;
         width: 180px;
         &__link{     
-            right: 0;
             width: 100%;
             text-align: left;
             color: white;
@@ -18,7 +17,9 @@
             @include centerFlex();
             gap: 20px;
             padding: 10px 0px 10px 10px;
-            transition: all 0.7s linear;
+            right: 0;
+            position: relative;
+            transition: right 0.9s ease;
                 &__text{ 
                     text-decoration: underline;
                     margin-right:  auto;
@@ -28,7 +29,7 @@
                     text-align: center;
                     width: 20px;
                     font-size: 1.5rem;
-                    transition: transform 0.9s ease-in-out;
+                    transition: transform 1s ease-in-out;
                 } 
             &:hover, &:focus{
                 z-index: 4;
