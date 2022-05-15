@@ -36,11 +36,13 @@ console.log(`Evaluations (bracket notation): ${person["evaluations"]}`);
 10. Log Only the greeting from the object (last element of your array), to the console. */
 
 console.log(`\n-------Part 2--------\n`);
+
 let colors = ["green", "blue", "red"];
 console.log(colors);
 console.log(`Length of array 'colors': ${colors.length}`);
+
 console.log(`First element of array 'colors': ${colors[0]}`);
-console.log(`Last element of array 'colors': ${colors[2]}`);
+console.log(`Last element of array 'colors': ${colors[colors.length - 1]}`);
 
 colors.push("Yellow");
 console.log(`Elements in array 'colors': `, colors);
@@ -51,7 +53,9 @@ console.log(`Elements in array 'colors': `, colors);
 colors.push({ greeting: "hi, I am an object" });
 console.log(`Elements in array 'colors': `, colors);
 console.log(
-  `Greeting (=property of object) in array 'colors': ${colors[5].greeting} `
+  `Greeting (=property of object) in array 'colors': ${
+    colors[colors.length - 1].greeting
+  } `
 );
 
 //----------------------------------------------------------------------------
