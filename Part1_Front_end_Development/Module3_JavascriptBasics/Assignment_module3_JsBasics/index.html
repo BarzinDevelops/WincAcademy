@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <script defer src="index.js"></script>
+    <script defer src="script.js"></script>
     <title>menu with js</title>
 </head>
 
@@ -21,15 +21,39 @@
         </div>
 
         <ul class="inactive-menu" id="menu">
+            <!-- <ul class="active-menu" id="menu"> -->
 
-            <!-- <div class="menu-btn" id="menu-btn"></div> -->
+
 
             <div class="items-wrapper" id="items-wrapper">
-                <li class="color1 items"></li>
-                <li class="color2 items"></li>
-                <li class="color3 items"></li>
-                <li class="color4 items"></li>
-                <li class="color5 items"></li>
+                <div class="li-wrap">
+                    <input type="radio" name="colors" class="item-radio1">
+                    <li class="color1 items"></li>
+                </div>
+
+                <div class="li-wrap">
+                    <input type="radio" name="colors" class="item-radio2">
+                    <li class="color2 items"></li>
+                </div>
+
+                <div class="li-wrap">
+                    <input type="radio" name="colors" class="item-radio3">
+                    <li class="color3 items"></li>
+                </div>
+
+                <div class="li-wrap">
+                    <input type="radio" name="colors" class="item-radio4">
+                    <li class="color4 items"></li>
+                </div>
+
+                <div class="li-wrap">
+                    <input type="radio" name="colors" class="item-radio5">
+                    <li class="color5 items"></li>
+                </div>
+
+
+
+
             </div>
 
         </ul>
