@@ -6,13 +6,21 @@ const menuBtn = document.getElementById("menu-btn");
 const itemsWrapper = document.getElementById("items-wrapper");
 let allListItems = document.querySelectorAll(".items");
 let chosenBgColorText = document.querySelector("#chosen-bg-color-text");
-const myColorsArr = ["green", "yellow", "purple", "tomato", "lightblue"];
+const radioBtns = document.querySelectorAll(".radios");
+const myColorsArr = [
+  "white",
+  "green",
+  "yellow",
+  "purple",
+  "tomato",
+  "lightblue",
+];
+// Current active background color:
+chosenBgColorText.textContent = "White";
 // ------------ Function Expression declarations ---------------
 const activeMenu = function () {
   menu.classList.remove("inactive-menu");
   menu.classList.add("active-menu");
-  itemsWrapper.style.display = "grid";
-  menu.style.display = "grid";
 };
 const inActiveMenu = function () {
   menu.classList.add("inactive-menu");
@@ -32,7 +40,9 @@ const keyboardChoise = function (itemNumber) {
 //---------------------------------------------------------------------
 mainBtn.addEventListener("mouseenter", activeMenu);
 mainBtn.addEventListener("click", toggleMenu);
+mainBtn.addEventListener("mouseleave", inActiveMenu);
 menu.addEventListener("mouseleave", inActiveMenu);
+menu.addEventListener("mouseenter", activeMenu);
 
 /* ---------------------------------------------------------------------------- */
 /* This function is used to get backgroundcolor value. 
@@ -49,15 +59,37 @@ const getBgColor = function (element) {
 };
 
 // ---------------------------------------------------------------------
-//loop through each li to set bg color as well as bg color name on each li:
+/* loop through each radio button and activate click-event of 
+   corresponding li-color */
 
+radioBtns.forEach((radio) => {
+  radio.addEventListener("click", (e) => {
+    if (radio.classList.contains("item-radio1")) {
+      allListItems[0].click();
+    } else if (radio.classList.contains("item-radio2")) {
+      allListItems[1].click();
+    } else if (radio.classList.contains("item-radio3")) {
+      allListItems[2].click();
+    } else if (radio.classList.contains("item-radio4")) {
+      allListItems[3].click();
+    } else if (radio.classList.contains("item-radio5")) {
+      allListItems[4].click();
+    } else if (radio.classList.contains("item-radio6")) {
+      allListItems[5].click();
+    }
+  });
+});
+//-------------------------------------------------------------------------
+/* loop through each li to set bg color as well as bg color name on each li.
+   Also activate radio-button corresponding to the clicked color item (as feedback).
+ */
 allListItems.forEach((item, i) => {
   item.style.backgroundColor = myColorsArr[i];
   item.textContent =
     myColorsArr[i].charAt(0).toUpperCase() + myColorsArr[i].slice(1);
+
   item.addEventListener("click", () => {
     toggleMenu();
-
     let radioBtn = document.querySelector(`.item-radio${i}`);
     radioBtn.checked = true; // activates radio button of chosen color
     mainWrapper.style.backgroundColor = getBgColor(item);
@@ -84,5 +116,8 @@ document.addEventListener("keyup", (e) => {
   }
   if (e.code === "Digit5") {
     keyboardChoise(4);
+  }
+  if (e.code === "Digit6") {
+    keyboardChoise(5);
   }
 });
