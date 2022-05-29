@@ -1,0 +1,41 @@
+
+What is Git version control?
+-------------------------------
+Learning goals:
+1. I can explain what version control is.
+    Version control is a system that records changes to a file or set of files over time, 
+    so the you can recall specific versions later. 
+    
+    In reality you can do this with nearly any type of file on a computer.
+    - It allows you to revert selected files back to a previous state, 
+    - revert the entire project back to a previous state, 
+    - compare changes over time, 
+    - see who last modified something that might be causing a problem, 
+    - who introduced an issue and when, and more.
+
+-------------------------------------------
+2. I can explain what a "snapshot" is in Git.
+     every time you commit, or save the state of your project, 
+     Git basically takes a picture of what all your files look 
+     like at that moment and stores a reference to that snapshot.
+     To be efficient, if files have not changed, Git doesn’t store the file again, 
+     just a link to the previous identical file it has already stored. 
+     
+    Git thinks about its data more like a stream of snapshots.
+
+----------------------------------------------
+3. I can explain the difference between Git and GitHub. ???????????????????
+
+--------------------------------------------------
+4. I know the three states of a file and am able to explain these.
+
+    Git has three main states that your files can reside in: modified, staged, and committed:
+        - Modified means that you have changed the file but have not committed it to your database yet.
+        - Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
+        - Committed means that the data is safely stored in your local database.
+    This leads us to the three main sections of a Git project: (1)the working tree, (2)the staging area, and (3)the Git directory.
+        1. You modify files in your working tree.
+        2. You selectively stage just those changes you want to be part of your next commit, which adds only those changes to the staging area.
+        3. You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+
+-----------------------------------------------------------------

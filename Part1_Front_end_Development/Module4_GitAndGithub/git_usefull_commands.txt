@@ -1,0 +1,72 @@
+// You can view all of your settings and where they are coming from using:
+git config --list --show-origin
+git config --list    -> this shows the settings git can find at that point (shorter output then when using above)
+// ----------------------------------------------------------------------------
+to create and go into a new branch:
+git checkout -b [name of branch you want to create]
+// ----------------------------------------------------------------------------
+if you want to merge the changes of a branch into the main branch (master/main):
+- first go into the master/main branch (command: checkout master)
+- then use this command:  merge [name of the branch you want to merge into master]
+// ----------------------------------------------------------------------------
+to see a nice concised overview of the git log:
+git log --oneline --all --graph
+// ----------------------------------------------------------------------------
+Short Status:   If you run [git status -s] or [git status --short] you get a far more simplified output from the command:
+example:
+========= example: ================
+$ git status -s
+ M README
+MM Rakefile
+A  lib/git.rb
+M  lib/simplegit.rb
+?? LICENSE.txt
+================================
+New files that aren’t tracked have a ?? next to them, 
+new files that have been added to the staging area have an A, 
+modified files have an M and so on. 
+There are two columns to the output 
+    - the left-hand column indicates the status of the staging area and 
+    - the right-hand column indicates the status of the working tree. 
+So for example in that output(see example above), the README file is modified in the working directory 
+but not yet staged, while the lib/simplegit.rb file is modified and staged. 
+The Rakefile was modified, staged and then modified again, so there are changes 
+to it that are both staged and unstaged.
+=========================list of status -s output columns ========================
+X          Y     Meaning
+-------------------------------------------------
+         [AMD]   not updated
+M        [ MTD]  updated in index
+T        [ MTD]  type changed in index
+A        [ MTD]  added to index
+D                deleted from index
+R        [ MTD]  renamed in index
+C        [ MTD]  copied in index
+[MTARC]          index and work tree matches
+[ MTARC]    M    work tree changed since index
+[ MTARC]    T    type changed in work tree since index
+[ MTARC]    D    deleted in work tree
+            R    renamed in work tree
+            C    copied in work tree
+-------------------------------------------------
+D           D    unmerged, both deleted
+A           U    unmerged, added by us
+U           D    unmerged, deleted by them
+U           A    unmerged, added by them
+D           U    unmerged, deleted by us
+A           A    unmerged, both added
+U           U    unmerged, both modified
+-------------------------------------------------
+?           ?    untracked
+!           !    ignored
+-------------------------------------------------
+
+==================================================================================
+
+// ----------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------
