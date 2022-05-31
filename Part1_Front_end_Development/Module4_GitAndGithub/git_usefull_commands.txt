@@ -62,7 +62,11 @@ U           U    unmerged, both modified
 -------------------------------------------------
 
 ==================================================================================
+to see what is added/removed but not staged yet:
+git diff
 
+to see what is add/removed and staged:
+git diff --staged / git diff --cached  (both staged and cached do same thing!)
 // ----------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------

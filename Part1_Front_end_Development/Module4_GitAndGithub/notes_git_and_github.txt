@@ -24,7 +24,8 @@ Learning goals:
     Git thinks about its data more like a stream of snapshots.
 
 ----------------------------------------------
-3. I can explain the difference between Git and GitHub. ???????????????????
+3. I can explain the difference between Git and GitHub. ????????
+
 
 --------------------------------------------------
 4. I know the three states of a file and am able to explain these.
