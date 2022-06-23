@@ -25,6 +25,7 @@ An array	Containing the elements that pass the test.
 
 const ages = [19, 18, 16, 12, 17, 8, 39, 37, 33, 57, 28];
 const result = ages.filter((age) =>{
+    
     return age >= 18;
 })
 
