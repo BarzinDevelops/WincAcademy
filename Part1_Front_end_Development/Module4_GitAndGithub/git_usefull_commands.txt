@@ -63,16 +63,17 @@ U           U    unmerged, both modified
 
 ==================================================================================
 to see what is added/removed but not staged yet:
-git diff
+    git diff
 
 to see what is add/removed and staged:
-git diff --staged / git diff --cached  (both staged and cached do same thing!)
+    git diff --staged / git diff --cached  (both staged and cached do same thing!)
 // ----------------------------------------------------------------------------
 Removes an staged file from git and file directory:
-git rm -f .\testfile1.txt
+    git rm -f .\testfile1.txt
 // ----------------------------------------------------------------------------
 This makes a staged file (testfile3.txt) unstaged and untracked:
-git rm --cached .\testfile3.txt
+    git rm --cached .\testfile3.txt
 // ----------------------------------------------------------------------------
-
+For Updating git to latest version on Windows pc:
+    git update-git-for-windows
 // ----------------------------------------------------------------------------
