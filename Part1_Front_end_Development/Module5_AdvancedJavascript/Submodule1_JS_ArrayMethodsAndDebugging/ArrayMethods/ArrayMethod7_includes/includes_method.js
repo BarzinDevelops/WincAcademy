@@ -1,36 +1,28 @@
 /* Definition and Usage
-The some() method checks if any array elements pass a test (provided as a callback function).
-The some() method executes the callback function once for each array element.
-The some() method returns true (and stops) if the function returns true for one of the array elements.
-The some() method returns false if the function returns false for all of the array elements.
-The some() method does not execute the function for empty array elements.
-
-The some() method does not change the original array.
+The includes() method returns true if a string contains a specified string.
+Otherwise it returns false.
+The includes() method is case sensitive.
 
 Syntax:
 -------
-array.some(function(value, index, arr), this)
+string.includes(searchvalue, start)
 
 Parameters:
 ----------
 Parameter	    Description
 --------        -----------
-function()	    Required. A function to run for each array element.
-currentValue	Required. The value of the current element.
-index	        Optional. The index of the current element.
-arr	            Optional. The array of the current element.
-this	        Optional. Default undefined. A value passed to the function to be used as its "this" value.
+searchvalue	    Required. The string to search for.
+start	          Optional. The position to start from. Default value is 0.
 
 Return Value:
 -------------
-A boolean	true if any of the array elements pass the test, otherwise false.
+A boolean	      true if the string contains the value, otherwise false.
 
 */
 
-const ages = [3, 10, 18, 20];
+let text = "Hello world, welcome to the universe.";
+text.includes("world", 12);
 
-console.log(`Is there anyone above 18 years old? => ${ages.some(checkAdult)}`);
-
-function checkAdult(age) {
-  return age > 18;
-}
+console.log(`text variable contains the word:'world' starting from 1th position? => ${text.includes('world', 1)}`);
+console.log(`text variable contains the word:'welcome' starting from 12th position? => ${text.includes('welcome', 12)}`);
+console.log(`text variable contains the word:'universe' starting from 29th position? => ${text.includes('universe', 29)}`);
