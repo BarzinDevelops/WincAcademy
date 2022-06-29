@@ -1,4 +1,4 @@
-/* Definition and Usage
+/* Definition and Usage   (NO MUTATION)
 The includes() method returns true if a string contains a specified string.
 Otherwise it returns false.
 The includes() method is case sensitive.

@@ -1,4 +1,4 @@
-/* Definition and Usage
+/* Definition and Usage   (NO MUTATION)
 The forEach() method calls a function for each element in an array.
 The forEach() method is not executed for empty elements.
 

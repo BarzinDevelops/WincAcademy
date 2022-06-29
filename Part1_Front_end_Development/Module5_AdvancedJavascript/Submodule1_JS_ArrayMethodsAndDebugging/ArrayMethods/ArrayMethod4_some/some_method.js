@@ -1,4 +1,4 @@
-/* Definition and Usage
+/* Definition and Usage   (NO MUTATION)
 The some() method checks if any array elements pass a test (provided as a callback function).
 The some() method executes the callback function once for each array element.
 The some() method returns true (and stops) if the function returns true for one of the array elements.
