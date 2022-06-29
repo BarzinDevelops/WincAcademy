@@ -21,7 +21,7 @@ ____________________________________________________________________________
 */
 
 /*
-A Write a JavaScript function that finds a certain item and returns 
+A) Write a JavaScript function that finds a certain item and returns 
 it based on a certain value. 
 Find the entire Spiderman object, based on the name "Spiderman". Use .find. 
  */
@@ -37,7 +37,14 @@ const superheroes = [
     {name: "Spiderman", alter_ego: "Peter Parker"}]
     
     // Here goes your function
-    
+     const findSpiderMan = heros =>{
+      return heros.find(hero=>{
+            // console.log(`item: ${item.name}`)
+            return hero.name === "Spiderman"
+        });
+        
+    }    
+
     console.log(findSpiderMan(superheroes))
     // Find Spiderman
     // result should be: {name: "Spiderman", alter_ego: "Peter Parker"}
