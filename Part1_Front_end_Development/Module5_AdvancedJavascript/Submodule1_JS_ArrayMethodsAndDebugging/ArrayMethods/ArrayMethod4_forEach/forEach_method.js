@@ -27,7 +27,7 @@ myFruit = 'mango';
 fruits.forEach((fruit)=>{
     if(fruit === myFruit){
         console.log(`YEAAAAAA your fruit is same as this fruit: ${fruit} 🍓🫐🍎🍍🍌🍐`);
-    }else console.log(`your fruit was: ${myFruit} but this fruit ${fruit} does NOT match!!`);
+    }else console.log(`your fruit was: ${myFruit} but this fruit -> '${fruit}', does NOT match!!`);
 })
 console.log(`All the items in fruits array: ${fruits}`)
 
