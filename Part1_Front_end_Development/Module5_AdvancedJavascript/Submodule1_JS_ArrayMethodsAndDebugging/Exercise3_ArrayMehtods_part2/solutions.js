@@ -65,6 +65,7 @@ const superheroes = [
 
   
   // D
+  console.log(`\n===========================\n\tPart D:\n===========================\n`)
   function isItalyInTheGreat7(array) {
     return array.includes("Italy");
   }
@@ -80,8 +81,12 @@ const superheroes = [
       "United States",
     ])
   );
+  console.log(`\n===========================\n\tEND of Part D:\n===========================\n`)
+  
+  
   
   // E
+  console.log(`\n===========================\n\tPart E:\n===========================\n`)
   const tenfold = function (array) {
     let newArray = [];
     array.forEach((number) => {
@@ -100,8 +105,10 @@ const superheroes = [
   
   // result should be [10, 40, 30, 60, 90, 70, 110]
   
+  console.log(`\n===========================\n\tEND of Part E:\n===========================\n`)
+
   // F
-  
+  console.log(`\n===========================\n\tPart F:\n===========================\n`)
   function isBelow100(array) {
     return array.every((number) => {
       return number < 100;
@@ -115,8 +122,12 @@ const superheroes = [
     "Onder de 100, Should be true:",
     isBelow100([1, 81, 4, 53, 3, 6, 79, 2, 43, 7, 28, 11, 77, 84, 98])
   );
-  
+  console.log(`\n===========================\n\tEND of Part F:\n===========================\n`)
+
+
+
   // G
+  console.log(`\n===========================\n\tPart G:\n===========================\n`)
   const numbers = [1, 81, 4, 53, 3, 6, 11, 77, 84, 98, 101, 206, 234];
   
   const bigSum = function (array) {
@@ -126,3 +137,5 @@ const superheroes = [
   };
   console.log("Big sum, add all numbers in array:", bigSum([3, 4]));
   console.log("Big sum, add all numbers in array:", bigSum(numbers));
+
+  console.log(`\n===========================\n\tEND of Part G:\n===========================\n`)

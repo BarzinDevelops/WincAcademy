@@ -20,6 +20,7 @@ We're going to practice with it more later today:
 ____________________________________________________________________________*/
 
 //  START OF ASSIGNMENTS:
+let result = null;  // will be used to store test results for each test
 
 /*PART A:
  Write a JavaScript function that finds a certain item and returns 
@@ -87,7 +88,7 @@ In an array of integers.
 Write a JavaScript function that checks if there is a number (integer) in the array 
 that is greater than 10. */
 
-/* Solution to PART C: */
+/* Solution to PART C: 
 console.log(`\n===========================\n\tPart C:\n===========================\n`)
 const containsNumberBiggerThan10 = arr =>{
     return arr.some(num => num > 10);
@@ -101,22 +102,29 @@ result = containsNumberBiggerThan10([1,2,1,2,1,2]);
 console.log(`is there a number higher than 10 in this array [1,2,1,2,1,2]: `, result);
 // result should be false
 
-
 console.log(`\n===========================\n\tEND of Part C:\n===========================\n`)
-
+*/
 
 
 /*PART D:
 In an array of strings. 
 Write a JavaScript function that checks for a certain string: "Italy" in the array */
 
-/* Solution to PART D: 
-console.log(`--------------------
-Part D:
-------------------`)
-isItalyInTheGreat7(['Canada', 'France','Germany','Italy','Japan','United Kingdom','United States'])
+/* Solution to PART D: */
+console.log(`\n===========================\n\tPart D:\n===========================\n`)
+
+const isItalyInTheGreat7 = arr =>{
+    return arr.includes('Italy', 3); //checks if italy is in the array starting at position 3
+}
+
+result = isItalyInTheGreat7(['Canada', 'France','Germany','Italy','Japan','United Kingdom','United States']);
+console.log(`is Italy in the array? : `, result);
+
+
 // result should be true
-*/
+
+console.log(`\n===========================\n\tEND of Part D:\n===========================\n`)
+
 
 
 /*PART E:
