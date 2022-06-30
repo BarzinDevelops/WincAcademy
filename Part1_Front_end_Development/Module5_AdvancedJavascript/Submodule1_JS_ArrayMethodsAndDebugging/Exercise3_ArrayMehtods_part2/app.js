@@ -58,29 +58,46 @@ const superheroes = [
 In an array of integers. Make sure you return an array with the integers doubled. 
 Use the .forEach method or, one level higher: the .map method. */
 
-/* Solution to PART B: */
-console.log(`--------------------
-Part B:
-------------------`)
+/* Solution to PART B:
+console.log(`=====================\n\tPart B:\n=====================\n`)
+// using forEach() to solve this:
+const doubleArrayValues1 = function (array) {
+    let newArr = [];
+    array.forEach(function (num){
+        newArr.push(num + num);
+    });
+    return newArr;
+}
+console.log(`Using .map method to double numbers in a array: `, doubleArrayValues1([1, 2, 3]));
 
-doubleArrayValues([1, 2, 3])
+// using shorthand .map() to solve this:
+const doubleArrayValues2 = arr => {
+    return arr.map(num => num * 2);
+}
+console.log(`\n------------------Shorthand notation using .map() -------------------\n
+Using .map method to double numbers in a array: `, doubleArrayValues2([1, 2, 3]));
 // result should be [2, 4, 6]
+let test =  doubleArrayValues2([1, 2, 3]);
+console.log("Type of returned map method: ", typeof test, test);
 
-
+console.log(`\n=================================================================\n`)
+ */
 /*PART C:
 In an array of integers. 
 Write a JavaScript function that checks if there is a number (integer) in the array 
 that is greater than 10. */
 
-/* Solution to PART C: 
-console.log(`--------------------
-Part C:
-------------------`)
+/* Solution to PART C: */
+console.log(`=====================\n\tPart C:\n=====================\n`)
+
 containsNumberBiggerThan10([1, 4, 3, 6, 9, 7, 11])
 // result should be true
-containsNumberBiggerThan10([1,2,1,2,1,2]})
+containsNumberBiggerThan10([1,2,1,2,1,2])
 // result should be false
-*/
+
+
+console.log(`\n=================================================================\n`)
+
 
 
 /*PART D:

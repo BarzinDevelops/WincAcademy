@@ -35,9 +35,9 @@ const superheroes = [
   
   console.log("Double 1,2,3:", doubleArrayValues([1, 2, 3]));
   // expected output: [2, 4, 6])
-  console.log(doubleArrayValuesArrow([4, 1, 1, 1, 4]));
+  console.log('doubleArrayValuesArrow =>',doubleArrayValuesArrow([4, 1, 1, 1, 4]));
   // expected output: [8, 2, 2, 2, 8]);
-  console.log(doubleArrayValuesShortHand([4, 1, 1, 1, 4]));
+  console.log('doubleArrayValuesShortHand =>',doubleArrayValuesShortHand([4, 1, 1, 1, 4]));
   // expected output: [8, 2, 2, 2, 8]);
   
   // C Is Bigger than 10
