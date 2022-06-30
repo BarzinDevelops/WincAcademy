@@ -40,7 +40,13 @@ const superheroes = [
   console.log('doubleArrayValuesShortHand =>',doubleArrayValuesShortHand([4, 1, 1, 1, 4]));
   // expected output: [8, 2, 2, 2, 8]);
   
+
+
+
+
   // C Is Bigger than 10
+  console.log(`\n===========================\n\tPart C:\n===========================\n`)
+  
   const containsNumberBiggerThan10 = function (array) {
     return array.some((number) => {
       return number > 10;
@@ -52,6 +58,11 @@ const superheroes = [
     "Je suis bigger than 10:",
     containsNumberBiggerThan10([1, 4, 3, 6, 9, 7, 11])
   );
+  console.log(`\n===========================\n\tEND of Part C:\n===========================\n`)
+
+
+
+
   
   // D
   function isItalyInTheGreat7(array) {

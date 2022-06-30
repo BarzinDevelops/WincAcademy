@@ -88,15 +88,21 @@ Write a JavaScript function that checks if there is a number (integer) in the ar
 that is greater than 10. */
 
 /* Solution to PART C: */
-console.log(`=====================\n\tPart C:\n=====================\n`)
+console.log(`\n===========================\n\tPart C:\n===========================\n`)
+const containsNumberBiggerThan10 = arr =>{
+    return arr.some(num => num > 10);
+}
+let result = null;
+result = containsNumberBiggerThan10([1, 4, 3, 6, 9, 7, 11]);
+console.log(`is there a number higher than 10 in this array [1, 4, 3, 6, 9, 7, 11]: `, result);
 
-containsNumberBiggerThan10([1, 4, 3, 6, 9, 7, 11])
 // result should be true
-containsNumberBiggerThan10([1,2,1,2,1,2])
+result = containsNumberBiggerThan10([1,2,1,2,1,2]);
+console.log(`is there a number higher than 10 in this array [1,2,1,2,1,2]: `, result);
 // result should be false
 
 
-console.log(`\n=================================================================\n`)
+console.log(`\n===========================\n\tEND of Part C:\n===========================\n`)
 
 
 
