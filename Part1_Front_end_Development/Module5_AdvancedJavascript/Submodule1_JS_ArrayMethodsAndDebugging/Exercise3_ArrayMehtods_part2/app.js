@@ -132,13 +132,10 @@ console.log(`\n===========================\n\tPart E:\n=========================
 const tenfold = arr => {
     return arr.map(nr => nr * 10);
 }
-
 result = tenfold([1, 4, 3, 6, 9, 7, 11]);
 console.log(`is every integer tenfold? : `, result);
 
-
 // result should be [10, 40, 30, 60, 90, 70, 110]
-
 console.log(`\n===========================\n\tEND of Part E:\n===========================\n`)
 */
 
@@ -147,14 +144,18 @@ In an array of integers.
 Write a JavaScript function that checks if all values ​​in the array are below 100, 
 and return True or False. */
 
-/* Solution to PART F: */
+/* Solution to PART F: 
 console.log(`\n===========================\n\tPart F:\n===========================\n`)
+const isBelow100 = arr => arr.every(nr => nr < 100);
 
-console.log(isBelow100([1, 81, 4, 53, 3, 6, 79, 2, 43, 7, 28, 101, 11, 77, 84, 98 ]))
+result = isBelow100([1, 81, 4, 53, 3, 6, 79, 2, 43, 7, 28, 101, 11, 77, 84, 98 ]);
+console.log(`Are all values in the array below 100? : `, result);
+result = isBelow100([1, 81, 4, 53, 3, 6, 79, 2, 43, 7, 28, 11, 77, 84, 98]);
+console.log(`Are all values in the array below 100? : `, result);
 // result should be: false
 
 console.log(`\n===========================\n\tEND of Part F:\n===========================\n`)
-
+*/
 
 /*PART G:
 Bonus! The last exercise is a bit more challenging. 
@@ -163,12 +164,22 @@ In an array of integers.
 Write a JavaScript function that adds all the values in the array and returns the sum total. 
 Use the .reduce method. And really, use Google. */
 
-/* Solution to PART G:
+/* Solution to PART G:*/
 console.log(`\n===========================\n\tPart G:\n===========================\n`)
 
-console.log(bigSum([1, 81, 4, 53, 3, 6, 79, 2, 43, 7, 28, 11, 77, 84, 98, 101, 206, 234]))
+let test;
+
+const bigSum = arr => {
+    return arr.reduce((tot, currVal)=>{ //after reduce is done, value save to "tot" gets returned
+                // console.log(`tot: ${tot}`);
+                // console.log(`currVal: ${currVal}`);
+                return tot + currVal;  // this returns result of this addition to 'tot' 
+            })
+}
+
+result = bigSum([1, 81, 4, 53, 3, 6, 79, 2, 43, 7, 28, 11, 77, 84, 98, 101, 206, 234]);
+console.log(`Sum total of array is: `, result);
 // result should be 1118 
 
 
 console.log(`\n===========================\n\tEND of Part G:\n===========================\n`)
-*/
