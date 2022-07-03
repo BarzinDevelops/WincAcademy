@@ -113,12 +113,20 @@ const superheroes = [
 // Take the superheroes data and turn it into the following...
 
 // 1. Make an array of all superhero names.
+/* 
 console.log(`\n================================================================================\n  Solution assignment1:\n================================================================================\n`)
+console.log(superheroes.map(hero => hero.name));
 console.log(`\n================================================================================\n  END ofSolution assignment1\n================================================================================\n`)
+*/
+
 // 2. Make an array of all "light" superheroes (< 190 pounds).
+/* 
 console.log(`\n================================================================================\n  Solution assignment2:\n================================================================================\n`)
+console.log(superheroes.filter(hero => hero.weight < 190));
 console.log(`\n================================================================================\n  END ofSolution assignment2\n================================================================================\n`)
-/*  3.Create an array with the names of the superheroes who weigh 200 pounds.
+*/
+
+/*  3.Create an array with the names of the superheroes who weight 200 pounds.
 
     Extra: chaining ⛓️
     The great thing about array methods is, you can chain them. 
@@ -135,27 +143,50 @@ console.log(`\n=================================================================
       }
     ----------------------
     */
+/*  
 console.log(`\n================================================================================\n  Solution assignment3:\n================================================================================\n`)
+
+const weightAbove200 = superheroes
+.filter(hero => Number(hero.weight) === 200)
+.map(hero => `${hero.name} => ${hero.weight}`);
+
+console.log(weightAbove200);
+
 console.log(`\n================================================================================\n  END ofSolution assignment3\n================================================================================\n`)
+*/
+
 // 4. Make an array with all the comics where the superheroes had their "first appearances".
+/* 
 console.log(`\n================================================================================\n  Solution assignment4:\n================================================================================\n`)
 console.log(`\n================================================================================\n  END ofSolution assignment4\n================================================================================\n`)
+*/
+
 /*  5.Create an array of all DC Comics superheroes. Did that work? 
     Then repeat the above function and also create an array with all Marvel Comics superheroes. */
+/* 
 console.log(`\n================================================================================\n  Solution assignment5:\n================================================================================\n`)
 console.log(`\n================================================================================\n  END ofSolution assignment5\n================================================================================\n`)
+*/
+
 /*  6.Add up the weight of all DC Comics superheroes. 
     Pay attention! Conditional to the rescue! The weight you see here, what data type is that? 
     A number? Or a string? Oh yeah, and do all superheroes have weight? */
+/* 
 console.log(`\n================================================================================\n  Solution assignment61:\n================================================================================\n`)
 console.log(`\n================================================================================\n  END ofSolution assignment6\n================================================================================\n`)
+*/
+
 /*  7.Add up the weight of all Marvel Comics superheroes. 
     Pay attention! Conditional to the rescue! The weight you see here, what data type is that? 
     A number? Or a string? Oh yeah, and do all superheroes have weight? */
+/* 
 console.log(`\n================================================================================\n  Solution assignment7:\n================================================================================\n`)
 console.log(`\n================================================================================\n  END ofSolution assignment7\n================================================================================\n`)
+*/
+
 // 8. Bonus: find the toughest superhero! Use the array of superheroes.
+/* 
 console.log(`\n================================================================================\n  Solution assignment8:\n================================================================================\n`)
 console.log(`\n================================================================================\n  END ofSolution assignment8\n================================================================================\n`)
-
+*/
 
