@@ -156,10 +156,13 @@ console.log(`\n=================================================================
 */
 
 // 4. Make an array with all the comics where the superheroes had their "first appearances".
-/* 
+ 
 console.log(`\n================================================================================\n  Solution assignment4:\n================================================================================\n`)
+// console.log(superheroes);
+const firstAppearance = superheroes.map(hero => hero.first_appearance);
+console.log(firstAppearance);
 console.log(`\n================================================================================\n  END ofSolution assignment4\n================================================================================\n`)
-*/
+/*  */
 
 /*  5.Create an array of all DC Comics superheroes. Did that work? 
     Then repeat the above function and also create an array with all Marvel Comics superheroes. */

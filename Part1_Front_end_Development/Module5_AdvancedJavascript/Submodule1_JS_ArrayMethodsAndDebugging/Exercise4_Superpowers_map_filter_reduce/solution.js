@@ -119,7 +119,7 @@ const heroNames = heroes.map(hero => {
   });
   console.log(lightHeroes.length);
   console.log(lightHeroes);
-  */
+ 
   // 3 Maak een array met de namen van de superhelden die 200 pounds wegen
   //Stap 1:
   const heavySuperHeroes = heroes.filter(hero => {
@@ -142,12 +142,12 @@ const heroNames = heroes.map(hero => {
     .filter(hero => hero.weight == 200)
     .map(hero => hero.name);
   console.log(heavySuperHeroNamesChained);
-  /*
+  */
   // 4 Maak een array met alle comics waar de superhelden hun "first apprearances" hebben gehad
   // Deze is gemaakt met een implicit return statement (oftwel een one-liner)
   const firstAppearance = heroes.map(hero => hero.first_appearance);
   console.log("firest appearance:", firstAppearance);
-  
+   /*
   // 5 Maak een array met alle superhelden van DC Comics en een array met alle superhelden van Marvel Comics
   // Deze is gemaakt met een implicit return statement (oftwel een one-liner)
   const DCComics = heroes.filter(hero => hero.publisher === "DC Comics");
