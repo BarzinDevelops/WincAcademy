@@ -142,21 +142,24 @@ const heroNames = heroes.map(hero => {
     .filter(hero => hero.weight == 200)
     .map(hero => hero.name);
   console.log(heavySuperHeroNamesChained);
-  */
+ 
   // 4 Maak een array met alle comics waar de superhelden hun "first apprearances" hebben gehad
   // Deze is gemaakt met een implicit return statement (oftwel een one-liner)
   const firstAppearance = heroes.map(hero => hero.first_appearance);
   console.log("firest appearance:", firstAppearance);
-   /*
+   
   // 5 Maak een array met alle superhelden van DC Comics en een array met alle superhelden van Marvel Comics
   // Deze is gemaakt met een implicit return statement (oftwel een one-liner)
   const DCComics = heroes.filter(hero => hero.publisher === "DC Comics");
   const marvelComics = heroes.filter(hero => hero.publisher === "Marvel Comics");
-  console.log("DC Comics:", DCComics, "Marvel Comics:", marvelComics);
+  console.log("assignment 5: DC Comics:", DCComics, "\nMarvel Comics:", marvelComics);
+  
+  
   
   // 6 Tel het gewicht van alle superhelden van DC Comics bij elkaar op
   // Deze is gemaakt voor de pro's met een implicit return statement (oftwel een one-liner)
   // EN een een in chain:
+  const DCComics = heroes.filter(hero => hero.publisher === "DC Comics");
   const addedWeightDC = DCComics.map(hero => {
     return hero.weight !== "unknown" ? parseInt(hero.weight, 10) : 0;
   }).reduce((weight1, weight2) => weight1 + weight2);
@@ -178,9 +181,12 @@ const heroNames = heroes.map(hero => {
   const addedWeightOfHeroes = heroWeights.reduce((weight1, weight2) => {
     return weight1 + weight2;
   });
-  console.log("TotalWeight of DC Comics:", addedWeightDC, addedWeightOfHeroes);
-  
+  console.log("TotalWeight of DC Comics:", addedWeightOfHeroes);
+ */
+
+   
   // 7 Doe hetzelfde met alle superhelden van Marvel Comics
+  const marvelComics = heroes.filter(hero => hero.publisher === "Marvel Comics");
   const addedWeightMarvel = marvelComics
     .map(hero => {
       return hero.weight !== "unknown" ? parseInt(hero.weight, 10) : 0;
@@ -188,7 +194,10 @@ const heroNames = heroes.map(hero => {
     .reduce((weight1, weight2) => weight1 + weight2, 0);
   // die 0 op het laats, daarmee geef je aan wat de initiele waarde is van de reduce functie.
   console.log("TotalWeight of Marvel:", addedWeightMarvel);
-  
+
+/*
+
+    
   // 8 Bonus: vind de zwaarste superheld!
   // First cast all values to a number or 0 if unknown
   const allHeroes = heroes.map(hero => {

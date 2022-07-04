@@ -166,6 +166,7 @@ console.log(`\n=================================================================
 
 /*  5.Create an array of all DC Comics superheroes. Did that work? 
     Then repeat the above function and also create an array with all Marvel Comics superheroes. */
+/*      
 console.log(`\n================================================================================\n  Solution assignment5:\n================================================================================\n`)
 
 const comics = (arr, publisher)=> { 
@@ -177,27 +178,49 @@ console.log(`DC Comics: `,comics(superheroes, 'DC Comics'));
 console.log(`Marvel Comics: `,comics(superheroes, 'Marvel Comics'));
 
 console.log(`\n================================================================================\n  END ofSolution assignment5\n================================================================================\n`)
-/*   */
+ */
 
 /*  6.Add up the weight of all DC Comics superheroes. 
     Pay attention! Conditional to the rescue! The weight you see here, what data type is that? 
     A number? Or a string? Oh yeah, and do all superheroes have weight? */
 /* 
-console.log(`\n================================================================================\n  Solution assignment61:\n================================================================================\n`)
-console.log(`\n================================================================================\n  END ofSolution assignment6\n================================================================================\n`)
+console.log(`\n================================================================================\n  Solution assignment 6:\n================================================================================\n`)
+
+const dcComicHeroWeight = superheroes
+.filter(hero => hero.publisher === 'DC Comics')
+.reduce((totWeight, hero) => Number(hero.weight) ? totWeight + Number(hero.weight): totWeight, 0);
+
+console.log(`Total Weight of DC Comics superheroes: `, dcComicHeroWeight);
+
+console.log(`\n================================================================================\n  END ofSolution assignment 6\n================================================================================\n`)
 */
+
+
 
 /*  7.Add up the weight of all Marvel Comics superheroes. 
     Pay attention! Conditional to the rescue! The weight you see here, what data type is that? 
     A number? Or a string? Oh yeah, and do all superheroes have weight? */
-/* 
-console.log(`\n================================================================================\n  Solution assignment7:\n================================================================================\n`)
-console.log(`\n================================================================================\n  END ofSolution assignment7\n================================================================================\n`)
-*/
+ 
+console.log(`\n================================================================================\n  Solution assignment 7:\n================================================================================\n`)
+const marvelComics = superheroes.filter(hero=>hero.publisher === "Marvel Comics");
+
+const addWeightMarvel = marvelComics
+.map(hero => Number(hero.weight) ?  Number(hero.weight) : 0)
+.reduce((totWeight, weight)=> totWeight + weight);
+
+console.log(`Total Weight of Marvel Comics superheroes: `, addWeightMarvel);
+
+
+console.log(`\n================================================================================\n  END ofSolution assignment 7\n================================================================================\n`)
+/*  */
+
+
 
 // 8. Bonus: find the toughest superhero! Use the array of superheroes.
 /* 
 console.log(`\n================================================================================\n  Solution assignment8:\n================================================================================\n`)
+
+
 console.log(`\n================================================================================\n  END ofSolution assignment8\n================================================================================\n`)
 */
 
