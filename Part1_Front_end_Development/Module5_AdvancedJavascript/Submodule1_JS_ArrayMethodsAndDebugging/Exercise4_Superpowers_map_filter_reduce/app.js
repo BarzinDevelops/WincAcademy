@@ -156,20 +156,28 @@ console.log(`\n=================================================================
 */
 
 // 4. Make an array with all the comics where the superheroes had their "first appearances".
- 
+/* 
 console.log(`\n================================================================================\n  Solution assignment4:\n================================================================================\n`)
 // console.log(superheroes);
 const firstAppearance = superheroes.map(hero => hero.first_appearance);
 console.log(firstAppearance);
 console.log(`\n================================================================================\n  END ofSolution assignment4\n================================================================================\n`)
-/*  */
+  */
 
 /*  5.Create an array of all DC Comics superheroes. Did that work? 
     Then repeat the above function and also create an array with all Marvel Comics superheroes. */
-/* 
 console.log(`\n================================================================================\n  Solution assignment5:\n================================================================================\n`)
+
+const comics = (arr, publisher)=> { 
+    return arr.filter(hero => hero.publisher === publisher)
+    .map(hero => {return hero.name})
+}
+
+console.log(`DC Comics: `,comics(superheroes, 'DC Comics'));
+console.log(`Marvel Comics: `,comics(superheroes, 'Marvel Comics'));
+
 console.log(`\n================================================================================\n  END ofSolution assignment5\n================================================================================\n`)
-*/
+/*   */
 
 /*  6.Add up the weight of all DC Comics superheroes. 
     Pay attention! Conditional to the rescue! The weight you see here, what data type is that? 
