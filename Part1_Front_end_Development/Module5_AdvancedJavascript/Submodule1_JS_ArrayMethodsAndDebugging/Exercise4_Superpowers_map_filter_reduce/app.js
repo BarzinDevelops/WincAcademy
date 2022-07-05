@@ -200,7 +200,7 @@ console.log(`\n=================================================================
 /*  7.Add up the weight of all Marvel Comics superheroes. 
     Pay attention! Conditional to the rescue! The weight you see here, what data type is that? 
     A number? Or a string? Oh yeah, and do all superheroes have weight? */
- 
+ /*
 console.log(`\n================================================================================\n  Solution assignment 7:\n================================================================================\n`)
 const marvelComics = superheroes.filter(hero=>hero.publisher === "Marvel Comics");
 
@@ -212,15 +212,23 @@ console.log(`Total Weight of Marvel Comics superheroes: `, addWeightMarvel);
 
 
 console.log(`\n================================================================================\n  END ofSolution assignment 7\n================================================================================\n`)
-/*  */
+  */
 
 
 
 // 8. Bonus: find the toughest superhero! Use the array of superheroes.
-/* 
+ /*
 console.log(`\n================================================================================\n  Solution assignment8:\n================================================================================\n`)
+
+const toughestHero = superheroes
+.map(hero =>  {
+    hero.weight = Number(hero.weight)
+    return Number(hero.weight) ? hero : {}
+}).reduce((biggest, hero) => hero.weight > biggest.weight ? biggest = hero : biggest = biggest);
+console.log('Toughest superhero is:', toughestHero);
+
 
 
 console.log(`\n================================================================================\n  END ofSolution assignment8\n================================================================================\n`)
+   
 */
-
