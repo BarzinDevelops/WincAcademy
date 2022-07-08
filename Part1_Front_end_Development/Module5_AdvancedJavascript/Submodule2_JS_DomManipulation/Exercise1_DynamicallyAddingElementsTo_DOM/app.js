@@ -21,76 +21,53 @@ Todo list for this exercise:
 const bigFiveBtns = document.querySelectorAll('.big-five-button');
 const spottedAnimalListUl = document.getElementById('spotted-animals-list');
 const currentItemDuck = document.querySelector(".spotted-animals-list-item");
-let resultCheck = null;
+// Part 2- remove the first btn 
+const removeFirstBtn = document.getElementById("remove-first-item-button");
+// Part 3 - remove all
+const removeAllBtn = document.getElementById('remove-all-button');
 //---------------My Functions-----------------------------
 let checkBeforeAdd = (arr) => {
-        // console.log([...new Set(arr)])
-        // return [...arr]
-   /* return arr.filter((item,index,selfArr) =>{
-
-    console.log("item => ", item);
-    console.log("typeof item => ", typeof item);
-    
-    // console.log("index => ", index);
-    // console.log("selfArr => ", selfArr);
-    console.log(" selfArr.indexOf(item) => ",  selfArr.indexOf(item));
-    console.log("index => ", index);
-    console.log("selfArr.indexOf(item) !== index => ", selfArr.indexOf(item) !== index);
-    console.log("-------------------------------------------\n\n");
-       return selfArr.indexOf(item) === index;
-    }); */
-}
-
-let testCheck = (arr) => {
-    console.log("this is the check: ",[...new Set(arr)])
     return [...new Set(arr)]
 }
-
-
-
-//-----------------------------------------------------------
-
+//---------------END of My Functions-----------------------------
 let listArr = [];
 let listItemArr = [];
-let testArr = [1,2,2,4,3,3,4,5];
-// console.log("typeof testArr => ", Array.isArray(testArr) );
-const btnPushedAction = (ev) =>{
-// ----------------testen-----------------------
-listArr.push(currentItemDuck.innerText);
-listArr.push(ev.target.innerText);
-// console.log("testCheck(listArr) => ", testCheck(listArr));
-listItemArr = testCheck(listArr);
-spottedAnimalListUl.replaceChildren();
-listItemArr.forEach(item => {
-    let listItem = document.createElement('li');
-    listItem.innerText = item;
-    spottedAnimalListUl.appendChild(listItem);
-    
-})
-
-// ---------------------------------------
-/*     let listItem = document.createElement('li');
-    listItem.innerText = ev.target.innerText;
-    listArr.push(listItem);
-    // testArr.push(5);
-    console.log("listArr", listArr);
-    // console.log("testArr", testArr);
- */
-
-    // console.log("checkBeforeAdd(listArr) => ", checkBeforeAdd(listArr));
-    // console.log("checkBeforeAdd(listArr) => ", checkBeforeAdd(testArr));
-    
-    
 
 
-    // spottedAnimalListUl.appendChild(listItem);
-    console.log("-------------------------------------------\n\n");
+const renderList = (listArr)=>{
+    listItemArr = checkBeforeAdd(listArr);
+    spottedAnimalListUl.replaceChildren();
+    listItemArr.forEach(item => {
+        let listItem = document.createElement('li');
+        listItem.innerText = item;
+        spottedAnimalListUl.appendChild(listItem);    
+    })
+}
 
+const animalsBtnPushedAction = (ev) =>{
+    listArr.push(ev.target.innerText);
+    renderList(listArr);
 }
 
 bigFiveBtns.forEach(btn => {
-    btn.addEventListener('click', btnPushedAction);
+    btn.addEventListener('click', animalsBtnPushedAction);
 })
+
+removeFirstBtn.addEventListener('click', () => {
+    if(spottedAnimalListUl.hasChildNodes()){ 
+        let firstItemToRemove = spottedAnimalListUl.firstChild.innerText;
+        listArr.splice(listArr.indexOf(firstItemToRemove),1);   
+    }
+    renderList(listArr)
+});
+
+
+
+// Part 3 - remove all btn functionality:
+
+removeAllBtn.addEventListener('click', () =>  spottedAnimalListUl.replaceChildren());
+
+
 
 
 
