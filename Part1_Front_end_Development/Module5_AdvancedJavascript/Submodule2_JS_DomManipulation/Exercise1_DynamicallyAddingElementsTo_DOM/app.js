@@ -25,68 +25,60 @@ const currentItemDuck = document.querySelector(".spotted-animals-list-item");
 const removeFirstBtn = document.getElementById("remove-first-item-button");
 // Part 3 - remove all
 const removeAllBtn = document.getElementById('remove-all-button');
-//---------------My Functions-----------------------------
+
+listArr = []
+if(spottedAnimalListUl.hasChildNodes())
+    listArr.push(spottedAnimalListUl.children[0].innerText)
+
 let checkBeforeAdd = (arr) => {
     listArr = [...new Set(arr)]
+    console.log("listArr in checkBeforeAdd() => ", listArr)
     return listArr
 }
-//---------------END of My Functions-----------------------------
-let listArr = [];
-
 const renderList = (arr)=>{
-    spottedAnimalListUl.replaceChildren();
     arr.forEach(item => {
+        if(spottedAnimalListUl.hasChildNodes()){ 
+           let currentItems = spottedAnimalListUl.children
+           for(let i=0; i<currentItems.length; i++){
+                if(currentItems.item(i).innerText !== item){
+                    listArr.push(item);
+                    checkBeforeAdd(listArr)
+               }
+           }
+        }
+    });
+    addToSpotted()   
+}
+const addToSpotted = ()=>{
+    spottedAnimalListUl.innerHTML = ""
+    listArr.forEach(item =>{
         let listItem = document.createElement('li');
         listItem.innerText = item;
-        spottedAnimalListUl.appendChild(listItem);    
-    })
+        spottedAnimalListUl.appendChild(listItem);
+    });
 }
-
-const animalsBtnPushedAction = (ev) =>{
-    if(spottedAnimalListUl.hasChildNodes()){ 
-        let currentItems = spottedAnimalListUl.children
-       for(let i=0; i<currentItems.length; i++){
-            listArr.push(currentItems.item(i).innerText);
-       } 
-       renderList( checkBeforeAdd(listArr));
-       console.log("(regel 51)listArr: ",listArr);
-    }
-    if(listArr.length <= bigFiveBtns.length){
-        console.log("bigFiveBtns.length", bigFiveBtns.length)
-        console.log("listArr.length", listArr.length)
-        // renderList( checkBeforeAdd(listArr));
-        listArr.push(ev.target.innerText);
-    }
-
-    // renderList( checkBeforeAdd(listArr));
-}
-
-bigFiveBtns.forEach(btn => {
-    btn.addEventListener('click', animalsBtnPushedAction);
-})
-
-
 
 // Part 2 - remove first item btn functionality:
 removeFirstBtn.addEventListener('click', () => {
-    if(spottedAnimalListUl.hasChildNodes()){ 
-        let firstItemToRemove = spottedAnimalListUl.firstChild.innerText;
-        listArr.splice(listArr.indexOf(firstItemToRemove),1);   
-        
-    }
-    renderList( checkBeforeAdd(listArr));
+    listArr.shift();
+    renderList(listArr);
 
 });
 
-// Part 3 - remove all btn functionality:
 
+// Part 3 - Removing Multiple Elements from the DOM
 removeAllBtn.addEventListener('click', () => {
-    // listItemArr = []; 
-    listArr = [];
-    spottedAnimalListUl.replaceChildren();
-    // renderList([])
+    listArr=[]
+    renderList(listArr);
+
 });
 
+bigFiveBtns.forEach(btn => {
+    btn.addEventListener('click', (ev)=>{
+        listArr.push(ev.target.innerText);
+        renderList(checkBeforeAdd(listArr));
+    });
+})
 
 
 
