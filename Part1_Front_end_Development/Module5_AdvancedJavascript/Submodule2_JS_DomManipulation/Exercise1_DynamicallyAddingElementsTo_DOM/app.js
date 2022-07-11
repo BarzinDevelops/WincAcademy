@@ -27,17 +27,15 @@ const removeFirstBtn = document.getElementById("remove-first-item-button");
 const removeAllBtn = document.getElementById('remove-all-button');
 //---------------My Functions-----------------------------
 let checkBeforeAdd = (arr) => {
-    return [...new Set(arr)]
+    listArr = [...new Set(arr)]
+    return listArr
 }
 //---------------END of My Functions-----------------------------
 let listArr = [];
-let listItemArr = [];
 
-
-const renderList = (listArr)=>{
-    listItemArr = checkBeforeAdd(listArr);
+const renderList = (arr)=>{
     spottedAnimalListUl.replaceChildren();
-    listItemArr.forEach(item => {
+    arr.forEach(item => {
         let listItem = document.createElement('li');
         listItem.innerText = item;
         spottedAnimalListUl.appendChild(listItem);    
@@ -45,27 +43,46 @@ const renderList = (listArr)=>{
 }
 
 const animalsBtnPushedAction = (ev) =>{
-    listArr.push(ev.target.innerText);
-    renderList(listArr);
+    if(spottedAnimalListUl.hasChildNodes()){ 
+        let currentItems = spottedAnimalListUl.children
+       for(let i=0; i<currentItems.length; i++){
+            listArr.push(currentItems.item(i).innerText);
+       } 
+       renderList( checkBeforeAdd(listArr));
+       console.log("(regel 51)listArr: ",listArr);
+    }
+    if(listArr.length <= bigFiveBtns.length){
+        console.log("bigFiveBtns.length", bigFiveBtns.length)
+        console.log("listArr.length", listArr.length)
+        renderList( checkBeforeAdd(listArr));
+        listArr.push(ev.target.innerText);
+    }
 }
 
 bigFiveBtns.forEach(btn => {
     btn.addEventListener('click', animalsBtnPushedAction);
 })
 
+
+
+// Part 2 - remove first item btn functionality:
 removeFirstBtn.addEventListener('click', () => {
     if(spottedAnimalListUl.hasChildNodes()){ 
         let firstItemToRemove = spottedAnimalListUl.firstChild.innerText;
         listArr.splice(listArr.indexOf(firstItemToRemove),1);   
     }
     renderList(listArr)
+
 });
-
-
 
 // Part 3 - remove all btn functionality:
 
-removeAllBtn.addEventListener('click', () =>  spottedAnimalListUl.replaceChildren());
+removeAllBtn.addEventListener('click', () => {
+    listItemArr = []; 
+    listArr = [];
+    spottedAnimalListUl.replaceChildren();
+    // renderList([])
+});
 
 
 
