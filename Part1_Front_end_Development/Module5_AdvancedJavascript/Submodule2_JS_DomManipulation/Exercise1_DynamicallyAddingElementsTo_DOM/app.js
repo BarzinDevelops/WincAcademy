@@ -54,9 +54,11 @@ const animalsBtnPushedAction = (ev) =>{
     if(listArr.length <= bigFiveBtns.length){
         console.log("bigFiveBtns.length", bigFiveBtns.length)
         console.log("listArr.length", listArr.length)
-        renderList( checkBeforeAdd(listArr));
+        // renderList( checkBeforeAdd(listArr));
         listArr.push(ev.target.innerText);
     }
+
+    // renderList( checkBeforeAdd(listArr));
 }
 
 bigFiveBtns.forEach(btn => {
@@ -70,15 +72,16 @@ removeFirstBtn.addEventListener('click', () => {
     if(spottedAnimalListUl.hasChildNodes()){ 
         let firstItemToRemove = spottedAnimalListUl.firstChild.innerText;
         listArr.splice(listArr.indexOf(firstItemToRemove),1);   
+        
     }
-    renderList(listArr)
+    renderList( checkBeforeAdd(listArr));
 
 });
 
 // Part 3 - remove all btn functionality:
 
 removeAllBtn.addEventListener('click', () => {
-    listItemArr = []; 
+    // listItemArr = []; 
     listArr = [];
     spottedAnimalListUl.replaceChildren();
     // renderList([])
