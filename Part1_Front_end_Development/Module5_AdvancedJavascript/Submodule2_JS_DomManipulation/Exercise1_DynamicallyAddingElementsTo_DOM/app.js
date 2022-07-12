@@ -21,34 +21,35 @@ Todo list for this exercise:
 const bigFiveBtns = document.querySelectorAll('.big-five-button');
 const spottedAnimalListUl = document.getElementById('spotted-animals-list');
 const currentItemDuck = document.querySelector(".spotted-animals-list-item");
-// Part 2- remove the first btn 
 const removeFirstBtn = document.getElementById("remove-first-item-button");
-// Part 3 - remove all
 const removeAllBtn = document.getElementById('remove-all-button');
-
+let currentItems = spottedAnimalListUl.children
 listArr = []
-if(spottedAnimalListUl.hasChildNodes())
-    listArr.push(spottedAnimalListUl.children[0].innerText)
 
-let checkBeforeAdd = (arr) => {
-    listArr = [...new Set(arr)]
-    console.log("listArr in checkBeforeAdd() => ", listArr)
-    return listArr
+// getting all existing items of spotted list (like Duck in this case)
+if(spottedAnimalListUl.hasChildNodes()){
+    for(let i=0; i<currentItems.length; i++){
+        listArr.push(currentItems[i].innerText)
+    }
 }
+
+// checks for doubles, saves new unique values to listArr and returns listArr
+const checkBeforeAdd = (arr) => listArr = [...new Set(arr)] 
+
+// for updating spotted list every time animal buttons event occurs or when one or all items get removed.
 const renderList = (arr)=>{
     arr.forEach(item => {
-        if(spottedAnimalListUl.hasChildNodes()){ 
-           let currentItems = spottedAnimalListUl.children
            for(let i=0; i<currentItems.length; i++){
                 if(currentItems.item(i).innerText !== item){
                     listArr.push(item);
                     checkBeforeAdd(listArr)
                }
            }
-        }
     });
     addToSpotted()   
 }
+
+// Cleans current spotteslist items. Adds all items in listArr (which is already updated)
 const addToSpotted = ()=>{
     spottedAnimalListUl.innerHTML = ""
     listArr.forEach(item =>{
@@ -62,17 +63,15 @@ const addToSpotted = ()=>{
 removeFirstBtn.addEventListener('click', () => {
     listArr.shift();
     renderList(listArr);
-
 });
-
 
 // Part 3 - Removing Multiple Elements from the DOM
 removeAllBtn.addEventListener('click', () => {
     listArr=[]
     renderList(listArr);
-
 });
 
+// attaches eventlistener to each animal button that gets triggered by 'click'-event type
 bigFiveBtns.forEach(btn => {
     btn.addEventListener('click', (ev)=>{
         listArr.push(ev.target.innerText);
@@ -129,4 +128,3 @@ console.log(`\n=================================================================
 console.log(`\n================================================================================\n  END of Solution Part 3\n================================================================================\n`)
 
 */
-
