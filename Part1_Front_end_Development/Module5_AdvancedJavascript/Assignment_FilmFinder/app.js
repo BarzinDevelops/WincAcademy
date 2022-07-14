@@ -1,7 +1,6 @@
 
 const navContainer = document.getElementById('nav-container');
 const mvRadioBtnFilters = navContainer.querySelectorAll('[name="mv-filter"]');
-
 const mainContainer = document.querySelector('.main-container');
 const moviesListUl = document.getElementById('mv-list');
 
@@ -11,53 +10,62 @@ mvRadioBtnFilters.forEach(item => {
     })
 });
 
-const addMoviesToDom = (moviesData) => {
+const addMoviesToDom = (moviesData, linkData) => {
     moviesListUl.innerHTML = ""
-    
-    moviesData
-    .map(movie => movie)
-    .forEach(movie =>  {
+    moviesData.map(movie => movie)
+    .forEach((movie, index) =>  {
         let newItem = document.createElement('li');
         newItem.id = 'mv-list-item'
+        moviesListUl.appendChild(newItem);
+        newLinkTag = document.createElement('a');
+        newLinkTag.href = linkData[index];
+        newItem.appendChild(newLinkTag);
         const img = document.createElement('img');
         img.src = movie.poster
-        newItem.appendChild(img)
-        moviesListUl.appendChild(newItem);
+        newLinkTag.appendChild(img)       
     })
-
 }
-// addMoviesToDom(movies);
-
 
 const handleOnChangeEvent = event => {
-    // console.log("handleOnChangeEvent() event.target", event.target)
-    // console.log("handleOnChangeEvent() event.target", event.target.id)
-
-    switch (event.target.id) {
+    let filteredMovies = filterMovies(event.target.value);
+    const movieLinks = createMovieLink(filteredMovies)
+    addMoviesToDom(filteredMovies, movieLinks)
+    /* switch (event.target.id) {
         case 'latest-mv':    
-            addMoviesToDom(filterMovies(event.target.value))
+            addMoviesToDom(filteredMovies, movieLinks)
             break;
         case 'av-mv':
+            console.log("test =>", test)
             addMoviesToDom(filterMovies(event.target.value))
             break;
         case 'xm-mv':
+            console.log("test =>", test)
             addMoviesToDom(filterMovies(event.target.value))
             break;
         case 'pr-mv':
+            console.log("test =>", test)
             addMoviesToDom(filterMovies(event.target.value))
             break;
         case 'bat-mv':
+            
+            console.log("test =>", test)
             addMoviesToDom(filterMovies(event.target.value))
+            createMovieLink(filterMovies(event.target.value))
             break;
         default:
             console.log("the filter in switch() doesnt seem to work!!")
             break;
-    }
+    } */
 }
 
 const filterMovies = wordInMovie =>{
-    console.log(movies)
    return movies
     .filter(movie => movie.title.toLowerCase().includes(wordInMovie) || 
     Number(movie.year) >= Number(wordInMovie));
+}
+
+
+const createMovieLink = (filterdMovies) =>{
+    const imdbUrl = 'https://www.imdb.com/title/';
+    return filterdMovies.map(movie => imdbUrl+movie.imdbID)
 }
