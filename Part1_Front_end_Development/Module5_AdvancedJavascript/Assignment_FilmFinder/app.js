@@ -3,6 +3,16 @@ const navContainer = document.getElementById('nav-container');
 const mvRadioBtnFilters = navContainer.querySelectorAll('[name="mv-filter"]');
 const mainContainer = document.querySelector('.main-container');
 const moviesListUl = document.getElementById('mv-list');
+const custumSearch = document.getElementById('custom-search');
+
+// todo: get user input and make event listener
+custumSearch.addEventListener('input', (e) =>{
+    console.log("your input: ", e.target.value)
+    mvRadioBtnFilters.values = "";
+    handleOnChangeEvent(e);
+} );
+
+
 
 mvRadioBtnFilters.forEach(item => {
     item.addEventListener('input', ev =>{
@@ -27,7 +37,7 @@ const addMoviesToDom = (moviesData, linkData) => {
     })
 }
 
-addMoviesToDom(movies, movies)
+
 
 
 
@@ -74,3 +84,5 @@ const createMovieLink = (filterdMovies) =>{
     const imdbUrl = 'https://www.imdb.com/title/';
     return filterdMovies.map(movie => imdbUrl+movie.imdbID)
 }
+
+addMoviesToDom(movies,  createMovieLink(movies))

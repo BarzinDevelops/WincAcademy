@@ -11,7 +11,6 @@ body{
 .main-container{
 
     width: 100%;
-    // height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     .nav{
@@ -54,11 +53,11 @@ body{
     }
     .movies-list{
         padding: 0 20px;
-        border: 2px solid red;
+        // border: 2px solid red;
         width:100%;
         display: grid;
-        gap: 30px;
-        grid-template-columns: repeat(4, auto);
+        gap: 50px;
+        grid-template-columns: repeat(1, auto);
         justify-content: center;
         
         .mv-list-item-class{
@@ -74,56 +73,61 @@ body{
     }
 }
 
-/* @media screen and (min-width: 450px) {
-
-    .nav{
-        .input-label-wrapper{
-            border: 3px solid rgb(172, 193, 18);
-            width: 400px;
+ @media screen and (min-width: 700px) {
+    .main-container{
+        .movies-list{
+            grid-template-columns: repeat(2, auto);
         }
-        .input-label-wrapper label,
-        .custom {
-            width: auto ;
-            font-size: 2rem;
-        }
-    }
-}
-@media screen and (min-width: 600px) {
-
-    .nav{
-        .input-label-wrapper{
-            // max-width: 100%;
-            border: 3px solid rgb(5, 20, 116);
-        }
-        .input-label-wrapper label,
-        .custom {
-            width: auto ;
-            font-size: 2.2rem;
-        }
-    }
-} */
-/* @media screen and (min-width: 600px) {
-
-    .nav{
-        grid-template-columns: repeat(auto-fit, auto);
-        justify-items: center;
-        .input-label-wrapper{
-            width: 600px;
-            border: 3px solid rgb(5, 20, 116);
-        }
-        .input-label-wrapper label,
-        .custom {
-            font-size: 3rem;
+        .nav{
+            .input-label-wrapper{
+                // border: 3px solid rgb(172, 193, 18);
+                width: 600px;
+            }
         }
     }
 }
-@media screen and (min-width: 2250px) {
 
-    .nav{
-        grid-template-columns:  repeat(6,auto);
-        .input-label-wrapper{
-            width: 100%;
-            border: 3px solid purple;
+@media screen and (min-width: 1000px) {
+    .main-container{
+        .movies-list{
+            grid-template-columns: repeat(3, auto);
+        }
+        .nav{
+            .input-label-wrapper{
+                // border: 3px solid rgb(172, 193, 18);
+                width: 800px;
+            }
         }
     }
-} */
+}
+@media screen and (min-width: 1500px) {
+    .main-container{
+        .movies-list{
+            grid-template-columns: repeat(4, auto);
+        }
+        .nav{
+            grid-template-columns: repeat(autofit);
+            justify-content: center;
+            .input-label-wrapper{
+                // border: 3px solid rgb(172, 193, 18);
+                width: 400px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 2300px) {
+    .main-container{
+        .movies-list{
+            grid-template-columns: repeat(4, auto);
+        }
+        .nav{
+            border: 3px solid blue;
+            grid-template-columns: 600px repeat(5, 300px);
+            justify-content: center;
+            .input-label-wrapper{
+                // border: 3px solid rgb(172, 193, 18);
+                // width: 300px;
+            }
+        }
+    }
+}
