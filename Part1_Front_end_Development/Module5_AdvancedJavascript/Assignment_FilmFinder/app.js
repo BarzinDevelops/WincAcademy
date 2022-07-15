@@ -27,6 +27,10 @@ const addMoviesToDom = (moviesData, linkData) => {
     })
 }
 
+addMoviesToDom(movies, movies)
+
+
+
 const handleOnChangeEvent = event => {
     let filteredMovies = filterMovies(event.target.value);
     const movieLinks = createMovieLink(filteredMovies)
