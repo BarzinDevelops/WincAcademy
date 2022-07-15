@@ -1,0 +1,168 @@
+*::after, *::before, * {
+  block-size: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.main-container {
+  background-color: black;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.main-container .nav {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  padding: 20px;
+  -ms-grid-columns: (100%)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 100%);
+  gap: 10px;
+  background-color: black;
+  color: tomato;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.main-container .nav .input-label-wrapper {
+  border: 3px solid green;
+  width: 100%;
+}
+
+.main-container .nav .input-label-wrapper :nth-child(2) {
+  width: 300px;
+}
+
+.main-container .nav .input-label-wrapper label {
+  margin-left: 3px;
+  line-height: 1.6;
+}
+
+.main-container .nav .input-label-wrapper label,
+.main-container .nav .custom {
+  font-size: 2rem;
+}
+
+.main-container .nav .custom {
+  padding: 5px 10px;
+  max-width: 90%;
+}
+
+.main-container .nav .custom:focus {
+  outline: none;
+}
+
+.main-container .nav ::-webkit-input-placeholder {
+  color: red;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.main-container .nav :-ms-input-placeholder {
+  color: red;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.main-container .nav ::-ms-input-placeholder {
+  color: red;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.main-container .nav ::placeholder {
+  color: red;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.main-container .movies-list {
+  border: 2px solid red;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-container .movies-list .mv-list-item-class {
+  list-style: none;
+  outline: none;
+}
+
+.main-container .movies-list .movies-list img {
+  height: 200px;
+}
+
+.main-container .movies-list .mv-list-item-class:hover {
+  -webkit-box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.454);
+          box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.454);
+}
+
+/* @media screen and (min-width: 450px) {
+
+    .nav{
+        .input-label-wrapper{
+            border: 3px solid rgb(172, 193, 18);
+            width: 400px;
+        }
+        .input-label-wrapper label,
+        .custom {
+            width: auto ;
+            font-size: 2rem;
+        }
+    }
+}
+@media screen and (min-width: 600px) {
+
+    .nav{
+        .input-label-wrapper{
+            // max-width: 100%;
+            border: 3px solid rgb(5, 20, 116);
+        }
+        .input-label-wrapper label,
+        .custom {
+            width: auto ;
+            font-size: 2.2rem;
+        }
+    }
+} */
+/* @media screen and (min-width: 600px) {
+
+    .nav{
+        grid-template-columns: repeat(auto-fit, auto);
+        justify-items: center;
+        .input-label-wrapper{
+            width: 600px;
+            border: 3px solid rgb(5, 20, 116);
+        }
+        .input-label-wrapper label,
+        .custom {
+            font-size: 3rem;
+        }
+    }
+}
+@media screen and (min-width: 2250px) {
+
+    .nav{
+        grid-template-columns:  repeat(6,auto);
+        .input-label-wrapper{
+            width: 100%;
+            border: 3px solid purple;
+        }
+    }
+} */
+/*# sourceMappingURL=style.css.map */

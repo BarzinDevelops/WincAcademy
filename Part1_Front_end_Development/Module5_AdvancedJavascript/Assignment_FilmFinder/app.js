@@ -11,11 +11,12 @@ mvRadioBtnFilters.forEach(item => {
 });
 
 const addMoviesToDom = (moviesData, linkData) => {
-    moviesListUl.innerHTML = ""
+    moviesListUl.innerHTML = "";
     moviesData.map(movie => movie)
     .forEach((movie, index) =>  {
         let newItem = document.createElement('li');
-        newItem.id = 'mv-list-item'
+        newItem.id = 'mv-list-item';
+        newItem.className = 'mv-list-item-class';
         moviesListUl.appendChild(newItem);
         newLinkTag = document.createElement('a');
         newLinkTag.href = linkData[index];

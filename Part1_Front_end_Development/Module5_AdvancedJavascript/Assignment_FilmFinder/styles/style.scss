@@ -1,0 +1,126 @@
+*::after, *::before, *{
+    block-size:border-box;
+}
+body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.main-container{
+    background-color: black;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    // justify-content: end;
+    .nav{
+        width: 100%;
+        display: grid;
+        padding: 20px;
+        grid-template-columns: repeat(auto-fit, 100%);
+        gap: 10px;
+        background-color: black;
+        color: tomato;
+        align-items: center;
+        justify-items: center;
+        .input-label-wrapper{
+            border: 3px solid green;
+            width: 100%;
+        }
+        .input-label-wrapper :nth-child(2){
+            width: 300px;
+        }
+        .input-label-wrapper label{
+            margin-left: 3px;
+            line-height: 1.6;
+        }
+        .input-label-wrapper label,
+        .custom {
+            font-size: 2rem;
+        }
+        .custom{
+            padding: 5px 10px;
+            max-width: 90%;
+        }
+        .custom:focus{
+        outline: none;
+        }
+        ::placeholder{
+            color: red;
+            font-style: italic;
+            opacity: 0.7;
+        }
+    }
+    .movies-list{
+        border: 2px solid red;
+        width:100%;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4, auto);
+        justify-content: center;
+        
+        .mv-list-item-class{
+            list-style: none;
+            outline: none;
+        }
+        .movies-list img{
+            height:200px;
+        }
+        .mv-list-item-class:hover{
+            box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.454);
+        }
+    }
+}
+
+/* @media screen and (min-width: 450px) {
+
+    .nav{
+        .input-label-wrapper{
+            border: 3px solid rgb(172, 193, 18);
+            width: 400px;
+        }
+        .input-label-wrapper label,
+        .custom {
+            width: auto ;
+            font-size: 2rem;
+        }
+    }
+}
+@media screen and (min-width: 600px) {
+
+    .nav{
+        .input-label-wrapper{
+            // max-width: 100%;
+            border: 3px solid rgb(5, 20, 116);
+        }
+        .input-label-wrapper label,
+        .custom {
+            width: auto ;
+            font-size: 2.2rem;
+        }
+    }
+} */
+/* @media screen and (min-width: 600px) {
+
+    .nav{
+        grid-template-columns: repeat(auto-fit, auto);
+        justify-items: center;
+        .input-label-wrapper{
+            width: 600px;
+            border: 3px solid rgb(5, 20, 116);
+        }
+        .input-label-wrapper label,
+        .custom {
+            font-size: 3rem;
+        }
+    }
+}
+@media screen and (min-width: 2250px) {
+
+    .nav{
+        grid-template-columns:  repeat(6,auto);
+        .input-label-wrapper{
+            width: 100%;
+            border: 3px solid purple;
+        }
+    }
+} */
