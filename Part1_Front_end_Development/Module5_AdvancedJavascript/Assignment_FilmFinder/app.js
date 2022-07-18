@@ -7,15 +7,13 @@ const custumSearch = document.getElementById('custom-search');
 
 // todo: get user input and make event listener
 custumSearch.addEventListener('input', (e) =>{
-    console.log("your input: ", e.target.value)
     mvRadioBtnFilters.values = "";
     handleOnChangeEvent(e);
 } );
 
-
-
 mvRadioBtnFilters.forEach(item => {
     item.addEventListener('input', ev =>{
+        custumSearch.value = "";
         handleOnChangeEvent(ev);
     })
 });
@@ -32,19 +30,15 @@ const addMoviesToDom = (moviesData, linkData) => {
         newLinkTag.href = linkData[index];
         newItem.appendChild(newLinkTag);
         const img = document.createElement('img');
-        img.src = movie.poster
-        newLinkTag.appendChild(img)       
+        img.src = movie.poster;
+        newLinkTag.appendChild(img);       
     })
 }
 
-
-
-
-
 const handleOnChangeEvent = event => {
     let filteredMovies = filterMovies(event.target.value);
-    const movieLinks = createMovieLink(filteredMovies)
-    addMoviesToDom(filteredMovies, movieLinks)
+    const movieLinks = createMovieLink(filteredMovies);
+    addMoviesToDom(filteredMovies, movieLinks);
     /* switch (event.target.id) {
         case 'latest-mv':    
             addMoviesToDom(filteredMovies, movieLinks)
@@ -79,10 +73,9 @@ const filterMovies = wordInMovie =>{
     Number(movie.year) >= Number(wordInMovie));
 }
 
-
 const createMovieLink = (filterdMovies) =>{
     const imdbUrl = 'https://www.imdb.com/title/';
-    return filterdMovies.map(movie => imdbUrl+movie.imdbID)
+    return filterdMovies.map(movie => imdbUrl+movie.imdbID);
 }
 
-addMoviesToDom(movies,  createMovieLink(movies))
+addMoviesToDom(movies,  createMovieLink(movies));
