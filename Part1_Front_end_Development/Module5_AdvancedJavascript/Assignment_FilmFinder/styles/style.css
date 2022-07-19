@@ -52,7 +52,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 200px;
+  width: 200px;
 }
 
 .main-container .nav .position-wrapper input[type="radio"] {
@@ -132,6 +132,46 @@ body {
 }
 
 @media screen and (min-width: 1000px) {
+  .main-container .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-container .nav .position-wrapper {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-container .nav .input-label-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-container .nav .input-label-wrapper label {
+    margin-top: 2px;
+  }
+  .main-container .movies-list {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-container {
+    font-size: 1.2rem;
+  }
   .main-container .movies-list {
     -ms-grid-columns: (auto)[3];
         grid-template-columns: repeat(3, auto);
@@ -139,6 +179,9 @@ body {
 }
 
 @media screen and (min-width: 1500px) {
+  .main-container {
+    font-size: 1.3rem;
+  }
   .main-container .movies-list {
     -ms-grid-columns: (auto)[4];
         grid-template-columns: repeat(4, auto);
@@ -146,6 +189,9 @@ body {
 }
 
 @media screen and (min-width: 1950px) {
+  .main-container {
+    font-size: 1.4rem;
+  }
   .main-container .movies-list {
     -ms-grid-columns: (auto)[5];
         grid-template-columns: repeat(5, auto);
