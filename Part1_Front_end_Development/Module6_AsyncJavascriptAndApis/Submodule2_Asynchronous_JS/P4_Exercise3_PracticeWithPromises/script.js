@@ -23,7 +23,6 @@ testNum(9);
 testNum(10);*/
  
 
-
 /*
 Exercise 2:
 Write two functions that use Promises that you can chain! 
