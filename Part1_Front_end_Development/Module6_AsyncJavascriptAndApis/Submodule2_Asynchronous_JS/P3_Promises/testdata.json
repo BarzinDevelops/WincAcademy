@@ -1,0 +1,6 @@
+[
+        {"username": "barzin", "age": 40, "fav-color": "black", "job": "programming"},
+        {"username": "behdis", "age": 34, "fav-color": "green", "job": "designing"},
+        {"username": "behrad", "age": 38, "fav-color": "blue", "job": "chemical expert"},
+        {"username": "behroez", "age": 66, "fav-color": "white", "job": "book keeper"}
+]
