@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <script>
+        var forwardingUrl =
+            "/page/bouncy.php?&bpae=GbhOtycmolx7NouIA9AjbgWpHMEiCCjvMx7XNoeO4GD%2BCCP%2BF%2BhOQq%2FxNxc7I59L38Gp8EK4E4K8SrWN192XMK5yavoHXqIx8jkucT%2FdvGPvI4MHLxwzB5tPQ7diPe6EMn%2BpsinDev0NCMmoch66b%2BMSx5Ny2oyT2NnG85PDhoLQydPwGtu%2F7amR40tDUud0eLVMNKMCmwgAweAjHTOFGlbBn%2FhaU%2Ftv6oVrvyylW5eg1nVt%2BMrIgUkRFBjZ44QpsMUd996gyaWZRgt9jSPnfxi8nKWMVlhtOyopv91LVfsmOPqMCYBZDfXLQWs5TTjsMuPmowTV2WSpj3XpYcYRTJqIsiCNQpGWjPRFpJD268ZDt1LAhMq%2B0pd3A75hBA2plVjkgqKAffEpsrs%3D&redirectType=js";
+        var destinationUrl =
+            "/page/bouncy.php?&bpae=GbhOtycmolx7NouIA9AjbgWpHMEiCCjvMx7XNoeO4GD%2BCCP%2BF%2BhOQq%2FxNxc7I59L38Gp8EK4E4K8SrWN192XMK5yavoHXqIx8jkucT%2FdvGPvI4MHLxwzB5tPQ7diPe6EMn%2BpsinDev0NCMmoch66b%2BMSx5Ny2oyT2NnG85PDhoLQydPwGtu%2F7amR40tDUud0eLVMNKMCmwgAweAjHTOFGlbBn%2FhaU%2Ftv6oVrvyylW5eg1nVt%2BMrIgUkRFBjZ44QpsMUd996gyaWZRgt9jSPnfxi8nKWMVlhtOyopv91LVfsmOPqMCYBZDfXLQWs5TTjsMuPmowTV2WSpj3XpYcYRTJqIsiCNQpGWjPRFpJD268ZDt1LAhMq%2B0pd3A75hBA2plVjkgqKAffEpsrs%3D&redirectType=meta";
+        var addDetection = true;
+        if (addDetection) {
+            var inIframe = window.self !== window.top;
+            forwardingUrl += "&inIframe=" + inIframe;
+            var inPopUp = (window.opener !== undefined && window.opener !== null && window.opener !== window);
+            forwardingUrl += "&inPopUp=" + inPopUp;
+        }
+        window.location.replace(forwardingUrl);
+    </script>
+    <noscript>
+        <meta http-equiv="refresh"
+            content="1;url=/page/bouncy.php?&bpae=GbhOtycmolx7NouIA9AjbgWpHMEiCCjvMx7XNoeO4GD%2BCCP%2BF%2BhOQq%2FxNxc7I59L38Gp8EK4E4K8SrWN192XMK5yavoHXqIx8jkucT%2FdvGPvI4MHLxwzB5tPQ7diPe6EMn%2BpsinDev0NCMmoch66b%2BMSx5Ny2oyT2NnG85PDhoLQydPwGtu%2F7amR40tDUud0eLVMNKMCmwgAweAjHTOFGlbBn%2FhaU%2Ftv6oVrvyylW5eg1nVt%2BMrIgUkRFBjZ44QpsMUd996gyaWZRgt9jSPnfxi8nKWMVlhtOyopv91LVfsmOPqMCYBZDfXLQWs5TTjsMuPmowTV2WSpj3XpYcYRTJqIsiCNQpGWjPRFpJD268ZDt1LAhMq%2B0pd3A75hBA2plVjkgqKAffEpsrs%3D&redirectType=meta" />
+    </noscript>
+</head>
+
+</html>
