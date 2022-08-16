@@ -6,6 +6,11 @@ const convertExpirationDate = person => {
     // parseInt("20" + "21")
     const expirationYear = parseInt("20" + expiration[1]);
     const expirationMonth = parseInt(expiration[0]) - 1; // Jan = 0, Dec = 11
+
+// console.log(`expiration->`, expiration)
+// console.log(`expirationMonth->`, expirationMonth)
+
+
     const expirationDay = 1; // Default
     person.credit_card.expiration_date = new Date(
         expirationYear,
@@ -37,9 +42,12 @@ const sortByExpirationDate = (person1, person2) => {
 const getCreditCardsThatWillExpire = () => {
     const adults = randomPersonData.filter(isAdult);
     const adultsWithNiceExpirationDatesOnCCs = adults.map(convertExpirationDate);
+    // console.log('adultsWithNiceExpirationDatesOnCCs =>',adultsWithNiceExpirationDatesOnCCs)
+    
     const adultsWithExpiredCards = adultsWithNiceExpirationDatesOnCCs.filter(
         cardExpiresInOneYear
     );
+    console.log('adultsWithExpiredCards =>',adultsWithExpiredCards)
     // // Earlier dates at the top.
     const sortedAdultsWithExpiredCards = adultsWithExpiredCards.sort(
         sortByExpirationDate
