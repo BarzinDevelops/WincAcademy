@@ -67,16 +67,10 @@ const renderCapriWoman = (...receivedCapriWomen) => {
 });
 };
 
+// creating btn for Capricorn Women
 const capricornWomenBtn = document.getElementById('capricornwomen');
 
-
-capricornWomenBtn.addEventListener('click', ()=>{
-resultsContainer.replaceChildren();
-titleOfLists.textContent = capricornWomenBtn.innerText;
-resultsContainer.append(titleOfLists);
-renderCapriWoman(...capriWoman);
-});
-
+//creates button event with rendering of data to page. (implementatin in main.js)
 btnEventCreator(capricornWomenBtn, renderCapriWoman, capriWoman);
 
 

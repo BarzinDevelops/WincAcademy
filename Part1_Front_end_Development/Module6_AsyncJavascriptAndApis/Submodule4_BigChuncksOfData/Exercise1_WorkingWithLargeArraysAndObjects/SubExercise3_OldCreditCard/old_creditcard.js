@@ -83,14 +83,11 @@ const renderToPage = (...selectedPeople) => {
         persContainer.appendChild(phone_number);
         persContainer.appendChild(creditcard_number);
         persContainer.appendChild(creditcard_expiration_date);
-
     });
 };
 
+// creating btn for Old Creditcard data.
 const oldCreditCardBtn = document.getElementById('old-creditcard');
-oldCreditCardBtn.addEventListener('click', ()=>{
-    resultsContainer.replaceChildren();
-    titleOfLists.textContent = oldCreditCardBtn.innerText;
-    resultsContainer.appendChild(titleOfLists);
-    renderToPage(...sortedOnCardExpiration);
-});
+
+//creates button event with rendering of data to page. (implementatin in main.js)
+btnEventCreator(oldCreditCardBtn, renderToPage, sortedOnCardExpiration);
