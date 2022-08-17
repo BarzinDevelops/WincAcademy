@@ -6,3 +6,12 @@ const titleOfLists = document.createElement('h1');
 const resultsContainer = document.getElementById('results');
 
 
+// creating eventlistener for each query button:
+const btnEventCreator =(btnName, renderFunc, resultToRender) =>{
+    btnName.addEventListener('click', ()=>{
+        resultsContainer.replaceChildren();
+        titleOfLists.textContent = btnName.innerText;
+        resultsContainer.appendChild(titleOfLists);
+        renderFunc(...resultToRender);
+    });
+};

@@ -77,6 +77,7 @@ resultsContainer.append(titleOfLists);
 renderCapriWoman(...capriWoman);
 });
 
+btnEventCreator(capricornWomenBtn, renderCapriWoman, capriWoman);
 
 
 
