@@ -8,7 +8,7 @@
         be older than 30 (1990 or older)
         be a Capricorn (birthday from December 22 to January 19) */
 
-const capricornWomenBtn = document.getElementById('capricornwomen');
+
 
 let capriWoman = [];
 randomPersonData.map(person =>  {
@@ -44,33 +44,30 @@ const renderCapriWoman = (...receivedCapriWomen) => {
     resultsContainer.appendChild(persContainer);
 
     const newItem_name = document.createElement('li');
-    newItem_name.textContent = `Name: ${women.name}`;
+    newItem_name.textContent = `Name: ${women.name} ${women.surname}`;
     newItem_name.style.color = 'purple';
-
-    const newItem_surname = document.createElement('li');
-    newItem_surname.textContent = `Surname: ${women.surname}`;
-    newItem_surname.style.color = 'blue';
 
     const newItem_age = document.createElement('li');
     newItem_age.textContent = `Age: ${women.age}`;
-    newItem_age.style.color = 'purple';
+    newItem_age.style.color = 'blue';
 
     const newItem_birthday = document.createElement('li');
     newItem_birthday.textContent = `Birthday: ${women.birthday}`;
-    newItem_birthday.style.color = 'blue';
+    newItem_birthday.style.color = 'purple';
 
     const newItem_photo = document.createElement('img'); 
     newItem_photo.classList.add('person-photo');
     newItem_photo.src = women.photo;
 
     persContainer.appendChild(newItem_name);
-    persContainer.appendChild(newItem_surname);
     persContainer.appendChild(newItem_photo);
     persContainer.appendChild(newItem_age);
     persContainer.appendChild(newItem_birthday);
 
 });
 };
+
+const capricornWomenBtn = document.getElementById('capricornwomen');
 
 
 capricornWomenBtn.addEventListener('click', ()=>{
@@ -79,6 +76,7 @@ titleOfLists.textContent = capricornWomenBtn.innerText;
 resultsContainer.append(titleOfLists);
 renderCapriWoman(...capriWoman);
 });
+
 
 
 
