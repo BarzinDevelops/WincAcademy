@@ -17,14 +17,14 @@ regionData.forEach(region => mostPopulation[region] ? mostPopulation[region] += 
 
 mostPopulation = Object.entries(mostPopulation).sort((a,b)=> a[1] > b[1] ? -1: 1);
 
-log('countryPopulation: ', mostPopulation)
+// log('countryPopulation: ', mostPopulation)
 
 
 const mostPeopleBtn = document.getElementById('most-people');
 
 
 const renderMostPeople = (...countries)=>{
-    log('countries', countries)
+    // log('countries', countries)
     countries.forEach(country => {
         let newListItem = document.createElement('li');
         let spanFortext = document.createElement('span');
