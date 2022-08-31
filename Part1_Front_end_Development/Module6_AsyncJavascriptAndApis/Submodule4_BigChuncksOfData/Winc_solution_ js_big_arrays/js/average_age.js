@@ -4,7 +4,7 @@ const calculateAverageAgeForCountry = country => {
   const peopleFromCountry = randomPersonData.filter(
     person => person.region === country
   );
-
+console.log(peopleFromCountry)
   const amountOfPeople = peopleFromCountry.length;
 
   if (amountOfPeople === 0) {
@@ -25,6 +25,7 @@ const displayAverageAgeForCountry = () => {
 
   const country = event.target.value;
   const average_age = calculateAverageAgeForCountry(country);
+  console.log(average_age)
   const li = document.createElement("li");
   li.innerHTML = `The average age for ${country} is ${average_age}`;
   addToResultList(li);
