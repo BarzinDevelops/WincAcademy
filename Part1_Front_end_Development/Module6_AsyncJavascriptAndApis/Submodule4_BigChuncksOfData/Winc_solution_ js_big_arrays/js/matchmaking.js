@@ -125,11 +125,16 @@ const getPeople = personData => {
     })
     .map(addStarSign);
 
+    
   personData.sort((person1, person2) =>
     sort_helper(person1.name < person2.name)
   );
   return personData;
 };
+
+
+console.log('getPeople(randomPersonData)',getPeople(randomPersonData))
+
 
 const matchMaking = () => {
   displayPeople(getPeople(randomPersonData));

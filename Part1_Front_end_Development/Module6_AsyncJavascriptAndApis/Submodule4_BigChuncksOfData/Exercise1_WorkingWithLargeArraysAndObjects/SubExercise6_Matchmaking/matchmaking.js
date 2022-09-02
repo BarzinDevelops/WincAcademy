@@ -23,39 +23,45 @@
     or you could use a list from the internet.  */
 
 
+const calcZodiacSign = (birthDate)=>{
+    let fullDate = birthDate.split('/');
+    // let month = Number(fullDate[0]);
+    // let day = Number(fullDate[1]);
+    return getZodiacSign(Number(fullDate[1]), Number(fullDate[0]));
+}
+    
+
 // get a lis of adults and (first name/Last Name/photo/country/age)
 const adults = randomPersonData
-                .filter(person => person.age>17)
-                .map(person =>  [person.name, 
-                                person.surname, 
-                                person.photo, 
-                                person.region, 
-                                person.age, 
-                                person.birthday]
-                );
+    .filter(person => person.age>17)
+    .map(person => { 
+      return  {
+            name: person.name, 
+            surname: person.surname, 
+            country: person.region, 
+            age : person.age, 
+            birthday : person.birthday.dmy,
+            zodiacSign: calcZodiacSign(person.birthday.mdy),
+            photo : person.photo,
+        }
+            
+    });
 
-// create data for zodiac signs
-const zodiacSignAndDate = 
-[
-    {'signName': 'Capricorn', 'signStartDate': '12/22', 'signEndDate': '1/19'},
-    {'signName': 'Aquarius', 'signStartDate': '1/20', 'signEndDate': '2/18'},
-    {'signName': 'Pisces', 'signStartDate': '2/19', 'signEndDate': '3/20'},
-    {'signName': 'Aries', 'signStartDate': '3/21', 'signEndDate': '4/19'},
-    {'signName': 'Taurus', 'signStartDate': '4/20', 'signEndDate': '5/20'},
-    {'signName': 'Gemini', 'signStartDate': '5/21', 'signEndDate': '6/20'},
-    {'signName': 'Cancer', 'signStartDate': '6/21', 'signEndDate': '7/23'},
-    {'signName': 'Leo', 'signStartDate': '7/24', 'signEndDate': '8/22'},
-    {'signName': 'Virgo', 'signStartDate': '8/23', 'signEndDate': '9/22'},
-    {'signName': 'Libra', 'signStartDate': '9/23', 'signEndDate': '10/22'},
-    {'signName': 'Scorpio', 'signStartDate': '10/23', 'signEndDate': '11/22'},
-    {'signName': 'Sagittarius', 'signStartDate': '11/23', 'signEndDate': '12/21'}
-]
+log('adults', adults)
+// log('adults', randomPersonData)
+
+
 
 // determine zodiac sign of each person and add this to adults array:
+// 1- get birthday and save month and day
 
 
 
 
 
-log('Persons', adults);
-log('zodiacSignAndDate', zodiacSignAndDate);
+// log('Persons', adults);
+// log('zodiacSignAndDate', zodiacSignAndDate);
+
+
+
+
