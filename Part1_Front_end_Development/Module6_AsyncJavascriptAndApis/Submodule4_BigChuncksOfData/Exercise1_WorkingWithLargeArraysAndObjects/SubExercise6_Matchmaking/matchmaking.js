@@ -47,16 +47,38 @@ const adults = randomPersonData
             
     });
 
-log('adults', adults)
+// log('adults', adults)
+
+
+const getMyMatch = (personToMatch) =>{
+    // log('personToMatch', personToMatch)
+    return adults.filter(adult => {
+        if(personToMatch.name !== adult.name){
+
+
+            if(personToMatch.zodiacSign === 'Virgo'){
+                if(adult.zodiacSign === 'Taurus' || 
+                adult.zodiacSign === 'Virgo') 
+                return adult
+            }
+
+
+
+
+            
+            
+        }
+    })
+}
+
+
 
 
 const matchMakingBtn = document.getElementById('matchmaking');
 const renderMatchmaking = (...candidatesArr) => {
+    resultsContainer.replaceChildren();
     cardWrapper = document.createElement('div');
     cardWrapper.classList.add('card-wrapper');
-   
-
-
     candidatesArr.forEach(candit => {
         let newCard = document.createElement('div');
         newCard.classList.add('candidate-card');
@@ -66,6 +88,7 @@ const renderMatchmaking = (...candidatesArr) => {
 
         let candidatePhoto = document.createElement('img');
         candidatePhoto.className = 'candidate-photo';
+        
         candidatePhoto.src = candit.photo
         
         let candidateInfo = document.createElement('span');
@@ -90,29 +113,21 @@ const renderMatchmaking = (...candidatesArr) => {
         newCard.append(cardInfoPhoto, matchBtn);
         cardWrapper.append(newCard);
         
+        
+        matchBtn.addEventListener('click', ()=>{
+            // log('candit.photo', candit.photo)
+            let foundMatch = getMyMatch(candit);
+            // log('candit.zodiacSign', candit.zodiacSign)
+            log('foundMatch', foundMatch)
+            renderMatchmaking(...foundMatch);
+        })
     });
     
     resultsContainer.appendChild(cardWrapper);
+    
 }
-
-
-
 btnEventCreator(matchMakingBtn, renderMatchmaking, adults);
 
-
-// call matchMaker() and give it adults as parameter
-// matchMaker(adults)
-
-
-
-
-
-
-
-
-
-// log('Persons', adults);
-// log('zodiacSignAndDate', zodiacSignAndDate);
 
 
 
