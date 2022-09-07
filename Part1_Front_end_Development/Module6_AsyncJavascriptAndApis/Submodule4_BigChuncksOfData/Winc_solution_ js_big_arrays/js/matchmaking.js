@@ -60,6 +60,7 @@ const getMatchesForPerson = event => {
 
 const getPersonCardHTML = ({
   name,
+  gender,
   surname,
   self,
   region,
@@ -71,6 +72,10 @@ const getPersonCardHTML = ({
   const nameSpan = document.createElement("span");
   nameSpan.classList.add("name");
   nameSpan.innerHTML = `${name} ${surname}`;
+
+  const genderSpan = document.createElement("span");
+  genderSpan.classList.add("gender");
+  genderSpan.innerHTML = `gender: ${gender}`;
 
   const countrySpan = document.createElement("span");
   nameSpan.classList.add("country");
@@ -101,6 +106,7 @@ const getPersonCardHTML = ({
   }
 
   card.appendChild(nameSpan);
+  card.appendChild(genderSpan);
   card.appendChild(countrySpan);
   card.appendChild(ageSpan);
   card.appendChild(birthdaySpan);

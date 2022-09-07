@@ -78,16 +78,93 @@ const getZodiacSign = (day, month) => {
     if(day <= 21 && month === 12) return 'Sagittarius';
 }
 
-
-const matchMaker = (candit) =>{
+const setCandidateInfo = (candit) =>{
+    return `Name: ${candit.name} ${candit.surname}
+        country: ${candit.country}
+        age: ${candit.age}
+        birthday: ${candit.birthday}
+        zodiacSign: ${candit.zodiacSign}
+    `
+}
+const getMyMatch = (personToMatch) =>{
     // determine wich zodiac signs are a match
     //used this source for matches => https://www.self.com/story/zodiac-matches-that-make-the-best-couples
-
     
-
-
-
-
+    return adults.filter(adult => {
+        if(personToMatch.name !== adult.name){
+            if(personToMatch.zodiacSign === 'Virgo'){
+                if(adult.zodiacSign === 'Taurus' || 
+                    adult.zodiacSign === 'Virgo') 
+                    return adult
+            }
+            if(personToMatch.zodiacSign === 'Capricorn'){
+                if(adult.zodiacSign === 'Taurus' || 
+                    adult.zodiacSign === 'Capricorn') 
+                    return adult
+            }
+            if(personToMatch.zodiacSign === 'Taurus'){
+                if(adult.zodiacSign === 'Cancer' || 
+                    adult.zodiacSign === 'Capricorn' ||
+                    adult.zodiacSign === 'Taurus' ||
+                    adult.zodiacSign === 'Virgo') 
+                    return adult
+            }
+            if(personToMatch.zodiacSign === 'Cancer'){
+                if(adult.zodiacSign === 'Scorpio' || 
+                    adult.zodiacSign === 'Pisces' ||
+                    adult.zodiacSign === 'Taurus' ||
+                    adult.zodiacSign === 'Cancer') 
+                    return adult
+            }
+            if(personToMatch.zodiacSign === 'Pisces'){
+                if(adult.zodiacSign === 'Scorpio' || 
+                    adult.zodiacSign === 'Cancer' || 
+                    adult.zodiacSign === 'Pisces') 
+                    return adult
+            }
+            if(personToMatch.zodiacSign === 'Scorpio'){
+                if(adult.zodiacSign === 'Cancer' || 
+                    adult.zodiacSign === 'Pisces' ||
+                    adult.zodiacSign === 'Scorpio') 
+                    return adult
+            }
+            if(personToMatch.zodiacSign === 'Aries'){
+                if(adult.zodiacSign === 'Sagittarius' || 
+                    adult.zodiacSign === 'Aquarius' ||
+                    adult.zodiacSign === 'Aries') 
+                    return adult
+            }
+            if(personToMatch.zodiacSign === 'Aquarius'){
+                if(adult.zodiacSign === 'Aries' || 
+                    adult.zodiacSign === 'Gemini' ||
+                    adult.zodiacSign === 'Aquarius') 
+                    return adult
+            }
+            if(personToMatch.zodiacSign === 'Gemini'){
+                if(adult.zodiacSign === 'Aquarius' || 
+                    adult.zodiacSign === 'Libra' ||
+                    adult.zodiacSign === 'Gemini') 
+                    return adult
+            }
+            if(personToMatch.zodiacSign === 'Libra'){
+                if(adult.zodiacSign === 'Gemini' || 
+                    adult.zodiacSign === 'Libra') 
+                    return adult
+            }
+            if(personToMatch.zodiacSign === 'Sagittarius'){
+                if(adult.zodiacSign === 'Leo' || 
+                    adult.zodiacSign === 'Aries' ||
+                    adult.zodiacSign === 'Sagittarius') 
+                    return adult
+            }
+            if(personToMatch.zodiacSign === 'Leo'){
+                if(adult.zodiacSign === 'Sagittarius' || 
+                    adult.zodiacSign === 'Leo') 
+                    return adult
+            }
+            
+        }
+    })
 }
 
     // =============== End Matchmaking ==========================

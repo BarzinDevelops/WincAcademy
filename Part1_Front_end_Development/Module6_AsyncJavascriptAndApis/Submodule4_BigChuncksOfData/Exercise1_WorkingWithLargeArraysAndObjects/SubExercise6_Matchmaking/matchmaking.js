@@ -23,14 +23,12 @@
     or you could use a list from the internet.  */
 
 // determine zodiac sign of each person and add this to adults array:
-// 1- get birthday and save month and day
 const calcZodiacSign = (birthDate)=>{
     let fullDate = birthDate.split('/');
     // getZodiacSign -> main.js
     return getZodiacSign(Number(fullDate[1]), Number(fullDate[0]));
 }
     
-
 // get a lis of adults and (first name/Last Name/photo/country/age)
 const adults = randomPersonData
     .filter(person => person.age>17)
@@ -44,87 +42,47 @@ const adults = randomPersonData
             zodiacSign: calcZodiacSign(person.birthday.mdy),
             photo : person.photo,
         }
-            
     });
-
-// log('adults', adults)
-
-
-const getMyMatch = (personToMatch) =>{
-    // log('personToMatch', personToMatch)
-    return adults.filter(adult => {
-        if(personToMatch.name !== adult.name){
-
-
-            if(personToMatch.zodiacSign === 'Virgo'){
-                if(adult.zodiacSign === 'Taurus' || 
-                adult.zodiacSign === 'Virgo') 
-                return adult
-            }
-
-
-
-
-            
-            
-        }
-    })
-}
-
-
-
 
 const matchMakingBtn = document.getElementById('matchmaking');
 const renderMatchmaking = (...candidatesArr) => {
-    resultsContainer.replaceChildren();
     cardWrapper = document.createElement('div');
     cardWrapper.classList.add('card-wrapper');
     candidatesArr.forEach(candit => {
         let newCard = document.createElement('div');
         newCard.classList.add('candidate-card');
+        newCard.id = candit.name
 
         let cardInfoPhoto = document.createElement('div');
         cardInfoPhoto.className = 'card-info-photo';
 
         let candidatePhoto = document.createElement('img');
         candidatePhoto.className = 'candidate-photo';
-        
         candidatePhoto.src = candit.photo
         
         let candidateInfo = document.createElement('span');
         candidateInfo.className = 'candidate-info';
-        
-        
-  
-        candidateInfo.innerText = 
-        `   Name: ${candit.name} ${candit.surname}
-            country: ${candit.country}
-            age: ${candit.age}
-            birthday: ${candit.birthday}
-            zodiacSign: ${candit.zodiacSign}
-        `
+        candidateInfo.innerText = setCandidateInfo(candit); // see main.js
 
         let matchBtn = document.createElement('button');
         matchBtn.innerText = '♥️♥️♥️ Find My Match ♥️♥️♥️';
         matchBtn.className = 'match-btn';
 
-
         cardInfoPhoto.append(candidateInfo, candidatePhoto);
         newCard.append(cardInfoPhoto, matchBtn);
         cardWrapper.append(newCard);
         
-        
-        matchBtn.addEventListener('click', ()=>{
-            // log('candit.photo', candit.photo)
-            let foundMatch = getMyMatch(candit);
-            // log('candit.zodiacSign', candit.zodiacSign)
-            log('foundMatch', foundMatch)
+        matchBtn.addEventListener('click', (e) => {
+            let foundMatch = getMyMatch(candit); // implemented in main.js
+            resultsContainer.replaceChildren();
+            renderMatchmaking(candit);
+            document.getElementById(e.target.parentElement.id)
+                .style.backgroundColor = 'plum';
             renderMatchmaking(...foundMatch);
-        })
+            newCard.append(cardInfoPhoto, matchBtn);
+        });
     });
-    
     resultsContainer.appendChild(cardWrapper);
-    
 }
 btnEventCreator(matchMakingBtn, renderMatchmaking, adults);
 
