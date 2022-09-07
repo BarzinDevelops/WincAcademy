@@ -22,11 +22,11 @@
     You may come up with your own list of good matches for each sign, 
     or you could use a list from the internet.  */
 
-
+// determine zodiac sign of each person and add this to adults array:
+// 1- get birthday and save month and day
 const calcZodiacSign = (birthDate)=>{
     let fullDate = birthDate.split('/');
-    // let month = Number(fullDate[0]);
-    // let day = Number(fullDate[1]);
+    // getZodiacSign -> main.js
     return getZodiacSign(Number(fullDate[1]), Number(fullDate[0]));
 }
     
@@ -48,12 +48,64 @@ const adults = randomPersonData
     });
 
 log('adults', adults)
-// log('adults', randomPersonData)
+
+
+const matchMakingBtn = document.getElementById('matchmaking');
+const renderMatchmaking = (...candidatesArr) => {
+    cardWrapper = document.createElement('div');
+    cardWrapper.classList.add('card-wrapper');
+   
+
+
+    candidatesArr.forEach(candit => {
+        let newCard = document.createElement('div');
+        newCard.classList.add('candidate-card');
+
+        let cardInfoPhoto = document.createElement('div');
+        cardInfoPhoto.className = 'card-info-photo';
+
+        let candidatePhoto = document.createElement('img');
+        candidatePhoto.className = 'candidate-photo';
+        candidatePhoto.src = candit.photo
+        
+        let candidateInfo = document.createElement('span');
+        candidateInfo.className = 'candidate-info';
+        
+        
+  
+        candidateInfo.innerText = 
+        `   Name: ${candit.name} ${candit.surname}
+            country: ${candit.country}
+            age: ${candit.age}
+            birthday: ${candit.birthday}
+            zodiacSign: ${candit.zodiacSign}
+        `
+
+        let matchBtn = document.createElement('button');
+        matchBtn.innerText = '♥️♥️♥️ Find My Match ♥️♥️♥️';
+        matchBtn.className = 'match-btn';
+
+
+        cardInfoPhoto.append(candidateInfo, candidatePhoto);
+        newCard.append(cardInfoPhoto, matchBtn);
+        cardWrapper.append(newCard);
+        
+    });
+    
+    resultsContainer.appendChild(cardWrapper);
+}
 
 
 
-// determine zodiac sign of each person and add this to adults array:
-// 1- get birthday and save month and day
+btnEventCreator(matchMakingBtn, renderMatchmaking, adults);
+
+
+// call matchMaker() and give it adults as parameter
+// matchMaker(adults)
+
+
+
+
 
 
 

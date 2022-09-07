@@ -40,8 +40,8 @@ const zodiacSignAndDate =
 ]
 
 const getZodiacSign = (day, month) => {
-    if(day >= 22 && month === 12) return 'capricorn';
-    if(day <= 19 && month === 1) return 'capricorn';
+    if(day >= 22 && month === 12) return 'Capricorn';
+    if(day <= 19 && month === 1) return 'Capricorn';
 
     if(day >= 20 && month === 1) return 'Aquarius';
     if(day <= 18 && month === 2) return 'Aquarius';
@@ -78,5 +78,16 @@ const getZodiacSign = (day, month) => {
     if(day <= 21 && month === 12) return 'Sagittarius';
 }
 
+
+const matchMaker = (candit) =>{
+    // determine wich zodiac signs are a match
+    //used this source for matches => https://www.self.com/story/zodiac-matches-that-make-the-best-couples
+
+    
+
+
+
+
+}
 
     // =============== End Matchmaking ==========================
