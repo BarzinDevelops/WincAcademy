@@ -79,7 +79,7 @@ const getZodiacSign = (day, month) => {
 }
 
 const setCandidateInfo = (candit) =>{
-    return `Name: ${candit.name} ${candit.surname}
+    return `Name: ${candit.name} ${candit.surname} 
         country: ${candit.country}
         age: ${candit.age}
         birthday: ${candit.birthday}
@@ -89,7 +89,7 @@ const setCandidateInfo = (candit) =>{
 const getMyMatch = (personToMatch) =>{
     // determine wich zodiac signs are a match
     //used this source for matches => https://www.self.com/story/zodiac-matches-that-make-the-best-couples
-    
+
     return adults.filter(adult => {
         if(personToMatch.name !== adult.name){
             if(personToMatch.zodiacSign === 'Virgo'){

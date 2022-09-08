@@ -1482,7 +1482,7 @@ const randomPersonData = [
     photo: "https://randomuser.me/api/portraits/men/13.jpg",
   },
   {
-    name: "",
+    name: "María",
     surname: "María Elena Carrillo",
     gender: "female",
     region: "Mexico",
@@ -2736,7 +2736,7 @@ const randomPersonData = [
     photo: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
-    name: "",
+    name: "Juan",
     surname: "Juan Antonio Jímenez",
     gender: "male",
     region: "Mexico",

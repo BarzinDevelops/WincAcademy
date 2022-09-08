@@ -42,12 +42,14 @@ const adults = randomPersonData
             zodiacSign: calcZodiacSign(person.birthday.mdy),
             photo : person.photo,
         }
-    });
+    }).sort((nameA, nameB)=> nameA.name > nameB.name ? 1 : -1);
 
 const matchMakingBtn = document.getElementById('matchmaking');
 const renderMatchmaking = (...candidatesArr) => {
     cardWrapper = document.createElement('div');
     cardWrapper.classList.add('card-wrapper');
+
+    // candidatesArr.sort((nameA, nameB)=> nameA.name > nameB.name ? 1 : -1);
     candidatesArr.forEach(candit => {
         let newCard = document.createElement('div');
         newCard.classList.add('candidate-card');
