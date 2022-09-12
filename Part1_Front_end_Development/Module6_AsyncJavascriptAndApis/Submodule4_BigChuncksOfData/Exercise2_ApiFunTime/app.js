@@ -28,6 +28,7 @@ Some examples of APIs you can use:
 
 const log = console.log;
 // get all the html elements:
+const pokeContainer = document.getElementById('poke-container');
 const pokeBtn = document.getElementById('poke-btn');
 const pokeInfo = document.getElementById('poke-info');
 const pokeImgDiv = document.getElementById('poke-img-div');
@@ -49,21 +50,31 @@ const getPokeData = async () => {
     setPokeInfo(createInfo)
 }
 const setPokeInfo = async (pokemanInfo) =>{
-    // pokeInfo.innerText = `
-    // ${pokemanInfo.forEach(item => item.name, item.height, item.weight)}
-    // `
+    log('pokeInfo',pokemanInfo)
+    
+    for(const prop in pokemanInfo){
+        let infoElement = document.createElement('span');
+        
+        infoElement.innerHTML = `
+        <b>${prop}</b>: ${pokemanInfo[prop]}<br>`
+        pokeInfo.appendChild(infoElement)
+    }
 }
 
 
 const setPokeImg = async (pokeImgSrc) =>{
 
     const pokeImg = document.createElement('img');
+    pokeImg.class = 'poke-img';
     pokeImg.src = pokeImgSrc;
     pokeImgDiv.appendChild(pokeImg);
     log('pokeImgSrc: ', pokeImgSrc)
 }
 
 pokeBtn.addEventListener('click', ()=> {
+    pokeContainer.classList.add('poke-container');
+    pokeInfo.replaceChildren();
+    pokeImgDiv.replaceChildren();
     getPokeData();
 
 });
