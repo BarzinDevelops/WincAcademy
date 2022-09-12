@@ -26,16 +26,44 @@ Some examples of APIs you can use:
 */
 
 
-
+const log = console.log;
 // get all the html elements:
 const pokeBtn = document.getElementById('poke-btn');
 const pokeInfo = document.getElementById('poke-info');
-const pokeImg = document.getElementById('poke-img');
+const pokeImgDiv = document.getElementById('poke-img-div');
 
 
-const pokeApi = async () => {
-    const pokeman = await fetch('https://pokeapi.co/api/v2/pokemon/1/');
-    log(pokeman);
+
+const getPokeData = async () => {
+    const resp = await fetch('https://pokeapi.co/api/v2/pokemon/1/');
+    const pokeman = await resp.json()
+    log('pokeman',pokeman);
+    // log('images', pokeman.sprites.front_default)
+    setPokeImg(pokeman.sprites.front_default);
+    const createInfo = {
+        name: pokeman.name,
+        height: pokeman.height,
+        weight: pokeman.weight,
+
+    }
+    setPokeInfo(createInfo)
+}
+const setPokeInfo = async (pokemanInfo) =>{
+    // pokeInfo.innerText = `
+    // ${pokemanInfo.forEach(item => item.name, item.height, item.weight)}
+    // `
 }
 
-pokeBtn.addEventListener('click', ()=> pokeApi)
+
+const setPokeImg = async (pokeImgSrc) =>{
+
+    const pokeImg = document.createElement('img');
+    pokeImg.src = pokeImgSrc;
+    pokeImgDiv.appendChild(pokeImg);
+    log('pokeImgSrc: ', pokeImgSrc)
+}
+
+pokeBtn.addEventListener('click', ()=> {
+    getPokeData();
+
+});
