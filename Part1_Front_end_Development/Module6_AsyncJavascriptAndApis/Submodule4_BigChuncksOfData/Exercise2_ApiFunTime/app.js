@@ -25,56 +25,70 @@ Some examples of APIs you can use:
     icanhazdadjoke  - (https://icanhazdadjoke.com/api#fetch-a-random-dad-joke)
 */
 
-
 const log = console.log;
 // get all the html elements:
-const pokeContainer = document.getElementById('poke-container');
-const pokeBtn = document.getElementById('poke-btn');
-const pokeInfo = document.getElementById('poke-info');
-const pokeImgDiv = document.getElementById('poke-img-div');
-
-
+const pokeContainer = document.getElementById("poke-container");
+const pokeBtn = document.getElementById("poke-btn");
+const pokeInfo = document.getElementById("poke-info");
+const pokeImgDiv = document.getElementById("poke-img-div");
 
 const getPokeData = async () => {
-    const resp = await fetch('https://pokeapi.co/api/v2/pokemon/1/');
-    const pokeman = await resp.json()
-    log('pokeman',pokeman);
-    // log('images', pokeman.sprites.front_default)
+  try {
+    const resp = await fetch("https://pokeapi.co/api/v2/pokemon/1/");
+    const pokeman = await resp.json();
     setPokeImg(pokeman.sprites.front_default);
     const createInfo = {
-        name: pokeman.name,
-        height: pokeman.height,
-        weight: pokeman.weight,
+      name: pokeman.name,
+      height: pokeman.height,
+      weight: pokeman.weight,
+    };
+    setPokeInfo(createInfo);
+  } catch (error) {log(error);}
+};
+const setPokeInfo = async (pokemanInfo) => {
+  log("pokeInfo", pokemanInfo);
+  for (const prop in pokemanInfo) {
+    let infoElement = document.createElement("span");
+    infoElement.innerHTML = 
+    `<b>${prop}</b>: ${pokemanInfo[prop]}<br>`;
+    pokeInfo.appendChild(infoElement);
+  }
+};
 
-    }
-    setPokeInfo(createInfo)
-}
-const setPokeInfo = async (pokemanInfo) =>{
-    log('pokeInfo',pokemanInfo)
-    
-    for(const prop in pokemanInfo){
-        let infoElement = document.createElement('span');
-        
-        infoElement.innerHTML = `
-        <b>${prop}</b>: ${pokemanInfo[prop]}<br>`
-        pokeInfo.appendChild(infoElement)
-    }
-}
+const setPokeImg = async (pokeImgSrc) => {
+  const pokeImg = document.createElement("img");
+  pokeImg.class = "poke-img";
+  pokeImg.src = pokeImgSrc;
+  pokeImgDiv.appendChild(pokeImg);
+  log("pokeImgSrc: ", pokeImgSrc);
+};
 
+// get trump quotes
+const getTrumpQuotes = async () => {
+  try {
+    const resp = await fetch("https://api.tronalddump.io/random/quote");
+    const respjson = await resp.json();
+    const quotesDiv = document.getElementById("trump-quotes");
+    quotesDiv.innerText = respjson.value;
+  } catch (error) {log(error);}
+};
+// use API for fetching a random joke
+const getJoke = async () => {
+  try {
+    const resp = await fetch(
+      "https://icanhazdadjoke.com/slack?username=icanhazdadjoke"
+    );
+    const respjson = await resp.json();
+    const jokesDiv = document.getElementById("jokes");
+    jokesDiv.innerText = respjson.attachments[0].text;
+  } catch (error) {log(error);}
+};
 
-const setPokeImg = async (pokeImgSrc) =>{
-
-    const pokeImg = document.createElement('img');
-    pokeImg.class = 'poke-img';
-    pokeImg.src = pokeImgSrc;
-    pokeImgDiv.appendChild(pokeImg);
-    log('pokeImgSrc: ', pokeImgSrc)
-}
-
-pokeBtn.addEventListener('click', ()=> {
-    pokeContainer.classList.add('poke-container');
-    pokeInfo.replaceChildren();
-    pokeImgDiv.replaceChildren();
-    getPokeData();
-
+pokeBtn.addEventListener("click", () => {
+  pokeContainer.classList.add("poke-container");
+  pokeInfo.replaceChildren();
+  pokeImgDiv.replaceChildren();
+  getPokeData();
+  getTrumpQuotes();
+  getJoke();
 });
