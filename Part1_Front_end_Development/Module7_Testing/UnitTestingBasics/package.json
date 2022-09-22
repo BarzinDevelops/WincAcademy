@@ -1,8 +1,8 @@
 {
-  "name": "module7_testing",
+  "name": "unittestingbasics",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "functions.js",
   "scripts": {
     "test": "jest"
   },
