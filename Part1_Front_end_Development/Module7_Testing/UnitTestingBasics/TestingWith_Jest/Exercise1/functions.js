@@ -11,6 +11,7 @@ const functions = {
         firstName: 'Brad' 
       };
       user['lastName'] = 'Traversy';
+      console.log('user is', user);
       return user;
     }
   };

@@ -1,29 +1,24 @@
 const functions = require('./functions');
 // console.log('these are functions in functions.js', functions);
-/*  */
+console.log(`==================== Barzin's SOLUTIONS============================`);
+// place to test code of Barzin here:
+
+
+/*---------------------------------------------------to test functions Barzin and Winc----------------------------  
+// toBeNull
 test('Should be null', () => {
-        // Start with expect()
-        // Inside the first brackets put what you want to test. That will be a function.
-        // Then follows your .toBeSomethingSomething function,
-        // find the appropriate function in the documentation.
-        // In this case we want to check if the function "isNull()" actually
-        // returned null. So "toBeNull()" makes the most sense
   expect(functions.isNull()).toBeNull();
 });
 
+// toBeFalsy
 test('checkValue Should be falsy when argument is undefined', () => {
-    // expect(functions.checkValue('someshit')).toBeFalsy();
     expect(functions.checkValue()).toBeFalsy();
 });
 
-
-test('User should be Brad Traversy object', () => {
-    console.log('return value is: ', functions.createUser())
+// toEqual
+test('User should be Brad Traversy object:', () => {
     expect(functions.createUser()).toEqual({ firstName: 'Brad', lastName: 'Traversy' });
 });
-
-// Tests are really just functions. To demonstrate that, 
-// we now let you create tests that work without outside input:
 
 // Less than or greater than
 test('Should be under or equal to 1600', () => {
@@ -33,16 +28,9 @@ test('Should be under or equal to 1600', () => {
 });
 
 // Regex
-test('There is no I in team', () => {
-    expect('team').not.toMatch(/I/);         
-    // console.log("'team'.search(/I/) =>",'team'.search(/I/));
-    // console.log('team'.search(/m/) > -1 ? 
-    //                 ("team.search(/m/) => "+'team'.search(/m/)) : 
-    //                 "no shit found");
-});
-
-
-
+// test('There is no I in team', () => {
+//     expect('team').not.toMatch(/I/i);         
+// });
 
 // Arrays
 test('Admin should be in usernames', () => {
@@ -53,3 +41,46 @@ test('Admin should be in usernames', () => {
      expect(usernames).toContain('admin');
      
 });
+
+// ==============Solutions WINC======================
+// toBeNull
+test("Should be null", () => {
+    expect(functions.isNull()).toBeNull();
+  });
+
+
+// toBeFalsy
+test("Should be falsy", () => {
+    expect(functions.checkValue(undefined)).toBeFalsy();
+  });
+
+
+// toEqual
+  test("User should be Brad Traversy object", () => {
+    expect(functions.createUser()).toEqual({
+      firstName: "Brad",
+      lastName: "Traversy"
+    });
+  });
+
+// Less than and greater than
+test("Should be under 1600", () => {
+  const load1 = 800;
+  const load2 = 800;
+  expect(load1 + load2).toBeLessThanOrEqual(1600);
+});
+
+// Regex
+test("There is no I in team", () => {
+    expect("team").not.toMatch(/I/i);
+  });
+
+// Arrays
+test("Admin should be in usernames", () => {
+    usernames = ["john", "karen", "admin"];
+    expect(usernames).toContain("admin");
+  });
+*/
+console.log('==================== WINC SOLUTIONS============================')
+// place to test code of WINC here:
+
