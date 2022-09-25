@@ -19,12 +19,23 @@ const myTddFunc = require('./functionsTDD');
   }); */
 
 // 2.  testing ->  getWordLengths() function:
-    test("Get word lengths", function() {
-      const words = ["sun", "potato", "roundabout", "pizza"];
-      const expected = [3, 6, 10, 5];
-      const output = myTddFunc.getWordLengths(words);
-      expect(output).toEqual(expected);
-      
-      // My own test log to see the real values of each received and to compare value:
-      log(`is output: [${output}] equal to expected: [${expected}] ?`);
-    });
+/* test("Get word lengths", function() {
+    const words = ["sun", "potato", "roundabout", "pizza"];
+    const expected = [3, 6, 10, 5];
+    const output = myTddFunc.getWordLengths(words);
+    expect(output).toEqual(expected);
+    
+    // My own test log to see the real values of each received and to compare value:
+    log(`is output: [${output}] equal to expected: [${expected}] ?`);
+}); */
+
+// 3.  testing ->  findNeedle() function:
+test("Find the needle", function() {
+    const words = ["house", "train", "slide", "needle", "book"];
+    const expected = 3;
+
+    const output = myTddFunc.findNeedle(words, "needle");
+    expect(output).toEqual(expected);
+
+    log(`is output: [${output}] equal to expected: [${expected}] ?`);
+});
