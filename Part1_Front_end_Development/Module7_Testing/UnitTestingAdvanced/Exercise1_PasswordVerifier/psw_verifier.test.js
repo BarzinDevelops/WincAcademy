@@ -2,9 +2,9 @@ const log = console.log; // preference for writing shorter syntax for console.lo
 //----------------------------------------------------------------------------------
 const myFunc = require('./psw_verifier');
 
-toTestValue = ["henkie1", "1234a","z","henkie1234","HENKhenk","HENK33$","1234", ""];
+toTestValue = ["henkie1", "1234a","z","henkie1234","HENKhenk","HENK33$","1234", "", null];
 
-test(`1.Password '${ toTestValue[0] }' => is shorter than 9 characters?: `, ()=>{
+/* test(`1.Password '${ toTestValue[0] }' => is shorter than 9 characters?: `, ()=>{
     expect(myFunc.lessThan9Chars(toTestValue[0])).toBeLessThan(9);
     log('the toTestValue was: ', myFunc.lessThan9Chars(toTestValue[0]));
 });
@@ -35,9 +35,40 @@ test(`1.Password '${ toTestValue[6] }' => is shorter than 9 characters?: `, ()=>
 test(`1.Password '${ toTestValue[7] }' => is shorter than 9 characters?: `, ()=>{
     expect(myFunc.lessThan9Chars(toTestValue[7])).toBeLessThan(9);
     log('the toTestValue was: ', myFunc.lessThan9Chars(toTestValue[7]));
+}); */
+
+test(`1.Password '${ toTestValue[0] }' => is not null?: `, ()=>{
+    expect(myFunc.lessThan9Chars(toTestValue[0])).not.toBeNull();
+    log('the toTestValue was: ', myFunc.lessThan9Chars(toTestValue[0]));
 });
-
-
+test(`2.Password '${ toTestValue[1] }' => is not null?: `, ()=>{
+    expect(myFunc.lessThan9Chars(toTestValue[1])).not.toBeNull();
+    log('the toTestValue was: ', myFunc.lessThan9Chars(toTestValue[1]));
+});
+test(`3.Password '${ toTestValue[2] }' => is not null?: `, ()=>{
+    expect(myFunc.lessThan9Chars(toTestValue[2])).not.toBeNull();
+    log('the toTestValue was: ', myFunc.lessThan9Chars(toTestValue[2]));
+});
+test(`4.Password '${ toTestValue[3] }' => is not null?: `, ()=>{
+    expect(myFunc.lessThan9Chars(toTestValue[3])).not.toBeNull();
+    log('the toTestValue was: ', myFunc.lessThan9Chars(toTestValue[3]));
+});
+test(`5.Password '${ toTestValue[4] }' => is not null?: `, ()=>{
+    expect(myFunc.lessThan9Chars(toTestValue[4])).not.toBeNull();
+    log('the toTestValue was: ', myFunc.lessThan9Chars(toTestValue[4]));
+});
+test(`6.Password '${ toTestValue[5] }' => is not null?: `, ()=>{
+    expect(myFunc.lessThan9Chars(toTestValue[5])).not.toBeNull();
+    log('the toTestValue was: ', myFunc.lessThan9Chars(toTestValue[5]));
+});
+test(`7.Password '${ toTestValue[6] }' => is not null?: `, ()=>{
+    expect(myFunc.lessThan9Chars(toTestValue[6])).not.toBeNull();
+    log('the toTestValue was: ', myFunc.lessThan9Chars(toTestValue[6]));
+});
+test(`8.Password '${ toTestValue[7] }' => is not null?: `, ()=>{
+    expect(myFunc.lessThan9Chars(toTestValue[7])).not.toBeNull();
+    log('the toTestValue was: ', myFunc.lessThan9Chars(toTestValue[7]));
+});
 
 
 
