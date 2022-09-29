@@ -117,7 +117,7 @@ describe('Testing all Utility functions',()=>{
         
     }); */
 
-   /*  describe('Password has one or more lowercase characters',()=>{
+    /*  describe('Password has one or more lowercase characters',()=>{
         test(`1.Password '${ toTestValue[0] }' => has more than 1 lowercase Characters: `, ()=>{
             expect(myFunc.hasLowerCaseCharacter(toTestValue[0])).toBe(true);
             log('the toTestValue 1 was: ', myFunc.hasLowerCaseCharacter(toTestValue[0]));
@@ -157,23 +157,42 @@ describe('Testing all Utility functions',()=>{
         
     }); */
 
-    
+    /* describe('Password has 1 or more digits',()=>{
+        test(`1.Password '${ toTestValue[0] }' => has at least 1 digit : `, ()=>{
+            expect(myFunc.hasDigit(toTestValue[0])).toBe(true);
+            log('the toTestValue 1 was: ', myFunc.hasDigit(toTestValue[0]));
+        });
+        test(`2.Password '${ toTestValue[1] }' => has at least 1 digit : `, ()=>{
+            expect(myFunc.hasDigit(toTestValue[1])).toBe(true);
+            log('the toTestValue 2 was: ', myFunc.hasDigit(toTestValue[1]));
+        });
+        test(`3.Password '${ toTestValue[2] }' => has at least 1 digit : `, ()=>{
+            expect(myFunc.hasDigit(toTestValue[2])).toBe(true);
+            log('the toTestValue 3 was: ', myFunc.hasDigit(toTestValue[2]));
+        });
+        test(`4.Password '${ toTestValue[3] }' => => has at least 1 digit : `, ()=>{
+            expect(myFunc.hasDigit(toTestValue[3])).toBe(true);
+            log('the toTestValue 4 was: ', myFunc.hasDigit(toTestValue[3]));
+        });
+        test(`5.Password '${ toTestValue[4] }' => => has at least 1 digit : `, ()=>{
+            expect(myFunc.hasDigit(toTestValue[4])).toBe(true);
+            log('the toTestValue 5 was: ', myFunc.hasDigit(toTestValue[4]));
+        });
+        test(`6.Password '${ toTestValue[5] }' => => has at least 1 digit : `, ()=>{
+            expect(myFunc.hasDigit(toTestValue[5])).toBe(true);
+            log('the toTestValue 6 was: ', myFunc.hasDigit(toTestValue[5]));
+        });
+        test(`7.Password '${ toTestValue[6] }' => => has at least 1 digit : `, ()=>{
+            expect(myFunc.hasDigit(toTestValue[6])).toBe(true);
+            log('the toTestValue 7 was: ', myFunc.hasDigit(toTestValue[6]));
+        });
+        test(`8.Password '${ toTestValue[7] }' => => has at least 1 digit : `, ()=>{
+            expect(myFunc.hasDigit(toTestValue[7])).toBe(true);
+            log('the toTestValue 8 was: ', myFunc.hasDigit(toTestValue[7]));
+        });
+        test(`9.Password '${ toTestValue[8] }' => => has at least 1 digit : `, ()=>{
+            expect(myFunc.hasDigit(toTestValue[8])).toBe(true);
+            log('the toTestValue 9 was: ', myFunc.hasDigit(toTestValue[8]));
+        });
+    }); */
 });
-
-
-
-
-
-
-/* 
-
-test('3.Password has 1 or more uppercase characters: ', ()=>{
-
-});
-test('4.Password has 1 or more lowercase characters: ', ()=>{
-
-});
-test('5.Password has 1 or more digits: ', ()=>{
-
-});
- */
