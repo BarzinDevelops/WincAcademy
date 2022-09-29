@@ -2,7 +2,7 @@
 //implementation of verifyPassword function:
 const lessThan9Chars = password => password.length < 9;
 const isNotNull = password => password !== null;
-const hasUpperCaseCharacters = password => password.match(/[A-Z]/).length;
+const hasUpperCaseCharacters = password => password.split('').filter(char => char.match(/[A-Z]/)).length >= 1;
 
 const verifyPassword = (password) =>{
     
