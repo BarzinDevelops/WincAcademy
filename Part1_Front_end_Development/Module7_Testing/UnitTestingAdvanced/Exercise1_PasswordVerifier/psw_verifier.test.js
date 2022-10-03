@@ -44,54 +44,27 @@ describe('Testing all Utility functions',()=>{
     describe('Password has one or more lowercase characters.',()=>{
         test(`1.Testing if argument contains one or more lowercase characters. `, ()=>{
             expect(utilFunctions.hasLowerCaseCharacter(toTestValue[4])).toBe(true);
-            log(`utilFunctions.hasLowerCaseCharacter(HENKhenk).toBe(true) => `, utilFunctions.hasLowerCaseCharacter(toTestValue[4]));
+            // log(`utilFunctions.hasLowerCaseCharacter(HENKhenk).toBe(true) => `, utilFunctions.hasLowerCaseCharacter(toTestValue[4]));
         });
         test(`2.Testing if argument DOESN'T contains any lowercase characters. `, ()=>{
             expect(utilFunctions.hasLowerCaseCharacter(toTestValue[5])).toBe(false);
-            log(`utilFunctions.hasLowerCaseCharacter(HENK33$).toBe(false) => `, utilFunctions.hasLowerCaseCharacter(toTestValue[5]));
+            // log(`utilFunctions.hasLowerCaseCharacter(HENK33$).toBe(false) => `, utilFunctions.hasLowerCaseCharacter(toTestValue[5]));
         });
     });
 
+    describe('Password has 1 or more digits.',()=>{
+        test(`1.Testing if argument contains one or more digits. `, ()=>{
+            expect(utilFunctions.hasDigit(toTestValue[5])).toBe(true);
+            log(`utilFunctions.hasDigit(HENK33$).toBe(true) => `, utilFunctions.hasDigit(toTestValue[5]));
+        });
+        test(`2.Testing if argument DOESN'T contains any digits. `, ()=>{
+            expect(utilFunctions.hasDigit(toTestValue[4])).toBe(false);
+            log(`utilFunctions.hasDigit(HENKhenk).toBe(false) => `, utilFunctions.hasDigit(toTestValue[4]));
+        });
+    });
 
-    /* describe('Password has 1 or more digits',()=>{
-        test(`1.Password '${ toTestValue[0] }' => has at least 1 digit : `, ()=>{
-            expect(myFunctions.hasDigit(toTestValue[0])).toBe(true);
-            log('the toTestValue 1 was: ', myFunctions.hasDigit(toTestValue[0]));
-        });
-        test(`2.Password '${ toTestValue[1] }' => has at least 1 digit : `, ()=>{
-            expect(myFunctions.hasDigit(toTestValue[1])).toBe(true);
-            log('the toTestValue 2 was: ', myFunctions.hasDigit(toTestValue[1]));
-        });
-        test(`3.Password '${ toTestValue[2] }' => has at least 1 digit : `, ()=>{
-            expect(myFunctions.hasDigit(toTestValue[2])).toBe(true);
-            log('the toTestValue 3 was: ', myFunctions.hasDigit(toTestValue[2]));
-        });
-        test(`4.Password '${ toTestValue[3] }' => => has at least 1 digit : `, ()=>{
-            expect(myFunctions.hasDigit(toTestValue[3])).toBe(true);
-            log('the toTestValue 4 was: ', myFunctions.hasDigit(toTestValue[3]));
-        });
-        test(`5.Password '${ toTestValue[4] }' => => has at least 1 digit : `, ()=>{
-            expect(myFunctions.hasDigit(toTestValue[4])).toBe(true);
-            log('the toTestValue 5 was: ', myFunctions.hasDigit(toTestValue[4]));
-        });
-        test(`6.Password '${ toTestValue[5] }' => => has at least 1 digit : `, ()=>{
-            expect(myFunctions.hasDigit(toTestValue[5])).toBe(true);
-            log('the toTestValue 6 was: ', myFunctions.hasDigit(toTestValue[5]));
-        });
-        test(`7.Password '${ toTestValue[6] }' => => has at least 1 digit : `, ()=>{
-            expect(myFunctions.hasDigit(toTestValue[6])).toBe(true);
-            log('the toTestValue 7 was: ', myFunctions.hasDigit(toTestValue[6]));
-        });
-        test(`8.Password '${ toTestValue[7] }' => => has at least 1 digit : `, ()=>{
-            expect(myFunctions.hasDigit(toTestValue[7])).toBe(true);
-            log('the toTestValue 8 was: ', myFunctions.hasDigit(toTestValue[7]));
-        });
-        test(`9.Password '${ toTestValue[8] }' => => has at least 1 digit : `, ()=>{
-            expect(myFunctions.hasDigit(toTestValue[8])).toBe(true);
-            log('the toTestValue 9 was: ', myFunctions.hasDigit(toTestValue[8]));
-        });
-    }); */
 });
+
 describe('Testing 2 minimum required conditions:', ()=>{
     /* test('Testing if 3 or more conditions are met or not:', () => {
             expect(myFunctions.minimumRequired.passedConditionsCount(toTestValue[0])).toBe(true);
