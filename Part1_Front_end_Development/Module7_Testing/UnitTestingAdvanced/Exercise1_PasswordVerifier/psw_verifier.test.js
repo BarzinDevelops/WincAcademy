@@ -3,6 +3,7 @@ const log = console.log; // preference for writing shorter syntax for console.lo
 const myFunctions = require('./psw_verifier');
 
 toTestValue = ["henkie1", "1234a","z","henkie1234","HENKhenk","HENK33$","1234", "", null, 'Z9','012345678'];
+
 describe('Testing all Utility functions',()=>{
     /* test(`1.Password '${ toTestValue[0] }' => is shorter than 9 characters?: `, ()=>{
         expect(myFunctions.lessThan9Chars(toTestValue[0])).toBe(true);
@@ -197,20 +198,20 @@ describe('Testing all Utility functions',()=>{
     }); */
 });
 describe('Testing 2 minimum required conditions:', ()=>{
-    test('Testing if 3 or more conditions are met:', () => {
+    /* test('Testing if 3 or more conditions are met or not:', () => {
             expect(myFunctions.minimumRequired.passedConditionsCount(toTestValue[0])).toBe(true);
             log(`expect(myFunctions.minimumRequired.passedConditionsCount('henkie1')).toBe(true) =>`, 
                 myFunctions.minimumRequired.passedConditionsCount(toTestValue[0]));
 
-    //         expect(myFunctions.minimumRequired.passedConditionsCount(toTestValue[10])).toBe(false);
-    //         log(`expect(myFunctions.minimumRequired.passedConditionsCount('012345678')).toBe(false) =>`, myFunctions.minimumRequired.passedConditionsCount(toTestValue[10]));
-        });
+            expect(myFunctions.minimumRequired.passedConditionsCount(toTestValue[10])).toBe(false);
+            log(`expect(myFunctions.minimumRequired.passedConditionsCount('012345678')).toBe(false) =>`, myFunctions.minimumRequired.passedConditionsCount(toTestValue[10]));
+        }); */
 
-    test('Testing if Password has 1 or more lowercase characters AND 3 or more conditions were met:', () => {
-            expect(myFunctions.minimumRequired.minimunRequirementsPassed(toTestValue[0])).toEqual(true);
-            log(` expect(myFunctions.minimumRequired.minimunRequirementsPassed('Z9')).toBe(true) =>`, myFunctions.minimumRequired.minimunRequirementsPassed(toTestValue[9]));
+    /* test('Testing if Password has 1 or more lowercase characters or not, AND if 3 or more conditions were met or not:', () => {
+            expect(myFunctions.minimumRequired.minimunRequirementsPassed(toTestValue[9])).toBe(false);
+            log(` expect(myFunctions.minimumRequired.minimunRequirementsPassed('Z9')).toBe(false) =>`, myFunctions.minimumRequired.minimunRequirementsPassed(toTestValue[9]));
 
-            // expect(myFunctions.minimumRequired.minimunRequirementsPassed(toTestValue[10])).toBe(false);
-            // log(` expect(myFunctions.minimumRequired.minimunRequirementsPassed('012345678')).toBe(false) =>`, myFunctions.minimumRequired.minimunRequirementsPassed(toTestValue[10]));
-        });
+            expect(myFunctions.minimumRequired.minimunRequirementsPassed(toTestValue[0])).toBe(true);
+            log(` expect(myFunctions.minimumRequired.minimunRequirementsPassed('henkie1')).toBe(true) =>`, myFunctions.minimumRequired.minimunRequirementsPassed(toTestValue[0]));
+        }); */
 });

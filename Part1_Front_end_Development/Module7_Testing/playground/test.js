@@ -106,7 +106,7 @@ log('Minimum Required Result2 =>',minimumRequired('henkie1234'))
 
  */
 
-const password = 'henkie1';
+
 
 //implementation of verifyPassword function:
 const lessThan9Chars = password => password.length < 9;
@@ -124,18 +124,22 @@ const conditionsResults = password => [
     hasDigit(password)
 ];
 
+
+
+
 // create function that checks if all mendatory requirements are met:
 const minimumRequired = {
+
     // count condition results that were met:
     passedConditionsCount: password => conditionsResults(password).filter(condition => condition === true).length > 2,
     
     /* If requirement both (requirement 1 and 2) are met, 
         return true and false otherwise:  */
-    minimunRequirementsPassed: (this.passedConditionsCount && conditionsResults(password)[3]) ? true : false
+    minimunRequirementsPassed: password => (conditionsResults(password)[3]) ? true : false
 }
 
 
-
+const password = '123456F678';
 
 
 log('conditionsResults',conditionsResults(password));
@@ -145,7 +149,10 @@ log('conditionsResults(password)[2]',conditionsResults(password)[2]);
 log('conditionsResults(password)[3]',conditionsResults(password)[3]);
 log('conditionsResults(password)[4]',conditionsResults(password)[4]);
 
+log('passedConditionsCount',minimumRequired.passedConditionsCount(password));
+log('minimunRequirementsPassed',minimumRequired.minimunRequirementsPassed(password));
 
+// log('testfunction ', minimumRequired.testFunc(password));
 
 
 

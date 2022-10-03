@@ -28,7 +28,7 @@ const minimumRequired = {
     
     /* If requirement both (requirement 1 and 2) are met, 
         return true and false otherwise:  */
-    minimunRequirementsPassed: password => (this.passedConditionsCount && conditionsResults(password)[3]) ? true : false
+    minimunRequirementsPassed: password => (conditionsResults(password)[3]) ? true : false
 
 }
 
