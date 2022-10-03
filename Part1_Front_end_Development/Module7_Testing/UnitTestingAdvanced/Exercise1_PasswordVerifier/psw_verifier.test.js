@@ -29,64 +29,29 @@ describe('Testing all Utility functions',()=>{
         });
     });
     
-
     describe('Password has one or more uppercase characters.',()=>{
         test(`1.Testing if argument contains one or more uppercase characters. `, ()=>{
             expect(utilFunctions.hasUpperCaseCharacters(toTestValue[4])).toBe(true);
-            log(`utilFunctions.hasUpperCaseCharacters(HENKhenk).toBe(true) => `, utilFunctions.hasUpperCaseCharacters(toTestValue[4]));
+            // log(`utilFunctions.hasUpperCaseCharacters(HENKhenk).toBe(true) => `, utilFunctions.hasUpperCaseCharacters(toTestValue[4]));
         });
         test(`2.Testing if argument DOESN'T contains any uppercase characters. `, ()=>{
             expect(utilFunctions.hasUpperCaseCharacters(toTestValue[0])).toBe(false);
-            log(`utilFunctions.hasUpperCaseCharacters(henkie1).toBe(false) => `, utilFunctions.hasUpperCaseCharacters(toTestValue[0]));
+            // log(`utilFunctions.hasUpperCaseCharacters(henkie1).toBe(false) => `, utilFunctions.hasUpperCaseCharacters(toTestValue[0]));
         });
     });
-    /* describe('Password has one or more uppercase characters',()=>{
-        test(`1.Password '${ toTestValue[0] }' => has more than 1 uppercase Characters: `, ()=>{
-            expect(myFunctions.hasUpperCaseCharacters(toTestValue[0])).toBe(true);
-            log('the toTestValue 1 was: ', myFunctions.hasUpperCaseCharacters(toTestValue[0]));
-        });
-        
-    }); */
 
-    /*  describe('Password has one or more lowercase characters',()=>{
-        test(`1.Password '${ toTestValue[0] }' => has more than 1 lowercase Characters: `, ()=>{
-            expect(myFunctions.hasLowerCaseCharacter(toTestValue[0])).toBe(true);
-            log('the toTestValue 1 was: ', myFunctions.hasLowerCaseCharacter(toTestValue[0]));
+
+    describe('Password has one or more lowercase characters.',()=>{
+        test(`1.Testing if argument contains one or more lowercase characters. `, ()=>{
+            expect(utilFunctions.hasLowerCaseCharacter(toTestValue[4])).toBe(true);
+            log(`utilFunctions.hasLowerCaseCharacter(HENKhenk).toBe(true) => `, utilFunctions.hasLowerCaseCharacter(toTestValue[4]));
         });
-        test(`2.Password '${ toTestValue[1] }' => has more than 1 lowercase Characters: `, ()=>{
-            expect(myFunctions.hasLowerCaseCharacter(toTestValue[1])).toBe(true);
-            log('the toTestValue 2 was: ', myFunctions.hasLowerCaseCharacter(toTestValue[1]));
+        test(`2.Testing if argument DOESN'T contains any lowercase characters. `, ()=>{
+            expect(utilFunctions.hasLowerCaseCharacter(toTestValue[5])).toBe(false);
+            log(`utilFunctions.hasLowerCaseCharacter(HENK33$).toBe(false) => `, utilFunctions.hasLowerCaseCharacter(toTestValue[5]));
         });
-        test(`3.Password '${ toTestValue[2] }' => has more than 1 lowercase Characters: `, ()=>{
-            expect(myFunctions.hasLowerCaseCharacter(toTestValue[2])).toBe(true);
-            log('the toTestValue 3 was: ', myFunctions.hasLowerCaseCharacter(toTestValue[2]));
-        });
-        test(`4.Password '${ toTestValue[3] }' => => has more than 1 lowercase Characters: `, ()=>{
-            expect(myFunctions.hasLowerCaseCharacter(toTestValue[3])).toBe(true);
-            log('the toTestValue 4 was: ', myFunctions.hasLowerCaseCharacter(toTestValue[3]));
-        });
-        test(`5.Password '${ toTestValue[4] }' => => has more than 1 lowercase Characters: `, ()=>{
-            expect(myFunctions.hasLowerCaseCharacter(toTestValue[4])).toBe(true);
-            log('the toTestValue 5 was: ', myFunctions.hasLowerCaseCharacter(toTestValue[4]));
-        });
-        test(`6.Password '${ toTestValue[5] }' => => has more than 1 lowercase Characters: `, ()=>{
-            expect(myFunctions.hasLowerCaseCharacter(toTestValue[5])).toBe(true);
-            log('the toTestValue 6 was: ', myFunctions.hasLowerCaseCharacter(toTestValue[5]));
-        });
-        test(`7.Password '${ toTestValue[6] }' => => has more than 1 lowercase Characters: `, ()=>{
-            expect(myFunctions.hasLowerCaseCharacter(toTestValue[6])).toBe(true);
-            log('the toTestValue 7 was: ', myFunctions.hasLowerCaseCharacter(toTestValue[6]));
-        });
-        test(`8.Password '${ toTestValue[7] }' => => has more than 1 lowercase Characters: `, ()=>{
-            expect(myFunctions.hasLowerCaseCharacter(toTestValue[7])).toBe(true);
-            log('the toTestValue 8 was: ', myFunctions.hasLowerCaseCharacter(toTestValue[7]));
-        });
-        test(`9.Password '${ toTestValue[8] }' => => has more than 1 lowercase Characters: `, ()=>{
-            expect(myFunctions.hasLowerCaseCharacter(toTestValue[8])).toBe(true);
-            log('the toTestValue 9 was: ', myFunctions.hasLowerCaseCharacter(toTestValue[8]));
-        });
-        
-    }); */
+    });
+
 
     /* describe('Password has 1 or more digits',()=>{
         test(`1.Password '${ toTestValue[0] }' => has at least 1 digit : `, ()=>{
