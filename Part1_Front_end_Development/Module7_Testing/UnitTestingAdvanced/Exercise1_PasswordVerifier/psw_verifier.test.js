@@ -2,6 +2,7 @@ const log = console.log; // preference for writing shorter syntax for console.lo
 //----------------------------------------------------------------------------------
 const myFunctions = require('./psw_verifier');
 const utilFunctions = myFunctions.UtilityFunctions;
+const  minimumRequired = myFunctions.minimumRequired;
 
 
 toTestValue = ["henkie1", "1234a","z","henkie1234","HENKhenk","HENK33$","1234", "", null, 'Z9','012345678'];
@@ -55,25 +56,26 @@ describe('Testing all Utility functions',()=>{
     describe('Password has 1 or more digits.',()=>{
         test(`1.Testing if argument contains one or more digits. `, ()=>{
             expect(utilFunctions.hasDigit(toTestValue[5])).toBe(true);
-            log(`utilFunctions.hasDigit(HENK33$).toBe(true) => `, utilFunctions.hasDigit(toTestValue[5]));
+            // log(`utilFunctions.hasDigit(HENK33$).toBe(true) => `, utilFunctions.hasDigit(toTestValue[5]));
         });
         test(`2.Testing if argument DOESN'T contains any digits. `, ()=>{
             expect(utilFunctions.hasDigit(toTestValue[4])).toBe(false);
-            log(`utilFunctions.hasDigit(HENKhenk).toBe(false) => `, utilFunctions.hasDigit(toTestValue[4]));
+            // log(`utilFunctions.hasDigit(HENKhenk).toBe(false) => `, utilFunctions.hasDigit(toTestValue[4]));
         });
     });
 
 });
 
-describe('Testing 2 minimum required conditions:', ()=>{
-    /* test('Testing if 3 or more conditions are met or not:', () => {
-            expect(myFunctions.minimumRequired.passedConditionsCount(toTestValue[0])).toBe(true);
-            log(`expect(myFunctions.minimumRequired.passedConditionsCount('henkie1')).toBe(true) =>`, 
-                myFunctions.minimumRequired.passedConditionsCount(toTestValue[0]));
+describe(`Testing 3 minimum required conditions.`, ()=>{
+    test(`Testing if 3 or more conditions DID met the requirements.`, () => {
+            expect(minimumRequired.passedConditionsCount(toTestValue[0])).toBe(true);
+            // log(`expect(myFunctions.minimumRequired.passedConditionsCount('henkie1')).toBe(true) =>`, minimumRequired.passedConditionsCount(toTestValue[0]));
+        });
 
-            expect(myFunctions.minimumRequired.passedConditionsCount(toTestValue[10])).toBe(false);
-            log(`expect(myFunctions.minimumRequired.passedConditionsCount('012345678')).toBe(false) =>`, myFunctions.minimumRequired.passedConditionsCount(toTestValue[10]));
-        }); */
+    test(`Testing if 3 or more conditions DIDN'T met the requirements.`, () => {
+            expect(minimumRequired.passedConditionsCount(toTestValue[10])).toBe(false);
+            // log(`expect(myFunctions.minimumRequired.passedConditionsCount('012345678')).toBe(false) =>`, minimumRequired.passedConditionsCount(toTestValue[10]));
+        });
 
     /* test('Testing if Password has 1 or more lowercase characters or not, AND if 3 or more conditions were met or not:', () => {
             expect(myFunctions.minimumRequired.minimunRequirementsPassed(toTestValue[9])).toBe(false);
