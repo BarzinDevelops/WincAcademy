@@ -10,101 +10,40 @@ describe('Testing all Utility functions',()=>{
     describe('Password is shorter than 9 characters',()=>{
         test(`1.Test if the argument IS shorter than 9 characters. `, ()=>{
             expect(utilFunctions.lessThan9Chars(toTestValue[0])).toBe(true);
-            log(`myFunctions.lessThan9Chars('henkie1')).toBe(true) => `, utilFunctions.lessThan9Chars(toTestValue[0]));
+            // log(`myFunctions.lessThan9Chars('henkie1')).toBe(true) => `, utilFunctions.lessThan9Chars(toTestValue[0]));
         });
-        test(`1.Test that the argument is NOT shorter than 9 characters. `, ()=>{
+        test(`2.Test that the argument is NOT shorter than 9 characters. `, ()=>{
             expect(utilFunctions.lessThan9Chars(toTestValue[3])).toBe(false);
-            log(`myFunctions.lessThan9Chars('henkie1234')).toBe(false) => `, utilFunctions.lessThan9Chars(toTestValue[3]));
+            // log(`myFunctions.lessThan9Chars('henkie1234')).toBe(false) => `, utilFunctions.lessThan9Chars(toTestValue[3]));
         });
     });
 
     describe('Password should not be null',()=>{
         test(`1.Testing if argument doesn't contain 'null'. `, ()=>{
             expect(utilFunctions.isNotNull(toTestValue[0])).toBe(true);
-            log(`utilFunctions.isNotNull('henkie1').toBe(true) => `, utilFunctions.isNotNull(toTestValue[0]));
+            // log(`utilFunctions.isNotNull('henkie1').toBe(true) => `, utilFunctions.isNotNull(toTestValue[0]));
         });
-        test(`1.Testing if argument does contain 'null'. `, ()=>{
+        test(`2.Testing if argument does contain 'null'. `, ()=>{
             expect(utilFunctions.isNotNull(toTestValue[8])).toBe(false);
-            log(`utilFunctions.isNotNull(null).toBe(false) => `, utilFunctions.isNotNull(toTestValue[8]));
+            // log(`utilFunctions.isNotNull(null).toBe(false) => `, utilFunctions.isNotNull(toTestValue[8]));
         });
     });
     
-    /* describe('Password should not be null',()=>{
-        test(`1.Password '${ toTestValue[0] }' => is not null?: `, ()=>{
-            expect(myFunctions.isNotNull(toTestValue[0])).toBe(true);
-            log('the toTestValue 1 was: ', myFunctions.isNotNull(toTestValue[0]));
-        });
-        test(`2.Password '${ toTestValue[1] }' => is not null?: `, ()=>{
-            expect(myFunctions.isNotNull(toTestValue[1])).toBe(true);
-            log('the toTestValue 2 was: ', myFunctions.isNotNull(toTestValue[1]));
-        });
-        test(`3.Password '${ toTestValue[2] }' => is not null?: `, ()=>{
-            expect(myFunctions.isNotNull(toTestValue[2])).toBe(true);
-            log('the toTestValue 3 was: ', myFunctions.isNotNull(toTestValue[2]));
-        });
-        test(`4.Password '${ toTestValue[3] }' => is not null?: `, ()=>{
-            expect(myFunctions.isNotNull(toTestValue[3])).toBe(true);
-            log('the toTestValue 4 was: ', myFunctions.isNotNull(toTestValue[3]));
-        });
-        test(`5.Password '${ toTestValue[4] }' => is not null?: `, ()=>{
-            expect(myFunctions.isNotNull(toTestValue[4])).toBe(true);
-            log('the toTestValue 5 was: ', myFunctions.isNotNull(toTestValue[4]));
-        });
-        test(`6.Password '${ toTestValue[5] }' => is not null?: `, ()=>{
-            expect(myFunctions.isNotNull(toTestValue[5])).toBe(true);
-            log('the toTestValue 6 was: ', myFunctions.isNotNull(toTestValue[5]));
-        });
-        test(`7.Password '${ toTestValue[6] }' => is not null?: `, ()=>{
-            expect(myFunctions.isNotNull(toTestValue[6])).toBe(true);
-            log('the toTestValue 7 was: ', myFunctions.isNotNull(toTestValue[6]));
-        });
-        test(`8.Password '${ toTestValue[7] }' => is not null?: `, ()=>{
-            expect(myFunctions.isNotNull(toTestValue[7])).toBe(true);
-            log('the toTestValue 8 was: ', myFunctions.isNotNull(toTestValue[7]));
-        });
-        test(`9.Password '${ toTestValue[8] }' => is not null?: `, ()=>{
-            expect(myFunctions.isNotNull(toTestValue[8])).toBe(true);
-            log('the toTestValue 9 was: ', myFunctions.isNotNull(toTestValue[8]));
-        });
-        
-    }); */
 
+    describe('Password has one or more uppercase characters.',()=>{
+        test(`1.Testing if argument contains one or more uppercase characters. `, ()=>{
+            expect(utilFunctions.hasUpperCaseCharacters(toTestValue[4])).toBe(true);
+            log(`utilFunctions.hasUpperCaseCharacters(HENKhenk).toBe(true) => `, utilFunctions.hasUpperCaseCharacters(toTestValue[4]));
+        });
+        test(`2.Testing if argument DOESN'T contains any uppercase characters. `, ()=>{
+            expect(utilFunctions.hasUpperCaseCharacters(toTestValue[0])).toBe(false);
+            log(`utilFunctions.hasUpperCaseCharacters(henkie1).toBe(false) => `, utilFunctions.hasUpperCaseCharacters(toTestValue[0]));
+        });
+    });
     /* describe('Password has one or more uppercase characters',()=>{
         test(`1.Password '${ toTestValue[0] }' => has more than 1 uppercase Characters: `, ()=>{
             expect(myFunctions.hasUpperCaseCharacters(toTestValue[0])).toBe(true);
             log('the toTestValue 1 was: ', myFunctions.hasUpperCaseCharacters(toTestValue[0]));
-        });
-        test(`2.Password '${ toTestValue[1] }' => has more than 1 uppercase Characters: `, ()=>{
-            expect(myFunctions.hasUpperCaseCharacters(toTestValue[1])).toBe(true);
-            log('the toTestValue 2 was: ', myFunctions.hasUpperCaseCharacters(toTestValue[1]));
-        });
-        test(`3.Password '${ toTestValue[2] }' => has more than 1 uppercase Characters: `, ()=>{
-            expect(myFunctions.hasUpperCaseCharacters(toTestValue[2])).toBe(true);
-            log('the toTestValue 3 was: ', myFunctions.hasUpperCaseCharacters(toTestValue[2]));
-        });
-        test(`4.Password '${ toTestValue[3] }' => => has more than 1 uppercase Characters: `, ()=>{
-            expect(myFunctions.hasUpperCaseCharacters(toTestValue[3])).toBe(true);
-            log('the toTestValue 4 was: ', myFunctions.hasUpperCaseCharacters(toTestValue[3]));
-        });
-        test(`5.Password '${ toTestValue[4] }' => => has more than 1 uppercase Characters: `, ()=>{
-            expect(myFunctions.hasUpperCaseCharacters(toTestValue[4])).toBe(true);
-            log('the toTestValue 5 was: ', myFunctions.hasUpperCaseCharacters(toTestValue[4]));
-        });
-        test(`6.Password '${ toTestValue[5] }' => => has more than 1 uppercase Characters: `, ()=>{
-            expect(myFunctions.hasUpperCaseCharacters(toTestValue[5])).toBe(true);
-            log('the toTestValue 6 was: ', myFunctions.hasUpperCaseCharacters(toTestValue[5]));
-        });
-        test(`7.Password '${ toTestValue[6] }' => => has more than 1 uppercase Characters: `, ()=>{
-            expect(myFunctions.hasUpperCaseCharacters(toTestValue[6])).toBe(true);
-            log('the toTestValue 7 was: ', myFunctions.hasUpperCaseCharacters(toTestValue[6]));
-        });
-        test(`8.Password '${ toTestValue[7] }' => => has more than 1 uppercase Characters: `, ()=>{
-            expect(myFunctions.hasUpperCaseCharacters(toTestValue[7])).toBe(true);
-            log('the toTestValue 8 was: ', myFunctions.hasUpperCaseCharacters(toTestValue[7]));
-        });
-        test(`9.Password '${ toTestValue[8] }' => => has more than 1 uppercase Characters: `, ()=>{
-            expect(myFunctions.hasUpperCaseCharacters(toTestValue[8])).toBe(true);
-            log('the toTestValue 9 was: ', myFunctions.hasUpperCaseCharacters(toTestValue[8]));
         });
         
     }); */
