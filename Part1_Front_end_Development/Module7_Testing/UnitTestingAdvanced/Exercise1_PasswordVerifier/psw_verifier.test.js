@@ -8,16 +8,27 @@ toTestValue = ["henkie1", "1234a","z","henkie1234","HENKhenk","HENK33$","1234", 
 
 describe('Testing all Utility functions',()=>{
     describe('Password is shorter than 9 characters',()=>{
-        test(`1.Test if '${ toTestValue[0] }' is shorter than 9 characters. `, ()=>{
+        test(`1.Test if the argument IS shorter than 9 characters. `, ()=>{
             expect(utilFunctions.lessThan9Chars(toTestValue[0])).toBe(true);
             log(`myFunctions.lessThan9Chars('henkie1')).toBe(true) => `, utilFunctions.lessThan9Chars(toTestValue[0]));
-
+        });
+        test(`1.Test that the argument is NOT shorter than 9 characters. `, ()=>{
             expect(utilFunctions.lessThan9Chars(toTestValue[3])).toBe(false);
             log(`myFunctions.lessThan9Chars('henkie1234')).toBe(false) => `, utilFunctions.lessThan9Chars(toTestValue[3]));
         });
     });
-    
 
+    describe('Password should not be null',()=>{
+        test(`1.Testing if argument doesn't contain 'null'. `, ()=>{
+            expect(utilFunctions.isNotNull(toTestValue[0])).toBe(true);
+            log(`utilFunctions.isNotNull('henkie1').toBe(true) => `, utilFunctions.isNotNull(toTestValue[0]));
+        });
+        test(`1.Testing if argument does contain 'null'. `, ()=>{
+            expect(utilFunctions.isNotNull(toTestValue[8])).toBe(false);
+            log(`utilFunctions.isNotNull(null).toBe(false) => `, utilFunctions.isNotNull(toTestValue[8]));
+        });
+    });
+    
     /* describe('Password should not be null',()=>{
         test(`1.Password '${ toTestValue[0] }' => is not null?: `, ()=>{
             expect(myFunctions.isNotNull(toTestValue[0])).toBe(true);
