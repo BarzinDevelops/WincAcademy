@@ -66,7 +66,7 @@ describe('Testing all Utility functions',()=>{
 
 });
 
-describe(`Testing 3 minimum required conditions.`, ()=>{
+describe(`Testing if 2 minimum required conditions pass.`, ()=>{
     test(`Testing if 3 or more conditions DID met the requirements.`, () => {
             expect(minimumRequired.passedConditionsCount(toTestValue[0])).toBe(true);
             // log(`expect(myFunctions.minimumRequired.passedConditionsCount('henkie1')).toBe(true) =>`, minimumRequired.passedConditionsCount(toTestValue[0]));
