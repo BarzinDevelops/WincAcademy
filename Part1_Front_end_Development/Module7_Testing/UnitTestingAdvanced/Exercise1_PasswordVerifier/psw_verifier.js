@@ -1,11 +1,11 @@
 
 //Create Utility functions for eacht test case:
 const UtilityFunctions =  {
-    lessThan9Chars : password => password.length < 9,
+    lessThan9Chars : password => UtilityFunctions.isNotNull(password) && password.length < 9,
     isNotNull : password => password !== null,
-    hasUpperCaseCharacters : password => password.split('').filter(char => char.match(/[A-Z]/)).length >= 1,
-    hasLowerCaseCharacter : password => password.split('').filter(char => char.match(/[a-z]/)).length >= 1,
-    hasDigit : password => password.split('').filter(char => char.match(/\d/)).length >= 1
+    hasUpperCaseCharacters : password => UtilityFunctions.isNotNull(password) && password.split('').filter(char => char.match(/[A-Z]/)).length >= 1,
+    hasLowerCaseCharacter : password => UtilityFunctions.isNotNull(password) && password.split('').filter(char => char.match(/[a-z]/)).length >= 1,
+    hasDigit : password => UtilityFunctions.isNotNull(password) && password.split('').filter(char => char.match(/\d/)).length >= 1
 };
 
 // make an array of all condition results:
@@ -25,11 +25,11 @@ const coditionsCount = {
 }
 
 const verifyPassword = (password) =>{
-    
+    return coditionsCount.passedConditions(password) && UtilityFunctions.hasLowerCaseCharacter(password)
 }
 module.exports = {
     UtilityFunctions,
     coditionsCount,
-    
+    verifyPassword
 };
 

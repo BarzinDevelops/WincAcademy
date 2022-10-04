@@ -1,16 +1,36 @@
-
 const log = console.log;
 
-const someArr = ['hiloo', 'NaiLedIt', 'L@coobaniTa']
+//Create Utility functions for eacht test case:
+const UtilityFunctions =  {
+    lessThan9Chars : password => UtilityFunctions.isNotNull(password) && password.length < 9,
+    isNotNull : password => password !== null,
+    hasUpperCaseCharacters : password => UtilityFunctions.isNotNull(password) && password.split('').filter(char => char.match(/[A-Z]/)).length >= 1,
+    hasLowerCaseCharacter : password => UtilityFunctions.isNotNull(password) && password.split('').filter(char => char.match(/[a-z]/)).length >= 1,
+    hasDigit : password => UtilityFunctions.isNotNull(password) && password.split('').filter(char => char.match(/\d/)).length >= 1
+};
 
-let myRe = new RegExp('hallLooo345');
-const re2 = /l+/i;
+// make an array of all condition results:
+const conditionsResults = password => 
+    [
+        UtilityFunctions.lessThan9Chars(password),
+        UtilityFunctions.isNotNull(password),
+        UtilityFunctions.hasUpperCaseCharacters(password),
+        UtilityFunctions.hasLowerCaseCharacter(password),
+        UtilityFunctions.hasDigit(password)
+    ];
 
-const re3 = new RegExp(re2);
+// create function that checks if minimum 3 requirements are met:
+const coditionsCount = {
+    // count condition results that were met:
+    passedConditions: password => conditionsResults(password).filter(condition => condition === true).length > 2
+}
 
-const result = someArr.filter(item => item.match(re2));
 
-log('result', result);
+const verifyPassword = (password) =>{
+    const result = coditionsCount.passedConditions(password) && UtilityFunctions.hasLowerCaseCharacter(password);
 
+    return result;
+}
 
-// log('myRe', myRe)
+let password = null;
+log('verifyPassword(password) => ', verifyPassword(null));
