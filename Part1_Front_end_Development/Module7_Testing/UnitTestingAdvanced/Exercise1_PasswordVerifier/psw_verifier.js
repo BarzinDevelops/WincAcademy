@@ -18,21 +18,10 @@ const conditionsResults = password =>
         UtilityFunctions.hasDigit(password)
     ];
 
-// create function that checks if all mendatory requirements are met:
-const minimumRequired = {
-
-    /* Minimum requirements:
-        1. At least 3 of the above conditions are true
-        2. Condition 4 (=Password has 1 or more lowercase characters) is true 
-        (so that must always be true)
-    */
+// create function that checks if minimum 3 requirements are met:
+const coditionsCount = {
     // count condition results that were met:
-    passedConditionsCount: password => conditionsResults(password).filter(condition => condition === true).length > 2,
-    
-    /* If requirement both (requirement 1 and 2) are met, 
-        return true and false otherwise:  */
-    minimunRequirementsPassed: password => (conditionsResults(password)[3]) ? true : false
-
+    passedConditions: password => conditionsResults(password).filter(condition => condition === true).length > 2
 }
 
 const verifyPassword = (password) =>{
@@ -40,7 +29,7 @@ const verifyPassword = (password) =>{
 }
 module.exports = {
     UtilityFunctions,
-    minimumRequired,
+    coditionsCount,
     
 };
 
