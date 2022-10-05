@@ -82,26 +82,26 @@ describe(`At least 3 of the 5 conditions are true.`, ()=>{
 describe(`Checking verifyPassword().`, ()=>{
     test(`Testing verifyPassword() => with correct password.`,()=>{
         expect(myFunctions.verifyPassword('henkie1')).toBe(true);
-        log(`expect(myFunctions.verifyPassword(henkie1)).toBe(true) =>`, myFunctions.verifyPassword(toTestValue[0]));
+        // log(`expect(myFunctions.verifyPassword(henkie1)).toBe(true) =>`, myFunctions.verifyPassword(toTestValue[0]));
     });
 
     test(`Testing verifyPassword() => with null.`,()=>{
         expect(myFunctions.verifyPassword(null)).toBe(false);
-        log(`expect(myFunctions.verifyPassword(null)).toBe(false) =>`, myFunctions.verifyPassword(null));
+        // log(`expect(myFunctions.verifyPassword(null)).toBe(false) =>`, myFunctions.verifyPassword(null));
     });
 
     test(`Testing verifyPassword() => too long, no digits an no capital.`,()=>{
         expect(myFunctions.verifyPassword('toolongpassword')).toBe(false);
-        log(`expect(myFunctions.verifyPassword(toolongpassword)).toBe(false) =>`, myFunctions.verifyPassword('toolongpassword'));
+        // log(`expect(myFunctions.verifyPassword(toolongpassword)).toBe(false) =>`, myFunctions.verifyPassword('toolongpassword'));
     });
 
     test(`Testing verifyPassword() => uppercase, digit, less than 9 chars no lowercase.`,()=>{
         expect(myFunctions.verifyPassword('PASS44')).toBe(false);
-        log(`expect(myFunctions.verifyPassword(PASS44)).toBe(false) =>`, myFunctions.verifyPassword('PASS44'));
+        // log(`expect(myFunctions.verifyPassword(PASS44)).toBe(false) =>`, myFunctions.verifyPassword('PASS44'));
     });
 
     test(`Testing verifyPassword() => lowercase and less than 9 chars.`,()=>{
         expect(myFunctions.verifyPassword('lower')).toBe(true);
-        log(`expect(myFunctions.verifyPassword(lower)).toBe(true) =>`, myFunctions.verifyPassword('lower'));
+        // log(`expect(myFunctions.verifyPassword(lower)).toBe(true) =>`, myFunctions.verifyPassword('lower'));
     });
 });

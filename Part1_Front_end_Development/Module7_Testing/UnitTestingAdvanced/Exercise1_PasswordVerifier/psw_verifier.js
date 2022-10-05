@@ -1,9 +1,9 @@
 
 //Create Utility functions for eacht test case:
 const UtilityFunctions =  {
-    lessThan9Chars : password => UtilityFunctions.isNotNull(password) && password.length < 9,
     isNotNull : password => password !== null,
-    hasUpperCaseCharacters : password => UtilityFunctions.isNotNull(password) && password.split('').filter(char => char.match(/[A-Z]/)).length >= 1,
+    lessThan9Chars : password => UtilityFunctions.isNotNull(password) && password.length < 9,
+    hasUpperCaseCharacters : password => UtilityFunctions.isNotNull(password) && password.split('').filter(char => char.match(/[A-Z]/g)).length >= 1,
     hasLowerCaseCharacter : password => UtilityFunctions.isNotNull(password) && password.split('').filter(char => char.match(/[a-z]/)).length >= 1,
     hasDigit : password => UtilityFunctions.isNotNull(password) && password.split('').filter(char => char.match(/\d/)).length >= 1
 };
@@ -11,8 +11,8 @@ const UtilityFunctions =  {
 // make an array of all condition results:
 const conditionsResults = password => 
     [
-        UtilityFunctions.lessThan9Chars(password),
         UtilityFunctions.isNotNull(password),
+        UtilityFunctions.lessThan9Chars(password),
         UtilityFunctions.hasUpperCaseCharacters(password),
         UtilityFunctions.hasLowerCaseCharacter(password),
         UtilityFunctions.hasDigit(password)
